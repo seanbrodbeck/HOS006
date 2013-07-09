@@ -1,0 +1,112 @@
+	{embed="inc/head"}
+	<body class="about">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+		{embed="inc/search-modal"}
+		<div class="hover-trigger"><span>Menu</span></div>
+	
+		{exp:channel:entries channel="about"}
+		
+		<div class="search-wrap content">
+			
+			<section class="hero">
+				<div class="wrap">
+					<h2 class="positioning-statement">{tagline}</h2>
+					<p class="subhead-alt">{intro_text}</p>
+				</div>
+			</section>
+
+			<div class="wrap">
+
+				<div class="carousel-wrap">
+					<div class="carousel cs-royalSlider  rsDefault">
+						{slideshow_images}
+						<img src="{image}" alt="{caption}" />
+						{/slideshow_images}
+					</div>
+					<!--<span class="prev-cs  image-pager ss-icon ss-standard ss-navigaterright">Previous</span>
+					<span class="next-cs image-pager ss-icon ss-standard ss-navigaterleft">Next</span>-->
+				</div>
+
+								<section class="split3_2-1-alt cards">
+					<article class="col first about-us">
+						<h2>About Us</h2>
+						<p class="intro">{intro_blurb}</p> 
+						<p>{about_body}</p> 
+
+						<h2>History</h2>
+						<p class="meta">
+							Est | <em>2002</em>
+						</p>
+						<p>{history_text}</p>
+					</article>
+
+					<div class="col">
+						
+						<section class="about-list">
+							<div class="head-wrap">
+								<h3 class="clients-head on">Clients</h3>
+								<h3 class="accolades-head">Awards</h3>
+								<h3 class="speaking-head">Speaking</h3>
+							</div>
+								
+								<ul class="clients tab-list">
+									{client_list}
+									<li>{client_name}</li>
+									{/client_list}
+								</ul>
+
+
+								
+							<ul class=" accolades tab-list">
+								{selected_accolades}
+								<li>{accolade}</li>
+								{/selected_accolades}
+
+							</ul>
+
+							<div class="speaking tab-list">
+								
+								<ul>
+									{public_speaking}
+									<li>{speaking_item}</li>
+									{/public_speaking}
+								</ul>
+
+								<p>We speak regularly at conferences, universities, and international and regional events. To inquire about our availability for your conference or event, please get in touch with us.</p>
+							</div>
+						</section><!-- split3-->
+
+					</div>
+				</section><!-- /split3_1-2-->
+
+				<section class="split3 cards">
+					{personel}
+					<article class="col {if row_count == "1"}first{/if}">
+						<img src="{image}">
+						<h3>{name}</h3>
+						<div class="cushion">
+							<p class="meta">{title}</p>
+							<p>{bio}</p>
+						</div>
+					</article>
+					{/personel}
+				</section><!-- split3-->
+
+
+
+
+			</div><!-- /wrap-->
+		</div><!-- / search-wrap-->
+		{/exp:channel:entries}
+
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+
+	
+	</body>
+</html>

@@ -1,0 +1,101 @@
+
+/*-------------------------------------------
+
+  	  Helpers 
+    
+-------------------------------------------*/
+
+
+::-moz-selection { background: #e4e64c; color: #000; text-shadow: none; }
+::selection { background: #e4e64c; color: #000; text-shadow: none; }
+
+.move { position: absolute; left: -9999px; }
+.hide { display: none; }
+.line { display: block; }
+a.line { display: inline-block; }
+
+
+.left { 
+	display: block;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.right { 
+	display: block;
+	float: left;
+	margin: 0 0 10px 10px;
+}
+
+%text-replace { display: block; text-indent: -9999px; background-color: transparent; background-position: 0 0; background-repeat: no-repeat; overflow: hidden; }
+
+
+//
+//
+// Global Mixins
+//
+//
+
+@mixin content-box {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+@mixin border-box {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin break-word {
+	word-wrap: break-word;
+	-ms-word-break: break-all;
+	word-break: break-all;
+	word-break: break-word;
+	-webkit-hyphens: auto;
+	-moz-hyphens: auto;
+	hyphens: auto;
+}
+
+@mixin clearfix {
+  &:after {
+	content: "."; display: block; height: 0; clear: both; visibility: hidden; font-size: 0;
+	}
+}
+
+@mixin transition($trans: all, $time: 0.16s, $ease: linear) {
+	-webkit-transition: $trans $time $ease;
+	-moz-transition: $trans $time $ease;
+	-ms-transition: $trans $time $ease;
+	-o-transition: $trans $time $ease;
+	transition: $trans $time $ease;  
+}
+
+@mixin no-transition() {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-ms-transition: none;
+	-o-transition: none;
+	transition: none;  
+}
+
+
+
+@mixin linear-gradient($color1: #393939, $color2: #202020) {
+	background: $color1;
+	background: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$color1), color-stop(100%,$color2));
+	background: -webkit-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -o-linear-gradient(top, $color1 0%,$color2 100%);
+	background: -ms-linear-gradient(top, $color1 0%,$color2 100%);
+	background: linear-gradient(to bottom, $color1 0%,$color2 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color1', endColorstr='$color2',GradientType=0 );
+}
+
+
+%li-reset { 
+	list-style: none; 
+	margin-left: 0;
+}
+

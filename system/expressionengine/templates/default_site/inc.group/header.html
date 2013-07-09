@@ -1,0 +1,24 @@
+<header>
+	<div class="inner-wrap">
+		<div class="wrap">
+
+			{if segment_1 == ""}<h1 class="logo">The Heads <span>of</span> State</h1>
+			{if:else}
+			<strong ><a class="logo" href="/">The Heads <span>of</span> State</a></strong>{/if}
+
+			<nav class="main-nav"  role="navigation">{if segment_3 == "work"}class="on" {/if}
+				<ul>
+					<li><a {if segment_2 == "work"}class="on" {/if} href="/site/work/">Work</a></li>
+					<li><a {if segment_2 == "about"}class="on" {/if} href="/site/about/">About</a></li>
+					<li><a {if segment_2 == "case-studies"}class="on" {/if} href="/site/case-studies/">Case Studies</a></li>
+					<li><a target="_blank" href="http://store.theheadsofstate.com">Store</a></li>
+					<li><a {if segment_2 == "blog"}class="on" {/if} href="/site/blog/">Blog</a></li>
+					<li class="contact-trigger"><a href="#contact">Contact</a></li>
+				</ul>
+				{if segment_2 != "results"}
+				<a class="ss-icon ss-standard" href="#" id="search-modal-button">search</a>
+				{/if}
+			</nav>
+		</div><!-- /wrap-->
+	</div><!-- /inner-wrap-->
+</header>

@@ -1,0 +1,52 @@
+	{embed="inc/head"}
+	<body class="case-studies">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+		
+		{embed="inc/search-modal"}
+
+		<div class="hover-trigger"><span>Menu</span></div>
+		
+		<div class="search-wrap">
+		
+			<div class="wrap content">
+			{exp:channel:entries channel="case_studies_landing" limit="1"}
+				<h2 class="positioning-statement">{cs_page_heading}</h2>
+
+				<p class="subhead-alt">{cs_intro_copy}</p>
+			{/exp:channel:entries}
+			</div>
+					
+
+			<div class="wrap">
+			{exp:channel:entries channel="case_studies"}
+
+				<figure class="grid-block">
+					<a href="{title_permalink="site/case-study"}">
+						<img src="{cover_image}" alt="" />
+
+						<div class="figcaption">
+							<div class="block-caption">
+								<h3>{title}</h3>
+								<em>{categories limit="1"}{category_name}{/categories}</em>
+							</div>
+							<div class="block-caption-more">
+								<p class="meta"><span>{casestudies_year_published}</span> | Poster &amp; Print Campaign</p>
+								<p>{casestudies_intro_text}&hellip;</p>
+							</div>
+						</div><!--/figcaption-->
+					</a>
+				</figure>
+			{/exp:channel:entries}
+			</div><!-- /wrap-->
+
+		</div><!-- /search-wrap-->
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+
+	</body>
+</html>

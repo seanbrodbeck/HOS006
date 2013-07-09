@@ -1,0 +1,32 @@
+{exp:search:search_results}
+{if count==1}
+<div class="adjunct-header">
+	<p class="results-count"><strong>{total_results} Result{if total_results > 1}s{/if} in <span>work</span></strong></p>
+	{if total_results > 5}<!--<p class="adjunct-link"><a href="/site/results/{segment_3}">See All Results</a></p>-->{/if}
+</div>
+
+<ul>
+{/if}
+{if count<5}	
+	<li>
+		<a href="{auto_path}">
+
+			<img src="{archive_thumb}" alt="" />
+			<div>
+				<p class="meta">Category | <em>{categories backspace="2"}{category_name}, {/categories}</em</p>
+				<h3>{title}</h3>
+				<p>{excerpt}</p>
+			</div>
+		</a>
+	</li>
+{/if}
+{if count == 5 || count == total_results}	
+</ul>
+
+{/if}
+{if count > 5 && count == total_results}	
+<p><a href="/site/results/{segment_3}">There&rsquo;s more where that came from...</a></p>
+{/if}
+
+
+{/exp:search:search_results}

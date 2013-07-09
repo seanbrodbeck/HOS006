@@ -1,0 +1,83 @@
+1372778582
+		{embed="inc/head"}
+		<body class="work-detail">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-wrapper">
+			<div class="header-inner-wrapper">
+				{embed="inc/header"}
+
+				
+				<nav class="subnav">
+					<ul>
+						<li class="{if "ads-collateral" == "branding"}on{/if}"> <a href="/site/work/#work-1">Branding</a></li>
+						<li class="{if "ads-collateral" == "ads-collateral"}on{/if}"><a href="/site/work/#work-2">Ads &amp; Collateral</a></li>
+						<li class="{if "ads-collateral" == "illustration"}on{/if}"><a href="/site/work/#work-3">Illustration</a></li>
+						<li class="{if "ads-collateral" == "posters"}on{/if}"><a href="/site/work/#work-4">Posters</a></li>
+						<li class="{if "ads-collateral" == "books-covers"}on{/if}"><a href="/site/work/#work-5">Books &amp; Covers</a></li>
+						<li class="{if "ads-collateral" == "in-house"}on{/if}"><a href="/site/work/#work-6">In House</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		{embed="inc/search-modal"}
+		<div class="hover-trigger"><span>Menu</span></div>
+	2
+		
+		<a class="prev pager ss-icon ss-standard ss-navigaterright" href="http://hos-app.pixelpushstudio.com/site/detail/starbucks">Previous</a>
+		
+
+		
+		<a class="next pager ss-icon ss-standard ss-navigaterleft" href="http://hos-app.pixelpushstudio.com/site/detail/miller-series">Next</a>
+		
+
+
+		<div class="wrap content search-wrap">
+
+			<div class="split3_1-2">
+
+				<div class="col first">
+
+					<div class="module">
+
+						<h1>Subaru</h1>
+
+						<p class="meta"></p>
+
+						<p class="intro"></p>
+
+						<p>Subaru asked us to create a series of ads and illustrations for the Philadelphia market to highlight the car manufacturers local ties and to celebrate the cities rich history.</p>
+
+						<p class="meta meta-alt">Client | <em>Subaru</em></p>
+						{if ""}<p class="meta">Art Direction | <em></em></p>{/if}
+
+					</div>
+
+				</div>
+
+				<div class="col">
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/Subaru_Bridge_WorkDetail.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/Subaru_CityHall_WorkDetail.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/Subaru_IndyHall_WorkDetail.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/Subaru_LibertyBell_WorkDetail.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/Subaru_LibertyPlace_WorkDetail.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/Subaru_Love_WorkDetail.jpg" data-caption="" alt="" />
+					
+				</div>
+
+			</div>
+			
+
+		</div><!-- /wrap-->
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+	</body>
+</html>

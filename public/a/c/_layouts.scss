@@ -1,0 +1,173 @@
+
+/*-------------------------------------------
+
+   	 Layouts
+-------------------------------------------*/
+.wrap { 
+	@include clearfix;
+	position: relative;
+	max-width: $max-page-width;
+	margin: 0 auto;
+
+	@media (max-width: $max-page-width + 20 ) { 
+		padding: 0 20px;
+	} 
+}
+
+.work, .work-detail, .case-study, .case-studies, .blog {
+	.content { padding-top: $base*2; }
+}
+
+
+.main { 
+	float: left;
+	@include flex-grid(7, 6); 
+	margin-right: $flex-gutter;
+	@media (max-width: 600px) {
+		width: 100%;
+		margin-right: 0;
+	}
+}
+
+.sub { 
+	float: left;
+	@include flex-grid(3, 2);
+	@media (max-width: 600px) {
+		width: 100%;
+		margin-right: 0;
+	}	
+}
+
+.split4 { // 4 equally sized columns
+	@include clearfix;
+	margin-bottom: $base-large;
+
+	.grid-block, .col { 
+		width: 23.5%;
+		margin: 0 0 2% 2%;
+	}
+	.grid-block {  }
+	.grid-block:nth-child(4n+1) { margin-left: 0 !important; }
+}
+
+
+.split3 { // 3 equally sized columns
+	@include clearfix;
+	//display: table;
+
+	.col { 
+		width: 31.6%;
+		margin-left: 2.5%;
+	}
+	@media (max-width: 730px) { 
+		&.handheld-horz .col { 
+			position: relative;
+			width: 100%;
+			padding-left: 27%;
+			padding-top: 20px;
+			margin-left: 0;
+			.meta { margin-bottom: $base-medium;}
+			p:not(.meta) { display: none; }
+			.about & p { display: block; }
+			.cushion { padding-bottom: $base-medium; }
+			img { position: absolute; top: 0; left: 0; max-width: 25%; }
+		}
+	}
+}
+
+.split3_2-1-alt {  
+	@include clearfix;
+	.col { 
+		width: 31.6%;
+		margin-left: 2.5%;
+	}
+	.first {
+		width: 65.7%;
+	}
+}
+
+.split3_1-2 { // 1st col small, 2nd col large
+	@include clearfix;
+
+	.col { 
+		@include flex-grid(7, 6);
+		margin-bottom: $flex-gutter;
+	}
+
+	.first { 
+		@include flex-grid(3, 2);
+		margin-right: $flex-gutter;
+	}
+	&.tall .grid-block:not(.first) figure:first-child {
+		margin-bottom: 30px;
+		@media screen and (max-width: 700px) {
+			margin-bottom: 9%;
+		}
+	}
+	&.tall .grid-block:not(.first) figure:last-child {
+		margin-bottom: 0;
+	}
+}
+
+
+.split3_2-1 { // 1st col large, 2nd col small
+	@include clearfix;
+
+	.col { 
+		@include flex-grid(3, 2);
+		margin-bottom: $flex-gutter;
+		@media (max-width: 700px) {
+			.about & { @include flex-grid(4, 3); }
+		}
+		@media (max-width: 550px) {
+			.about & { width: 100%; }
+		}		
+	}
+	.first { 
+		@include flex-grid(7, 6);
+		margin-right: $flex-gutter;
+		@media (max-width: 700px) {
+			.about & { @include flex-grid(6, 5); }
+		}
+		@media (max-width: 550px) {
+			.about & { 
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+
+	}
+	&.tall .grid-block:not(.first) figure:first-child {
+		margin-bottom: 30px;
+		@media screen and (max-width: 700px) {
+			margin-bottom: 9%;
+		}
+	}
+
+}
+
+.split2 {  // 2 equally sized columns
+	@include clearfix;
+	.col { 
+		width: 49%;
+		margin-left: 2%;
+	}
+	@media (max-width: 600px) {
+		footer .col-2 & .col {
+			width: 100%;
+			margin-left: 0;
+		}	
+	}
+}
+
+.full-width { margin-bottom: $flex-gutter; }
+
+.col { // basic buidling block for columns TODO
+	float: left;
+}
+
+.grid-block { @extend .col; }
+
+.first { margin-left: 0 !important; }
+
+

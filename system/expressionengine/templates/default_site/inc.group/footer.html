@@ -1,0 +1,80 @@
+<footer id="contact">
+	<div class="wrap">
+
+		<div class="col-1">
+			<h2>Contact Us</h2>
+
+			<div class="split2">
+
+				<div class="col first">
+
+					<p class="address">
+						<strong>The Heads of State</strong>
+						<a target="_blank"  title="Go to Google Maps" href="https://maps.google.com/maps?q=39+N.+3rd+Street+%7C+2nd+Floor&amp;ie=UTF-8&amp;hq=&amp;hnear=0x89c6c885cdfed2f9:0x7f7f7b0de6fc04cb,39+N+3rd+St,+Philadelphia,+PA+19106&amp;gl=us&amp;daddr=39+N+3rd+St,+Philadelphia,+PA+19106&amp;ei=ZKWmUcLyDtjI4APrlYHAAQ&amp;ved=0CDIQwwUwAA">39 N. 3rd Street | 2nd Floor<br />
+						Philadelphia, PA 19106</a>
+					</p>
+
+				</div>
+
+				<div class="col social-header">
+
+					<h3>Follow Us</h3>
+					<p>
+						<a class="f-fb ss-social ss-icon" target="_blank" href="https://www.facebook.com/theheadsofstate">Facebook</a>
+						<a class="f-twitter ss-social ss-icon" target="_blank"  href="https://twitter.com/theheadsofstate">Twitter</a>
+						<a class="f-instagram ss-social ss-icon" target="_blank"  href="http://instagram.com/theheadsofstate/">Instagram</a>
+						<a class="f-pintrest ss-social ss-icon" target="_blank"  href="http://pinterest.com/theheadsofstate/">Pinterest</a>
+					</p>
+
+				</div><!--col-->
+
+			</div><!-- split-2-alt -->
+
+			<p class="f-email ss-standard ss-mail"><a href="mailto:studio@theheadsofstate.com">studio@theheadsofstate.com</a></p>
+
+			<form class="mailing-list" action="http://theheadsofstate.createsend.com/t/y/s/wjjui/" method="post">
+				<label class="move">Join Our Mailing List</label>
+				<input type="text" name="cm-wjjui-wjjui" id="wjjui-wjjui" placeholder="Join our mailing list">
+				<input type="submit" class="btn" value="Sign Up">
+			</form>
+
+		</div><!-- col-->
+
+		<div class="col-2">
+
+			<h2>Questions?</h2>
+
+			{exp:freeform:form 
+				form:class="split2"
+				form_name="contact"
+				return="site/contact-confirmation" 
+			}
+				<div class="col first">
+					<input type="text" placeholder="Name" name="name"/>
+					<input type="email" placeholder="Email" name="email"/>
+					<input type="tel" placeholder="Phone" name="phone"/>
+					<input type="text" placeholder="Company" name="company"/>
+				</div>
+				<div class="col">
+					<select class="styled-select" style="width: 100%" name="business">
+						<option>How May We Direct Your Call?</option>
+						<option value="New Business">New Business</option>
+						<option value="Old Business">Old Business</option>
+						<option value="Love Letters">Love Letters</option>
+						<option value="Press and Speaking">Press &amp; Speaking</option>
+						<option value="General Questions">General Questions</option>
+					</select>
+
+					<textarea name="message"></textarea>
+
+					<input type="submit" class="btn" value="Submit">
+				</div>
+			{/exp:freeform:form}
+		</div><!-- col -->
+
+
+
+		<p class="copyright">&copy; The Heads of State 2013. All rights Reserved.</p>
+
+	</div>
+</footer>

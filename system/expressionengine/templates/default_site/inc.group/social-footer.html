@@ -1,0 +1,83 @@
+<section class="social-footer cards">
+
+	<span class="prev pager ss-icon ss-standard ss-navigaterright">Previous</span>
+	<span class="next pager ss-icon ss-standard ss-navigaterleft">Next</span>
+
+	<div class="wrap">
+
+		<div class="adjunct-header">
+			<ul>
+				<li><a class="on blog-trigger" href="#">Blog</a></li>
+				<li><a class="insta-trigger" href="#">Instagram</a></li>
+			</ul>
+			<p class="adjunct-link"><a href="/site/blog/">See All Posts</a></p>
+		</div>
+
+
+		<h2 class="move">Blog</h2>
+		<div class="royalSlider rsDefault blog-panel">
+			{exp:channel:entries channel="blog" dynamic="no" limit="15"}
+			{if count == '1'}<div class="split3 rsContent">{/if}
+			{if count == '4'}<div class="split3  rsContent">{/if}
+			{if count == '7'}<div class="split3  rsContent">{/if}
+			{if count == '10'}<div class="split3 rsContent">{/if}
+			{if count == '13'}<div class="split3  rsContent">{/if}
+
+			<article class="col {if count == "1"}first{/if}{if count == "4"}first{/if}{if count == "7"}first{/if}{if count == "10"}first{/if}{if count == "13"}first{/if}">
+				<a href="{title_permalink="site/article"}">
+					<img src="{home_feature_image}" alt="" height="376" width="376" />
+					<h3>{title}</h3>
+				</a>
+				<div class="cushion">
+					<p class="meta">
+						{entry_date format="%n.%d.%y"} | <em>By {author}</em> <span>|</span>
+						<a class="ss-social ss-icon" href="https://www.facebook.com/dialog/feed&link={title_permalink='site/article'}">Like</a>
+						<a class="ss-social ss-icon" href="https://twitter.com/intent/tweet?url={title_permalink="site/article"}&hashtags=theheadsofstate">twitter</a>
+					</p>
+					<p class="article">{article_intro_text}&hellip;</p>
+					<p class="more"><a href="{title_permalink="site/article"}">Read the full article&hellip;</a></p>	
+				</div>
+			</article>
+			{if count == '3'}</div><!-- split3-->{/if}
+			{if count == '6'}</div><!-- split3-->{/if}
+			{if count == '9'}</div><!-- split3-->{/if}
+			{if count == '12'}</div><!-- split3-->{/if}
+			{if count == '15'}</div><!-- split3-->{/if}
+			{/exp:channel:entries}
+		</div>
+
+
+		<h2 class="move">Instagram</h2>
+		<div class="royalSlider rsDefault royalSlider2 insta-panel">
+
+			<div class="split3 rsContent">
+			
+				{exp:tgl_instagram:user_feed username="theheadsofstate" limit="30" cache="30"}
+
+				{if count==4 || count==7 || count==10 || count==13 || count==16 || count==19 || count==22 || count==25 || count==28 || count==31}
+				<div class="split3 handheld-horz">
+				{/if}	
+
+					<article class="col block-instagram {if count==1 ||count==4 || count==7 || count==10 || count==13 || count==16 || count==19 || count==22 || count==25 || count==28}first{/if}">
+						<a target="_blank" href="{link}">
+							<img src="{standard_resolution_url}" height="376" width="376" alt="">
+							<p>
+								<span class="likes">{likes_count} Likes</span>
+								<em>{exp:wb_relative_date}{created_at}{/exp:wb_relative_date}</em>
+							</p>
+						</a>
+					</article>
+
+				{if count==3 || count ==6 || count==9 || count==12 || count==15 || count==18 || count==21 || count==24 || count==27 || count==30}
+				</div>
+				{/if}
+
+				{/exp:tgl_instagram:user_feed}					
+
+
+		</div><!-- royalSlider-->
+
+	</div><!-- /wrap-->
+
+</section><!-- /social-footer-->
+

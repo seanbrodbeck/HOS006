@@ -1,0 +1,45 @@
+<div id="search-modal">
+
+	<div class="search-drawer">
+		<div class="topper">
+			<div class="wrap">
+				<form id="search-modal-form">
+					<input type="text" id="search-modal-keywords" placeholder="Keywords.." />
+				</form>
+
+				<a class="close" href="#" id="search-modal-close">x</a>
+			</div>
+		</div>
+	</div><!-- /search-drawer-->
+
+	<div class="search-results">
+		<div class="wrap">
+			{!-- search results get injected here --}
+		</div>
+	</div><!-- /search-results-->
+
+	{!-- these are the search forms created by ee. we serialize them with jquery and submit with ajax --}
+	<div id="search-forms" style="display:none;">
+		{exp:search:simple_form 
+			channel="blog" 
+			form_id="blog-search-form"
+			result_page="inc/search-results-ajax-blog"
+			no_result_page="inc/search-no-results-ajax/blog"
+			results="20"
+			search_in="everywhere"
+		}
+		<input type="hidden" id="blog-keywords" name="keywords" value="" >  
+		{/exp:search:simple_form}
+
+		{exp:search:simple_form 
+			channel="work" 
+			form_id="work-search-form"
+			result_page="inc/search-results-ajax-work"
+			no_result_page="inc/search-no-results-ajax/work"
+			results="20"
+			search_in="everywhere"
+		}
+		<input type="hidden" id="work-keywords" name="keywords" value="" >  
+		{/exp:search:simple_form}
+	</div>
+</div>

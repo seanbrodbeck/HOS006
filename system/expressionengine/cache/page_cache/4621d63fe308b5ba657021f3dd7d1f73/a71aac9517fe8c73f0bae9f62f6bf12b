@@ -1,0 +1,83 @@
+1372706748
+		{embed="inc/head"}
+		<body class="work-detail">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-wrapper">
+			<div class="header-inner-wrapper">
+				{embed="inc/header"}
+
+				
+				<nav class="subnav">
+					<ul>
+						<li class="{if "branding" == "branding"}on{/if}"> <a href="/site/work/#work-1">Branding</a></li>
+						<li class="{if "branding" == "ads-collateral"}on{/if}"><a href="/site/work/#work-2">Ads &amp; Collateral</a></li>
+						<li class="{if "branding" == "illustration"}on{/if}"><a href="/site/work/#work-3">Illustration</a></li>
+						<li class="{if "branding" == "posters"}on{/if}"><a href="/site/work/#work-4">Posters</a></li>
+						<li class="{if "branding" == "books-covers"}on{/if}"><a href="/site/work/#work-5">Books &amp; Covers</a></li>
+						<li class="{if "branding" == "in-house"}on{/if}"><a href="/site/work/#work-6">In House</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		{embed="inc/search-modal"}
+		<div class="hover-trigger"><span>Menu</span></div>
+	1
+		
+		<a class="prev pager ss-icon ss-standard ss-navigaterright" href="http://hos-app.pixelpushstudio.com/site/detail/spells">Previous</a>
+		
+
+		
+		<a class="next pager ss-icon ss-standard ss-navigaterleft" href="http://hos-app.pixelpushstudio.com/site/detail/wondermade">Next</a>
+		
+
+
+		<div class="wrap content search-wrap">
+
+			<div class="split3_1-2">
+
+				<div class="col first">
+
+					<div class="module">
+
+						<h1>SVA</h1>
+
+						<p class="meta"></p>
+
+						<p class="intro"></p>
+
+						<p>For the branding of The School of Visual Arts' MFA in Interaction Design program we created a custom version of HTF's Gotham to anchor an identity and collateral system that speaks to interaction and user interface. </p>
+
+						<p class="meta meta-alt">Client | <em>School of Visual Arts</em></p>
+						{if ""}<p class="meta">Art Direction | <em></em></p>{/if}
+
+					</div>
+
+				</div>
+
+				<div class="col">
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/SVA_WorkDetail_Standard_1.png" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/SVA_Workdetail_Standard_3.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/SVA_Workdetail_Standard_4.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/SVA_WorkDetail_Standard_6.png" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/SVA_Workdetail_Standard_2.jpg" data-caption="" alt="" />
+					
+					<img src="http://hos-app.pixelpushstudio.com/images/uploads/SVA_Workdetail_Standard_5.jpg" data-caption="" alt="" />
+					
+				</div>
+
+			</div>
+			
+
+		</div><!-- /wrap-->
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+	</body>
+</html>

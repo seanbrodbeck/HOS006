@@ -1,0 +1,232 @@
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script src="{site_url}public/a/j/plugins.js"></script>
+		<script src="{site_url}public/a/j/vendor/jquery.royalslider.custom.min.js"></script>
+		<script src="{site_url}public/a/j/vendor/jquery.timeago.js"></script>
+		<script src="{site_url}public/a/j/main.min.js"></script>
+		<script src="{site_url}public/a/j/vendor/stickystack.js"></script>
+		<script src="{site_url}public/a/j/vendor/jquery.ddslick.min.js"></script>
+		<script src="{site_url}public/a/j/vendor/waypoints.min.js"></script>
+	
+
+		<script>
+		    jQuery(document).ready(function($) {
+		        $(".royalSlider").royalSlider({
+		        	controlNavigation: 'none',
+		        	loop: true,
+		        	arrowsNav: false,
+		        	autoHeight:true
+
+		        }); 
+		        $(".royalSlider2").royalSlider({
+    				controlNavigation: 'none',
+    				arrowsNav: false,
+    				autoHeight:true,
+    				loop: true
+
+    			});  	
+		        $(".cs-royalSlider").royalSlider({
+		        	controlNavigation: 'none',
+		        	arrowsNav: false,
+		        	autoScaleSlider:true,
+		        	loop: true, 
+		        	autoScaleSliderWidth: '1190', 
+		        	autoScaleSliderHeight: '506',
+		        	imageScalePadding: 0,
+		        	slideSpacing: 0,
+		        	transitionType: 'fade',
+		        	autoPlay: {
+		        		// autoplay options go gere
+		        		enabled: true,
+		        		delay: 4000
+		        	}
+		        }); 
+	  		 var slider = $(".royalSlider").data('royalSlider');
+				$('.prev').click(function(){
+					slider.prev();
+				})
+				$('.next').click(function(){
+					slider.next();
+
+				});
+			var slider2 = $(".royalSlider2").data('royalSlider');
+				$('.prev').click(function(){
+					slider2.prev();
+				})
+				$('.next').click(function(){
+					slider2.next();
+
+				});	
+			// var slider3 = $(".cs-royalSlider").data('royalSlider');
+			// 	$('.prev-cs').click(function(){
+			// 		slider3.prev();
+			// 	})
+			// 	$('.next-cs').click(function(){
+			// 		slider3.next();
+
+			// 	});					
+			});
+
+			$('.styled-select').ddslick();
+		</script>
+		<script>
+
+			$container = $(".header-inner-wrapper")
+			$totalHeight = $container.outerHeight();
+
+			$('body:not(.home) .search-wrap')
+			  .waypoint(function(direction) {
+			    if (direction === 'down') { 
+			    	$(".hover-trigger").fadeIn("fast");
+			    	$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
+			    	$("body").css("padding-top", $totalHeight);
+			    }
+			  }, { offset: 20 })
+			  .waypoint(function(direction) {
+			    if (direction === 'up') { 
+			    	$(".hover-trigger").fadeOut("fast");
+			    	$container.removeClass("fixed").css("top", 0);
+			    	$("body").css("padding-top", 0);
+			    	$(".hover-trigger span").fadeIn();
+			    }
+			  }, { offset: 20 });
+
+
+			  $('.home .home-ps')
+			    .waypoint(function(direction) {
+			      if (direction === 'down') { 
+			      	$(".hover-trigger").fadeIn("fast");
+			      	$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
+			      	$("body").css("padding-top", $totalHeight);
+			      }
+			    }, { offset: 20 })
+			    .waypoint(function(direction) {
+			      if (direction === 'up') { 
+			      	$(".hover-trigger").fadeOut("fast");
+			      	$container.removeClass("fixed").css("top", 0);
+			      	$("body").css("padding-top", 0);
+			      	$(".hover-trigger span").fadeIn();
+			      }
+			    }, { offset: 20 });
+	
+
+			$('.hover-trigger').hover(function() {
+				$(".hover-trigger span").fadeOut();
+				$(".header-inner-wrapper").addClass("expanded").animate({
+	  				top: 0
+				});
+
+			});
+
+			$container.mouseleave(function() {
+				$(this).removeClass("expanded").animate({
+					top:  -$totalHeight
+				});
+				$(".hover-trigger span").fadeIn();
+			});				
+
+			$container.waypoint(function() {
+				$(this).addClass("top")
+				console.log("add top class");
+			});	
+				
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			// Show search modal
+			$('#search-modal-button').click(function(e){
+				e.preventDefault();
+				$('#search-modal').fadeIn(500);
+				$('#search-modal-keywords').focus();
+			});
+
+			// Close search modal
+			$('#search-modal-close').click(function(e){
+				e.preventDefault();
+				$('#search-modal').fadeOut(100);
+			});
+
+			// Catch the search modal submit event
+			// and do the searches via ajax
+			$('#search-modal-form').submit(function(e){
+				e.preventDefault();
+
+				// grab the keywords field
+				var keywords = $('#search-modal-keywords').val();
+				
+				// clear any existing results
+				$('.search-results .wrap').html('');
+
+				// set the two hidden keywords field
+				// values to the user input
+				$('#blog-keywords').val(keywords);
+				$('#work-keywords').val(keywords);
+
+				// perform the ajax post for the blog search
+				var action = $('#blog-search-form').attr('action');
+				var form = $('#blog-search-form').serialize();
+
+				$.post(action, form, function(data){
+					$('.search-results .wrap').append(data);
+				});
+
+				// perform ajax post for the work search
+				var action = $('#work-search-form').attr('action');
+				var form = $('#work-search-form').serialize();
+
+				$.post(action, form, function(data){
+					$('.search-results .wrap').append(data);
+				});
+
+			});
+
+			// Load archives
+			$('.see-more h2 a').click(function(e){
+				e.preventDefault();
+				
+				var page = $('nav.subnav ul li.on a').data('page');
+
+				var category = $('section#' + page + ' input.category').val();
+				var children = $('section#' + page + ' input.children').val();
+				children.replace('|', '&');
+
+				$.get('/inc/archives/' + category + '/' + children, function(data) {
+  					$('#archive-holder').html(data);
+  				});
+				
+			});
+
+			$(document).on('click','.subnav a',function(e){
+ 				if  ($('nav.subnav ul li.on a').data('page') == "branding" || $('nav.subnav ul li.on a').data('page') == "books" || $('nav.subnav ul li.on a').data('page') == "ads-collateral") {
+ 					$(".see-more").hide();
+ 				}
+ 				else {
+ 					$(".see-more").show();
+ 				}
+			});
+
+		});
+
+			$(document).on('click','.about-list .clients-head',function(e){
+				$(".head-wrap h3").removeClass("on");
+ 				$(this).addClass("on");
+ 				$(".accolades, .speaking").hide();
+ 				$(".about-list .clients").show();
+			});
+			$(document).on('click','.about-list .accolades-head',function(e){
+ 				$(".head-wrap h3").removeClass("on");
+ 				$(this).addClass("on");
+ 				$(".about-list .clients, .about-list .speaking").fadeOut(function(){
+ 					$(".about-list .accolades").fadeIn();
+ 				});
+ 				
+			});
+			$(document).on('click','.about-list .speaking-head',function(e){
+				$(".head-wrap h3").removeClass("on");
+ 				$(this).addClass("on");
+ 				$(".about-list .accolades, .about-list .clients").fadeOut(function(){
+ 					$(".about-list .speaking").fadeIn();
+ 				});
+			});
+	</script>

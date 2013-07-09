@@ -1,0 +1,39 @@
+.user-message-page{
+	header {
+		margin-bottom: 0;
+	}
+	.content {	
+		
+		.wrap {
+			max-width: 600px;
+			
+			text-align: center;
+		}
+		h2 { 
+			font: bold 40px/1 $serif;
+			margin-bottom: 30px;
+		}
+	}
+	
+	.intro { font: 37px/1 $serif; }
+	.meta { 
+		font: bold italic 18px $serif; 
+		color: #939392;
+		text-transform: none;
+		letter-spacing: 0;
+		a { 
+			color: #3b3b3b;
+		}
+	}
+}
+
+.four-o-four {
+	.content {
+		min-height: 545px;
+		margin-top: -16px;
+		background: #fff url(/public/a/i/404.jpg) center -192px;
+		.wrap {
+			margin-top: 276px;
+		}
+	}
+}

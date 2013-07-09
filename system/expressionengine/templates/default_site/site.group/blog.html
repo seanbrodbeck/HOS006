@@ -1,0 +1,114 @@
+	{embed="inc/head"}
+	<body class="blog">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+
+		{embed="inc/search-modal"}
+
+		<div class="hover-trigger"><span>Menu</span></div>
+		
+		<div class="search-wrap">
+	
+			<div class="wrap content">
+				{exp:channel:entries channel="blog_landing" limit="1"}
+					<h2 class="positioning-statement">{cs_page_heading}</h2>
+					<p class="subhead-alt">{cs_intro_copy}</p>
+				{/exp:channel:entries}
+			</div>
+			<div class="wrap blog">
+
+				<div class="main cards infinite-container">
+				{exp:channel:entries channel="blog" limit="7" orderby="date" paginate_base="site/blog"}
+
+					<article class="col">
+						<a href="{title_permalink="site/article"}">
+							<img src="{blog_cover_image}" alt="" />
+							<h3>{title}</h3>
+						</a>
+						<div class="cushion">
+							<p class="meta">
+								{entry_date format="%n.%d.%y"} | <em>By {author}</em> |
+								<a class="ss-social ss-icon" href="#">Like</a>
+								<a class="ss-social ss-icon" href="https://twitter.com/intent/tweet?url={title_permalink="site/article"}&hashtags=theheadsofstate">twitter</a>
+							</p>
+							<p>{article_intro_text}&hellip;</p>
+							<p class="more"><a href="{title_permalink="site/article"}">Read the full article&hellip;</a></p>	
+						</div>
+					</article>	
+
+					{paginate}
+					<div class="pagination">
+					    {pagination_links}
+					        {previous_page}
+					            <a href="{pagination_url}" class="newer">Previous Page</a>
+					        {/previous_page}
+
+					        {next_page}
+					            <a href="{pagination_url}" class="older">Next Page</a>
+					            {/next_page}
+					    {/pagination_links}
+					</div>
+					{/paginate}
+
+				{/exp:channel:entries}
+				</div><!--/main -->
+
+				<div class="sub" data-load="instagram">
+				{exp:tgl_instagram:user_feed username="theheadsofstate" limit="30" cache="30"}
+
+					<div class="block-instagram">
+						<a href="{link}">
+							<img src="{standard_resolution_url}" alt="" />
+							<p>
+								<span class="likes">{likes_count} Likes</span>
+								<em>{exp:wb_relative_date}{created_at}{/exp:wb_relative_date}</em>
+							</p>
+						</a>
+					</div>
+					
+				{/exp:tgl_instagram:user_feed}		
+				</div><!-- /sub -->
+
+			</div><!-- /wrap-->
+
+		</div><!-- /search-wrap-->
+		
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+
+		<script src="/public/a/j/waypoints-infinite.min.js"></script>
+		<script>
+
+			var $wall = $('.infinite-container');
+
+			//Infinite scroll
+			$wall.infinitescroll({
+				navSelector : 'div.pagination',
+				nextSelector : 'div.pagination a.older',
+				itemSelector : 'article',
+				loading: {
+					finishedMsg: "End of the line!",
+					img: "/public/i/ajax-loader.gif",
+					msgText: "<em>Loading articles...</em>"
+				},
+				animate : true,
+				extraScrollPx: 150,
+				extractLink: true,
+			    pathParse: function() {
+			        return ['http://hos-app.dev/site/blog/P','']
+			    },
+				debug: true,
+				errorCallback: function() {
+					// fade out the error message after 2 seconds
+					$('#infscr-loading').animate({opacity: .8},2000).fadeOut('normal');
+				}
+			});
+
+		</script>
+
+	</body>
+</html>

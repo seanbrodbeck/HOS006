@@ -1,0 +1,429 @@
+<script type="text/javascript">
+
+	;(function(global, $){
+
+		function switchSite(site_id, form_id)
+		{
+			$('site_loader').show();
+
+			// The loader image is given a second to be seen before we switch
+			setTimeout(function(){
+				switchSite_action(site_id ,form_id);
+			}, 200);
+		}
+
+		function switchSite_action(site_id, form_id)
+		{
+			$("div[id*=_extension_site_channels]").hide();
+			$("div[id="+site_id+"_extension_site_channels]").show();
+
+			$('#site_loader').hide();
+
+			if ($("select[name='"+site_id+"_channel_list_pulldown'] option").length == 0)
+			{
+				switchChannel('none', site_id, form_id);
+			}
+			else
+			{
+				switchChannel($("select[name='"+site_id+"_channel_list_pulldown']").val(), site_id, form_id);
+			}
+		}
+
+
+		function switchChannel(channel_id, site_id, form_id)
+		{
+			$('#' + site_id + '_channel_loader').show();
+
+			// The loader image is given a second to be seen before we switch
+			setTimeout(function(){
+				switchChannel_action(channel_id,site_id,form_id);
+			}, 200);
+		}
+
+		function switchChannel_action(channel_id, site_id, form_id)
+		{
+			$("div[id*=_extension_channels_custom_fields]").hide();
+			$("div[id="+channel_id+"_extension_channels_custom_fields]").show();
+
+			$('#' + site_id + '_channel_loader').hide();
+
+			if (channel_id == 'none')
+			{
+				$("div[id*=_extension_field_settings]").hide();
+				$("#none_channels_extension_field_settings").show();
+				return;
+			}
+
+			if ($("select[name='" + channel_id + "_custom_field_list_pulldown'] option").length == 0)
+			{
+				switchCustomField('none', channel_id, form_id, site_id);
+			}
+			else
+			{
+				switchCustomField($("select[name='" + channel_id + "_custom_field_list_pulldown']").val(), channel_id, form_id, site_id);
+			}
+		}
+
+
+		function switchCustomField(field_id, channel_id, form_id, site_id)
+		{
+			$('#' + channel_id + '_custom_field_loader').show();
+
+			// The loader image is given a second to be seen before we switch
+			setTimeout(function(){
+				switchCustomField_action(field_id,channel_id,form_id, site_id);
+			}, 200);
+		}
+
+		function switchCustomField_action(field_id, channel_id, form_id, site_id)
+		{
+			if (field_id != 'none')
+			{
+				loadSelectBox(site_id, channel_id, field_id);
+			}
+
+			$("div[id*=_extension_field_settings]").hide();
+
+			$('#' + channel_id + '_custom_field_loader').hide();
+
+			if (field_id == 'none')
+			{
+				$("#none_custom_fields_extension_field_settings").show();
+				return;
+			}
+
+			$('#'+ channel_id + "_" + field_id + "_extension_field_settings").show();
+		}
+
+		var loaded 		= {};
+
+		function loadSelectBox(site_id, channel_id, field_id)
+		{
+			// -------------------------------------
+			//	prevent double loading
+			// -------------------------------------
+
+			var local_name = [site_id, channel_id, field_id].join('_');
+
+			if (typeof loaded[local_name] && loaded[local_name])
+			{
+				return;
+			}
+
+			loaded[local_name] = true;
+
+			// -------------------------------------
+			//	hard work
+			// -------------------------------------
+
+			var $select 	= $('#' + channel_id + '_' + field_id + '_template_id');
+			var selected 	= $select.attr('data-selected');
+
+			var optionString = '';
+
+			for (var group in selectOptions[site_id])
+			{
+				if (selectOptions[site_id].hasOwnProperty(group))
+				{
+					//add optgroup start
+					optionString += '<optgroup label="' + group + '">';
+
+					//build selections in this group
+					for (var val in selectOptions[site_id][group])
+					{
+						if (selectOptions[site_id][group].hasOwnProperty(val))
+						{
+							//value
+							optionString += '<option value="' + val + '" ' +
+											((selected == val) ? 'selected="selected">' : '>');
+
+							//text label
+							optionString += selectOptions[site_id][group][val];
+							optionString += '<\/option>';
+						}
+					}
+
+					//add optgroup end
+					optionString += '<\/optgroup>';
+				}
+			}
+
+			$select.html(optionString);
+		}
+
+		global.Preparse = {
+			switchCustomField 	: switchCustomField,
+			switchChannel 		: switchChannel,
+			switchSite 			: switchSite,
+			loadSelectBox		: loadSelectBox
+		};
+
+		//select options are stored here because once you get a lot of templates, they repeat too many times
+		var selectOptions = {};
+
+<?php foreach ($sites as $site_id => $site_label):?>
+	<?php if ( ! isset($first_site)):?>
+		global.Preparse.firstSite = <?=$site_id?>;
+	<?php $first_site = TRUE; endif;?>
+
+		selectOptions['<?=$site_id?>'] = {};
+
+	<?php foreach($templates[$site_id] AS $group_name => $group_templates) :?>
+	selectOptions['<?=$site_id?>']['<?=addslashes($group_name)?>'] = {
+		<?php 	$count = 0;
+			foreach($group_templates AS $value => $text) :
+				$count++?>
+				'<?=addslashes($value)?>' : '<?=addslashes($text)?>'<?php
+					if ($count < count($group_templates)) echo ",\n";?>
+		<?php endforeach; ?>
+
+		};
+	<?php endforeach; ?>
+
+
+<?php endforeach; ?>
+
+	}(window, jQuery));
+
+</script>
+
+<!-- BEGIN FORM -->
+
+	<form action='<?php echo $caller->output($base_uri.(APP_VER < 2.0 ? '&P=save_extension_settings' : '&M=save_extension_settings'));?>' method='post' id="extension_settings_form">
+		<div>
+			<input type="hidden" name="name" value="preparse" />
+			<input type="hidden" name="XID" value="<?=$XID_SECURE_HASH?>" />
+		</div>
+
+		<div style='float:right;' ><strong> [<a href='<?php echo $docs_url;?>' onclick="window.open(this.href); return false;"><?php echo lang('documentation');?></a>]</strong>&nbsp;&nbsp;</div>
+
+		<div class="clear"></div>
+
+		<table class="mainTable padTable" border='0'  cellspacing='0' cellpadding='0' style='width:100%; border:none;' >
+
+			<tbody>
+				<tr>
+					<td valign='top' style='width:220px; border:none;'>
+
+						<!-- Site Pulldown -->
+						<?php if ($this->EE->config->item('multiple_sites_enabled') == 'y') : ?>
+
+						<table class="" style="width:100%" border="0" cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th><?php echo lang('sites');?></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>
+										<select name="site_list_pulldown" class="select" onchange="Preparse.switchSite(this.value, 'extension_settings_form')">
+											<?php foreach($caller->output($sites) as $site_id => $site_label) : ?>
+												<option value='<?php echo $site_id;?>' <?php echo ($site_id == $display['default_site_id']) ? 'selected="selected"' : '';?>><?php echo $site_label; ?></option>
+											<?php endforeach; ?>
+										</select>
+
+										<span id="site_loader" style="display:none;"><img src="<?php echo PATH_CP_GBL_IMG;?>loader.gif" width="16" height="16" style="vertical-align:sub;" /></span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<?php endif; ?>
+
+						<table class="" border="0" cellspacing="0" cellpadding="0" style="width:100%">
+							<thead>
+								<tr>
+									<th><?php echo lang('channels');?></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>
+										<!-- Channel Pulldowns -->
+										<?php foreach($caller->output($sites) as $site_id => $site_label) : ?>
+											<div class='profileMenuInner' id="<?php echo $site_id;?>_extension_site_channels" style="display: <?php echo ($site_id == $display['default_site_id']) ? 'block' : 'none';?>;">
+
+												<select name="<?php echo $site_id;?>_channel_list_pulldown" class="select" onchange="Preparse.switchChannel(this.value, '<?php echo $site_id;?>', 'extension_settings_form')">
+													<?php foreach($caller->output($channels[$site_id]) as $channel_id => $wechannel_title) : ?>
+														<option value='<?php echo $channel_id;?>' <?php echo ($channel_id == $display['default_channel_id']) ? 'selected="selected"' : '';?>><?php echo $wechannel_title; ?></option>
+													<?php endforeach; ?>
+												</select>
+
+												<span id="<?php echo $site_id;?>_channel_loader" style="display:none;"><img src="<?php echo PATH_CP_GBL_IMG;?>loader.gif" width="16" height="16" style="vertical-align:sub;" /></span>
+											</div>
+										<?php endforeach; ?>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table class="mainTable padTable" border="0" cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th><?php echo lang('custom_field');?></th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr>
+									<td>
+
+										<!-- Custom Field Pulldowns -->
+										<?php foreach($caller->output($sites) as $site_id => $site_label) : ?>
+											<?php foreach($caller->output($channels[$site_id]) as $channel_id => $wechannel_title) : ?>
+											<div class='profileMenuInner' id="<?php echo $channel_id;?>_extension_channels_custom_fields" style="display: <?php echo ($site_id == $display['default_site_id'] && $channel_id == $display['default_channel_id']) ? 'block' : 'none';?>;">
+
+												<select name="<?php echo $channel_id;?>_custom_field_list_pulldown" class="select" onchange="Preparse.switchCustomField(this.value, '<?php echo $channel_id;?>', 'extension_settings_form','<?=$site_id?>')">
+													<?php foreach($caller->output($custom_fields[$channel_id]) as $field_id => $field_label) : ?>
+														<?php $marker = ($current[$channel_id][$field_id]['outgoing_field_id'] != '') ? '*' : '';?>
+
+														<option value='<?php echo $field_id;?>' <?php echo ($field_id == $display['default_field_id']) ? 'selected="selected"' : '';?>><?=$marker.$field_label?></option>
+													<?php endforeach; ?>
+												</select>
+
+												<span id="<?php echo $channel_id;?>_custom_field_loader" style="display:none;"><img src="<?php echo PATH_CP_GBL_IMG;?>loader.gif" width="16" height="16" style="vertical-align:sub;" /></span>
+											</div>
+										<?php endforeach; ?>
+										<?php endforeach; ?>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+
+					<td class='default' style='width:8px; border:none;'></td>
+
+					<td valign='top' style="border:none !important;">
+
+
+
+
+
+<?php foreach($this->output($sites) AS $site_id => $site_label) : ?>
+<?php foreach($this->output($channels[$site_id]) AS $channel_id => $channel_title) : ?>
+<?php foreach($custom_fields[$channel_id] AS $custom_field_id => $custom_field_label) : ?>
+
+	<div id="<?php echo $channel_id;?>_<?php echo $custom_field_id;?>_extension_field_settings" style="display: <?php echo ($channel_id == $display['default_channel_id'] && $custom_field_id == $display['default_field_id']) ? 'block' : 'none';?>; padding:0; margin: 0;">
+		<table border='0'  cellspacing='0' cellpadding='0' style='width:100%;'  >
+			<thead>
+				<tr>
+					<th colspan='2'><?=$channel_title; ?> :: <?=$custom_field_label?></th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr class="odd">
+					<td style='width:35%;'>
+						<label for="<?=$channel_id?>_<?=$custom_field_id?>_outgoing_field_id"><?=lang('outgoing_field_id')?></label>
+					</td>
+
+					<td>
+						<select name="<?=$channel_id?>_<?=$custom_field_id?>_outgoing_field_id"
+								id="<?=$channel_id?>_<?=$custom_field_id?>_outgoing_field_id">
+
+						<?php
+							$options = array('0' => lang('choose_field')) + $custom_fields[$channel_id];
+
+							// Cannot output to yourself!  Silly Field!
+							unset($options[$custom_field_id]);
+
+							foreach($options as $value => $text) :
+							$selected = ($value == $current[$channel_id][$custom_field_id]['outgoing_field_id']) ? 'selected="selected"' : '';
+						?>
+							<option value="<?=$value?>" <?=$selected?>><?=$caller->output($text)?></option>
+						<?php endforeach; ?>
+						</select>
+					</td>
+				</tr>
+
+				<tr class="even">
+					<td style='width:35%; vertical-align:top;'>
+						<label for="<?=$channel_id?>_<?=$custom_field_id?>_template_id"><?=lang('template_id')?></label>
+					</td>
+
+					<td>
+						<select name="<?=$channel_id?>_<?=$custom_field_id?>_template_id"
+								id="<?=$channel_id?>_<?=$custom_field_id?>_template_id"
+							class="templateSelectBox"
+							data-selected="<?=$current[$channel_id][$custom_field_id]['template_id']?>">
+							<option value="<?=$current[$channel_id][$custom_field_id]['template_id']?>" selected="selected">x</option>
+						</select>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<?php endforeach;?>
+<?php endforeach;?>
+<?php endforeach;?>
+
+
+
+
+
+
+
+
+
+
+						<!-- In case a Site has no Channels -->
+
+						<div id="none_channels_extension_field_settings" style="display: none; padding:0; margin: 0;">
+							<table border='0'  cellspacing='0' cellpadding='0' style='width:100%;' >
+								<thead>
+									<tr>
+										<th>---</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="odd"><?php echo lang('no_channels');?></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<!-- In case a Channel has no Custom Fields -->
+
+						<div id="none_custom_fields_extension_field_settings" style="display: none; padding:0; margin: 0;">
+							<table border='0'  cellspacing='0' cellpadding='0' style='width:100%;' class="" >
+								<thead>
+									<tr>
+										<th>---</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="odd"><?php echo lang('no_custom_fields');?></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</td>
+				</tr>
+
+				<tr>
+					<td colspan="2" style="border:none;"></td>
+					<td style="border:none !important;">
+						<div class='itemWrapperTop' >
+							<input name='return' type='submit' class='submit' value='<?php echo  lang('save');?>'  />
+						</div>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	</form>
+
+<script type="text/javascript">
+	;(function($){
+		var nums = $('.templateSelectBox:first').attr('id').replace('_template_id', '').split('_');
+
+		Preparse.loadSelectBox(Preparse.firstSite, nums[0], nums[1]);
+	}(jQuery));
+</script>
+
+<!-- END FORM -->

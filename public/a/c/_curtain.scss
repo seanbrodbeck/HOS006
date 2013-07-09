@@ -1,0 +1,28 @@
+//OBSOLETE
+
+.curtains{
+    width: 100%;
+    z-index:1;
+    position:relative;
+    margin-bottom: 0;
+      header { z-index: 1000; top: 0; width: 100%;  position: fixed; 
+        //.inner-wrap { margin-bottom: 0; }
+    }
+}
+
+.curtains>li{
+    -webkit-transform:translateZ(0);
+    position: fixed;
+    display:block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    z-index:1;
+    margin: 0;
+    padding: 0;
+}
+.curtains>li.hidden{display:none;}
+.curtains>li:first-child{z-index:2;}
+

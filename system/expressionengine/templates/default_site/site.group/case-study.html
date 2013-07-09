@@ -1,0 +1,81 @@
+	{embed="inc/head"}
+	<body class="case-study">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+		
+		{embed="inc/search-modal"}
+
+		<div class="hover-trigger"><span>Menu</span></div>
+
+		{exp:channel:entries channel="case_studies" limit="1"}
+
+		{exp:channel:next_entry channel="case_studies"}
+				<a class="prev pager ss-icon ss-standard ss-navigaterright" href="{path='site/case-study'}">Previous</a>
+		{/exp:channel:next_entry}
+
+		{exp:channel:prev_entry channel="case_studies"}
+				<a class="next pager ss-icon ss-standard ss-navigaterleft" href="{path='site/case-study'}">Next</a>
+		{/exp:channel:prev_entry}
+	
+
+		<div class="wrap content search-wrap">
+
+			<strong class="meta-header">&mdash; Case Study &mdash;</strong>
+			<h1  class="positioning-statement">{title}</h1>
+			<p class="subhead">{subtitle}</p>
+			
+			<div class="carousel-wrap">
+				<div class="carousel cs-royalSlider rsDefault">
+					{casestudy_slideshow_images}
+					<img class="rsImg" src="{image}" alt="{caption}" height="506" width="1190" />
+					{/casestudy_slideshow_images}
+				</div>
+				<!--<span class="prev-cs  image-pager ss-icon ss-standard ss-navigaterright">Previous</span>
+				<span class="next-cs image-pager ss-icon ss-standard ss-navigaterleft">Next</span>-->
+			</div>
+
+			<div class="split3_1-2">
+
+				<div class="col capabilities first ">
+
+					<div class="module">
+						<h2>Project Scope</h2>
+						<ul>
+						{categories id="2"}
+							<li>{category_name}</li>
+						{/categories}
+						</ul>	
+
+						<p>{client_summary}</p>
+					</div>
+					<p class="btn-alt"><a href="{work_url}">See The Full Project</a></p>						
+				</div>
+
+				<div class="col module">
+
+					{body}
+					
+					<blockquote>
+						{testimonial}
+						<p>&ldquo;{testimonial}&rdquo;</p>
+						<p class="who">- {client} | {client-role}</p>
+						{/testimonial}
+					</blockquote>
+
+					{solution}
+
+				</div>
+				
+			</div><!-- /split3_1-2-->
+
+		</div><!-- /wrap-->
+		{/exp:channel:entries}
+
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+	</body>
+</html>

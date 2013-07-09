@@ -1,0 +1,106 @@
+1372779682
+	{embed="inc/head"}
+	<body class="case-study">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+		
+		{embed="inc/search-modal"}
+
+		<div class="hover-trigger"><span>Menu</span></div>
+
+		
+
+		
+
+		
+				<a class="next pager ss-icon ss-standard ss-navigaterleft" href="http://hos-app.pixelpushstudio.com/site/case-study/once-in-a-lullaby">Next</a>
+		
+	
+
+		<div class="wrap content search-wrap">
+
+			<strong class="meta-header">&mdash; Case Study &mdash;</strong>
+			<h1  class="positioning-statement">Wondermade</h1>
+			<p class="subhead">Talk About Your Childhood Wishes...</p>
+			
+			<div class="carousel-wrap">
+				<div class="carousel cs-royalSlider rsDefault">
+					
+					<img class="rsImg" src="http://hos-app.pixelpushstudio.com/images/uploads/Wondermade_casestudies_large01_Standard.jpg" alt="" height="506" width="1190" />
+					
+					<img class="rsImg" src="http://hos-app.pixelpushstudio.com/images/uploads/Wondermade_casestudies_large02_Standard.jpg" alt="" height="506" width="1190" />
+					
+					<img class="rsImg" src="http://hos-app.pixelpushstudio.com/images/uploads/Wondermade_casestudies_large03_Standard.jpg" alt="" height="506" width="1190" />
+					
+					<img class="rsImg" src="http://hos-app.pixelpushstudio.com/images/uploads/Wondermade_casestudies_large05.jpg" alt="" height="506" width="1190" />
+					
+					<img class="rsImg" src="http://hos-app.pixelpushstudio.com/images/uploads/Wondermade_casestudies_large06.jpg" alt="" height="506" width="1190" />
+					
+				</div>
+				<!--<span class="prev-cs  image-pager ss-icon ss-standard ss-navigaterright">Previous</span>
+				<span class="next-cs image-pager ss-icon ss-standard ss-navigaterleft">Next</span>-->
+			</div>
+
+			<div class="split3_1-2">
+
+				<div class="col capabilities first ">
+
+					<div class="module">
+						<h2>Project Scope</h2>
+						<ul>
+						
+							<li>Branding</li>
+						
+							<li>Art Direction</li>
+						
+							<li>Branding</li>
+						
+							<li>Collateral</li>
+						
+							<li>Copyrighting</li>
+						
+							<li>Illustration</li>
+						
+						</ul>	
+
+						<p>Wondermade makes superior handmade marshmallows. With flavors unexpected and delightful, this small company from Orlando, FL has made quite the stir.</p>
+					</div>
+					<p class="btn-alt"><a href="/site/detail/wondermade">See The Full Project</a></p>						
+				</div>
+
+				<div class="col module">
+
+					<h2>Overview</h2>
+<p>Wondermade approached us with a simple yet outrageous plan. They wanted to make artisan marshmallows and they needed branding and packaging. Their flavors would be unique like blueberry, lemon, and Guinness beer. And they didn’t want to sell their treats in a plastic bag at the supermarket.</p>
+
+<h2>Problem</h2>
+<p>The artisan confectionery market is dominated by packaging with amateurish typesetting and overly luxurious printing techniques. We wanted to be bold and simple, while maintaining a sense of childlike wonder and surprise.</p>
+
+
+					
+					<blockquote>
+						
+						<p>&ldquo;I was concerned about achieving the balance between high impact and aesthetic taste, but the solution did a better job at setting this not only as a movie but as a brand.
+&rdquo;</p>
+						<p class="who">- Jonathan Kalafer | Founder New Jersey Films</p>
+						
+					</blockquote>
+
+					<h2>Solution</h2>
+The logo needed to be fun and memorable, as well as symbolic of the product and the company's pioneering spirit. We found our inspiration in both Willy Wonka and Jules Verne. Using bright colors and custom letterpressing, we then created a package that feels fun while not being silly, and substantial without looking luxurious. We used uncoated stock to further emphasize the hand-crafted nature of the marshmallows. But the icing on the cake came for us with the addition of the tagline “Made with 100% Sweet Magic Air.” We knew we had found the ultimate secret candy recipe.
+
+				</div>
+				
+			</div><!-- /split3_1-2-->
+
+		</div><!-- /wrap-->
+		
+
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+	</body>
+</html>

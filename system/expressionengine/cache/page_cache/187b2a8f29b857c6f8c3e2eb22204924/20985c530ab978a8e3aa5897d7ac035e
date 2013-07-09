@@ -1,0 +1,83 @@
+1372783012
+	{embed="inc/head"}
+	<body class="work-landing">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-wrapper">
+			<div class="header-inner-wrapper">
+				{embed="inc/header"}
+
+				<nav class="subnav">
+					<ul>
+						<li class="on"><a href="/site/work/#work-1" data-page="branding">Branding</a></li>
+						<li class="ads"><a href="/site/work/#work-2" data-page="ads-collateral">Ads &amp; Collateral</a></li>
+						<li class="illustration"><a href="/site/work/#work-3" data-page="illustration">Illustration</a></li>
+						<li class="posters"><a href="/site/work/#work-4" data-page="posters">Posters</a></li>
+						<li class="books"><a href="/site/work/#work-5" data-page="books-covers">Books &amp; Covers</a></li>
+						<li class="in-house"><a href="/site/work/#work-6" data-page="in-house">In House</a></li>
+					</ul>
+				</nav>
+
+			</div>
+		</div>
+
+		{embed="inc/search-modal"}
+
+		<div class="hover-trigger"><span>Menu</span></div>
+
+		<div class="wrap work search-wrap content">
+			
+			<h1 class="move">Work</h1>
+			
+			<div class="pages">
+
+				<section class="page" id="branding">
+					<div class="page-content">
+						{embed="inc/branding"}
+					</div>
+				
+				</section>
+
+				<section class="page" id="ads-collateral">
+					<div class="page-content"></div>
+					
+				</section>
+
+				<section class="page" id="illustration">
+					<div class="page-content"></div>
+					
+				</section>	
+
+				<section class="page" id="posters">
+					<div class="page-content"></div>
+					
+				</section>	
+
+				<section class="page" id="books-covers">
+					<div class="page-content"></div>
+					
+				</section>		
+
+				<section class="page" id="in-house">
+					<div class="page-content"></div>
+					
+				</section>	
+			
+			</div>
+		</div><!-- /wrap-->
+
+
+		<section class="see-more">
+			<h2><a href="#">From the Archives</a></h2>
+
+			<div class="wrap">
+				<div class="split4 drawer" id="archive-holder"></div>
+			</div>
+
+		</section>
+
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+	</body>
+</html>

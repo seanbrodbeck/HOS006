@@ -1,0 +1,11 @@
+#RewriteEngine On
+
+#RewriteRule ^(.*)\.v\d+\.(js|css)$ $1.$2 [L,QSA]
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ /index.php/$1 [L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /index.php/$1 [L,QSA] 

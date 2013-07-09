@@ -1,0 +1,131 @@
+	{embed="inc/head"}
+	<body class="search-results-page">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<style>
+			.search-results-page  .search-results { position: static; }
+			.search-drawer { 
+				margin-top: -20px;
+				z-index: 1;
+			}
+		</style>
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+		
+		<div class="search-drawer">
+			<div class="topper">
+				<div class="wrap">
+					<form id="search-results-form">
+						<input type="text" id="search-results-keywords" value="{exp:search:keywords}" />
+					</form>
+				</div>
+			</div>
+		</div><!-- /search-drawer-->
+
+
+		{exp:search:search_results}
+		{if count==1}
+		<div class="search-results">
+			<div class="wrap">				
+				<div class="adjunct-header">
+					<p class="results-count"><strong>{exp:search:total_results} results in <span>{channel_name}</span></strong></p>
+				</div>
+				<ul>
+		{/if}		
+					<li>
+						<a href="{auto_path}">
+							{if channel_short_name == "blog"}
+								<img src="{home_feature_image}" alt="" />
+							{if:elseif channel_short_name == "work"}
+								<img src="{archive_thumb}" />
+							{/if}
+							<p>									
+								<strong class="meta">Category | <em>{categories backspace="2"}{category_name}, {/categories}</em></strong>
+								<h3>{title}</h3>
+								<p>{excerpt}</p>
+							</p>
+						</a>
+					</li>
+				{if count == total_results}		
+				</ul>
+				
+
+				{paginate}
+				<div class="search-pagination">
+        			<p>Page {current_page} of {total_pages} pages {pagination_links}</p>
+				</div>
+				{/paginate}	
+
+			</div>
+		</div><!-- /search-results-->
+		{/if}
+		{/exp:search:search_results}	
+
+
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+		<script>
+			$(document).ready(function(){
+				// Catch the search form submit event
+				// and do the searches via ajax
+				$('#search-results-form').submit(function(e){
+					e.preventDefault();
+
+					// grab the keywords field
+					var keywords = $('#search-results-keywords').val();
+					
+					// clear any existing results
+					$('.search-results .wrap').html('');
+
+					// set the two hidden keywords field
+					// values to the user input
+					$('#blog-keywords').val(keywords);
+					$('#work-keywords').val(keywords);
+
+					// perform the ajax post for the blog search
+					var action = $('#blog-search-form').attr('action');
+					var form = $('#blog-search-form').serialize();
+
+					$.post(action, form, function(data){
+						$('.search-results .wrap').append(data);
+					});
+
+					// perform ajax post for the work search
+					var action = $('#work-search-form').attr('action');
+					var form = $('#work-search-form').serialize();
+
+					$.post(action, form, function(data){
+						$('.search-results .wrap').append(data);
+					});
+
+				});
+			});
+		</script>
+		{!-- these are the search forms created by ee. we serialize them with jquery and submit with ajax --}
+		<div id="search-forms" style="display:none;">
+		{exp:search:simple_form 
+			channel="blog" 
+			form_id="blog-search-form"
+			result_page="inc/search-results-ajax-blog"
+			no_result_page="inc/search-no-results-ajax/blog"
+			results="10"
+			search_in="everywhere"
+		}
+		<input type="hidden" id="blog-keywords" name="keywords" value="" >  
+		{/exp:search:simple_form}
+
+		{exp:search:simple_form 
+			channel="work" 
+			form_id="work-search-form"
+			result_page="inc/search-results-ajax-work"
+			no_result_page="inc/search-no-results-ajax/work"
+			results="10"
+			search_in="everywhere"
+		}
+		<input type="hidden" id="work-keywords" name="keywords" value="" >  
+		{/exp:search:simple_form}
+		</div>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+/*
+*************************************************
+
+Screen Styles
+
+*************************************************
+*/
+
+@import "normalize";
+@import "global";
+@import "general";
+@import "header";
+@import "footer";
+@import "layouts";
+@import "home";
+@import "print";
+@import "search";
+@import "royalslider";
+@import "rs-default";
+@import "curtain"; //obsolete?
+@import "user-message";
+
+
+
+
+html{
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+

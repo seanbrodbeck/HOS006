@@ -1,0 +1,314 @@
+	{embed="inc/head"}
+	<body class="home">
+	<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+
+		{embed="inc/search-modal"}
+		
+		<div class="hover-trigger"><span>Menu</span></div>
+
+		<div class="search-wrap">
+			<div class="masthead">
+				<img src="{site_url}public/a/i/curtain-new.jpg" alt="" />
+			</div>
+
+
+			<div class="wrap home-ps">
+
+				<!--<h2 class="positioning-statement">An&nbsp;Agency. A&nbsp;Workshop. <span>A&nbsp;Think&nbsp;Tank. A&nbsp;Clubhouse.</span></h2>-->
+				<!--<p class="subhead">Providing image-making and design strategy to a diverse list of clients since&nbsp;2002.</p>-->
+
+				{exp:channel:entries channel="home"}
+				<h2 class="positioning-statement">{home_page_heading}</span></h2>
+				<p class="subhead">{home_intro_copy}</p>
+				{/exp:channel:entries}	
+
+				{exp:channel:entries channel="work_pages" disable="category_fields|member_data|pagination" limit="1" dynamic="no" url_title="homepage"}
+				<div class="split3_1-2 tall">
+
+					<div class="grid-block first">	
+						{work_336x336 limit="1" offset="0" disable="category_fields|member_data|pagination"}
+						<figure>
+							<a href="/site/detail/{url_title}">
+								<img src="{336x336_square limit="1"}{336x336}{/336x336_square}" alt="" width="336" height="336">
+								<div class="figcaption">
+									<div class="block-caption">
+										<h3>{feature_title_a}</h3>
+										<em>{categories backspace="2"}{category_name}, {/categories}</em>
+									</div>
+									<div class="block-caption-more">
+										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+										<p>{summary}</p>
+									</div>
+								</div><!--/figcaption-->
+							</a>
+						</figure>
+						{/work_336x336}
+
+						{work_336x336 limit="1" offset="1" disable="category_fields|member_data|pagination"}
+						<figure>
+							<a href="/site/detail/{url_title}">
+								<img src="{336x336_square limit="1"}{336x336}{/336x336_square}" alt="" width="336" height="336">
+								<div class="figcaption">
+									<div class="block-caption">
+										<h3>{feature_title_a}</h3>
+										<em>{categories backspace="2"}{category_name}, {/categories}</em>
+									</div>
+									<div class="block-caption-more">
+										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+										<p>{summary}</p>
+									</div>
+								</div><!--/figcaption-->
+							</a>
+						</figure>
+						{/work_336x336}
+					</div>
+
+					{work_824x702 limit="1" offset="0" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block">
+						<a href="/site/detail/{url_title}">
+							<img src="{824x702 limit="1"}{824x702}{/824x702}" alt="" width="824" height="702">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_824x702}
+
+				</div>
+
+				<div class="split3_2-1">
+
+					{work_824x336 limit="1" offset="0" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block first">
+						<a href="/site/detail/{url_title}">
+							<img src="{824x336 limit="1"}{824x336}{/824x336}" alt="" width="824" height="336">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_824x336}
+
+					{work_336x336 limit="1" offset="2" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block col">
+						<a href="/site/detail/{url_title}">
+							<img src="{336x336_square limit="1"}{336x336}{/336x336_square}" alt="" width="336" height="336">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_336x336}
+
+				</div>
+
+
+				<div class="split3_2-1">
+
+					{work_824x702 limit="1" offset="1" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block first">
+						<a href="/site/detail/{url_title}">
+							<img src="{824x702 limit="1"}{824x702}{/824x702}" alt="" width="824" height="702">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_824x702}
+
+					{work_336x702 limit="1" offset="0" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block col">
+						<a href="/site/detail/{url_title}">
+							<img src="{336x702 limit="1"}{336x702}{/336x702}" alt="" width="336" height="702">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_336x702}
+
+				</div>	
+
+
+				<div class="split3_1-2 tall">
+
+					<div class="grid-block first">
+
+						{work_336x702 limit="1" offset="1" disable="category_fields|member_data|pagination"}
+						<figure>
+							<a href="/site/detail/{url_title}">
+								<img src="{336x702 limit="1"}{336x702}{/336x702}" alt="" width="336" height="702">
+								<div class="figcaption">
+									<div class="block-caption">
+										<h3>{feature_title_a}</h3>
+										<em>{categories backspace="2"}{category_name}, {/categories}</em>
+									</div>
+									<div class="block-caption-more">
+										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+										<p>{summary}</p>
+									</div>
+								</div><!--/figcaption-->
+							</a>
+						</figure>
+						{/work_336x702}
+
+					</div>
+
+
+					<div class="grid-block">	
+						{work_824x336 limit="1" offset="1" disable="category_fields|member_data|pagination"}
+						<figure>
+							<a href="/site/detail/{url_title}">
+								<img src="{824x336 limit="1"}{824x336}{/824x336}" alt="" width="824" height="336">
+								<div class="figcaption">
+									<div class="block-caption">
+										<h3>{feature_title_a}</h3>
+										<em>{categories backspace="2"}{category_name}, {/categories}</em>
+									</div>
+									<div class="block-caption-more">
+										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+										<p>{summary}</p>
+									</div>
+								</div><!--/figcaption-->
+							</a>
+						</figure>
+						{/work_824x336}
+						
+						{work_824x336 limit="1" offset="2" disable="category_fields|member_data|pagination"}
+						<figure>
+							<a href="/site/detail/{url_title}">
+								<img src="{824x336 limit="1"}{824x336}{/824x336}" alt="" width="824" height="336">
+								<div class="figcaption">
+									<div class="block-caption">
+										<h3>{feature_title_a}</h3>
+										<em>{categories backspace="2"}{category_name}, {/categories}</em>
+									</div>
+									<div class="block-caption-more">
+										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+										<p>{summary}</p>
+									</div>
+								</div><!--/figcaption-->
+							</a>
+						</figure>
+						{/work_824x336}
+					</div>
+
+				</div>
+
+
+
+				<div class="split3_2-1">
+
+					{work_824x336 limit="1" offset="3" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block first">
+						<a href="/site/detail/{url_title}">
+							<img src="{824x336 limit="1"}{824x336}{/824x336}" alt="" width="824" height="336">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_824x336}
+
+					{work_336x336 limit="1" offset="3" disable="category_fields|member_data|pagination"}
+					<figure class="grid-block col">
+						<a href="/site/detail/{url_title}">
+							<img src="{336x336_square limit="1"}{336x336}{/336x336_square}" alt="" width="336" height="336">
+							<div class="figcaption">
+								<div class="block-caption">
+									<h3>{feature_title_a}</h3>
+									<em>{categories backspace="2"}{category_name}, {/categories}</em>
+								</div>
+								<div class="block-caption-more">
+									<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
+									<p>{summary}</p>
+								</div>
+							</div><!--/figcaption-->
+						</a>
+					</figure>
+					{/work_336x336}
+
+				</div>
+
+			{/exp:channel:entries}																
+			</div><!-- /wrap-->
+
+		{embed="inc/social-footer"}
+		
+		</div><!-- search-wrap-->
+
+		{embed="inc/footer"}
+
+
+
+		{embed="inc/jsReference"}
+
+		<!--<script src="/public/a/j/vendor/curtain.js"></script>-->
+		<script>
+			// $(function() {
+			// 	enableHomeCurtain();
+
+			// 	function enableHomeCurtain() {
+			// 		if ($('nav.main-nav a.on').length > 0) return false;
+			// 		$('.curtains').curtain({
+			// 			curtainLinks: '.curtain-links',
+			// 			controls: '.curtainMenu',
+			// 			nextSlide: function(self) {
+			// 				self.$current.prev().remove();
+			// 				$(window).scrollTop(0);
+			// 				self.init(true);
+			// 				$("body").addClass("unfixed");
+			// 			}
+			// 		});
+			// 	};
+			// });
+		</script>
+	</body>
+</html>

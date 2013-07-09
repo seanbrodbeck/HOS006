@@ -1,0 +1,70 @@
+	{embed="inc/head"}
+	<body class="blog">
+		<!--[if lt IE 7]>
+			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+		<![endif]-->
+		<div class="header-inner-wrapper">
+			{embed="inc/header"}
+		</div>
+		{embed="inc/search-modal"}
+		<div class="hover-trigger"><span>Menu</span></div>
+
+		{exp:channel:prev_entry channel="blog"}
+				<a class="prev pager ss-icon ss-standard ss-navigaterright" href="{path='article'}">Previous</a>
+		{/exp:channel:prev_entry}
+
+		{exp:channel:next_entry channel="blog"}
+				<a class="next pager ss-icon ss-standard ss-navigaterleft" href="{path='article'}">Next</a>
+		{/exp:channel:next_entry}
+
+		<div class="wrap blog single search-wrap content">
+
+			<div class="main cards">
+			{exp:channel:entries channel="blog" limit="1"}
+
+				<article class="col">
+					
+					<h1>{title}</h1>
+					
+					<p class="meta">
+						{entry_date format="%n.%d.%y"} | <em>By {author}</em> |
+						<a class="ss-social ss-icon" href="#">Like</a>
+						<a class="ss-social ss-icon" href="https://twitter.com/intent/tweet?url={title_permalink="site/article"}&hashtags=theheadsofstate">twitter</a>
+					</p>
+
+					<p class="intro">{article_intro_text}</p> 
+
+					{blog-body}
+
+					{blog_images}
+					<figure>
+						<img src="{image}" alt="" />
+						<div class="figcaption">{caption}</div>
+					</figure>
+					{/blog_images}
+
+				</article>	
+
+			{/exp:channel:entries}
+			</div><!--/main -->
+
+			<div class="sub" data-load="instagram">
+				{exp:tgl_instagram:user_feed username="theheadsofstate" limit="30" cache="30"}
+				<div class="block-instagram">
+					<a href="{link}"><!--points to image on instagram profile instagram.com/theheadsofstate-->
+						<img src="{standard_resolution_url}" alt="" />
+						<p>
+							<span class="likes">{likes_count} Likes</span>
+							<em>{exp:wb_relative_date}{created_at}{/exp:wb_relative_date}</em>
+						</p>
+					</a>
+				</div>
+				{/exp:tgl_instagram:user_feed}		
+			</div><!-- /sub -->
+		</div><!-- /wrap-->
+
+		{embed="inc/footer"}
+		{embed="inc/jsReference"}
+
+	</body>
+</html>	
