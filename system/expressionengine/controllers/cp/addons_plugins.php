@@ -373,6 +373,7 @@ class Addons_plugins extends CI_Controller {
 		{
 			curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
 		}
+		
 
 		$code = curl_exec($c);
 		curl_close($c);

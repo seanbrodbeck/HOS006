@@ -35,7 +35,12 @@ class CurlHttpClient {
 
     protected function _setOptions() {
         curl_setopt($this->handler, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($this->handler, CURLOPT_FOLLOWLOCATION, true);
+        
+        //Added 07/09/2013 by Bueno to hide php warning from base dir
+        if ( ! ini_get('safe_mode') && ! ini_get('open_basedir')){
+            curl_setopt($this->handler, CURLOPT_FOLLOWLOCATION, true);
+        }
+        
         curl_setopt($this->handler, CURLOPT_USERAGENT, self::DEFAULT_USER_AGENT);
         
         curl_setopt ($this->handler, CURLOPT_SSL_VERIFYHOST, 0);

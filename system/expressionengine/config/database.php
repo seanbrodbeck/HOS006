@@ -3,15 +3,15 @@
 $active_group = 'expressionengine';
 $active_record = TRUE;
 
-$db['expressionengine']['hostname'] = 'headsofstate.db.2870503.hostedresource.com';
-$db['expressionengine']['username'] = 'headsofstate';
-$db['expressionengine']['password'] = '';
+$db['expressionengine']['hostname'] = '216.70.96.207';
+$db['expressionengine']['username'] = 'faculty';
+$db['expressionengine']['password'] = 'scr@ppl3';
 $db['expressionengine']['database'] = 'headsofstate';
 $db['expressionengine']['dbdriver'] = 'mysql';
 $db['expressionengine']['pconnect'] = FALSE;
 $db['expressionengine']['dbprefix'] = 'exp_';
 $db['expressionengine']['swap_pre'] = 'exp_';
-$db['expressionengine']['db_debug'] = TRUE;
+$db['expressionengine']['db_debug'] = FALSE;
 $db['expressionengine']['cache_on'] = FALSE;
 $db['expressionengine']['autoinit'] = FALSE;
 $db['expressionengine']['char_set'] = 'utf8';

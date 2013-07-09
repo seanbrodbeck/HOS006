@@ -36,7 +36,7 @@ $config['cookie_prefix'] = '';
 |	http://example.com/
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://clients.facultycreative.com/hos/hos005/';
 
 /*
 |--------------------------------------------------------------------------
