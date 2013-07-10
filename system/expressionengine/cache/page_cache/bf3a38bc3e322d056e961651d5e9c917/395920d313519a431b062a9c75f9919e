@@ -34,7 +34,7 @@
 					<div class="grid-block first">	
 						
 						<figure>
-							<a href="/site/detail/nike">
+							<a href="{site_url}site/detail/nike">
 								<img src="http://hos-app.pixelpushstudio.com/images/uploads/Nike_Crop_X_Standard.jpg" alt="" width="336" height="336">
 								<div class="figcaption">
 									<div class="block-caption">
@@ -52,7 +52,7 @@
 
 						
 						<figure>
-							<a href="/site/detail/duke">
+							<a href="{site_url}site/detail/duke">
 								<img src="http://hos-app.pixelpushstudio.com/images/uploads/Duke_Barbicide_crops_Standard_X.jpg" alt="" width="336" height="336">
 								<div class="figcaption">
 									<div class="block-caption">
@@ -72,7 +72,7 @@
 
 					
 					<figure class="grid-block">
-						<a href="/site/detail/wondermade">
+						<a href="{site_url}site/detail/wondermade">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/WonderMade_FeaturedCrop_Standard_2Y.jpg" alt="" width="824" height="702">
 							<div class="figcaption">
 								<div class="block-caption">
@@ -94,7 +94,7 @@
 
 					
 					<figure class="grid-block first">
-						<a href="/site/detail/gatsby">
+						<a href="{site_url}site/detail/gatsby">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/Gatsby_Standard_Y.jpg" alt="" width="824" height="336">
 							<div class="figcaption">
 								<div class="block-caption">
@@ -112,7 +112,7 @@
 
 					
 					<figure class="grid-block col">
-						<a href="/site/detail/new-york-times-book-review-presidents">
+						<a href="{site_url}site/detail/new-york-times-book-review-presidents">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/NYTimes_BookRev_Presidential_Standard_X.jpg" alt="" width="336" height="336">
 							<div class="figcaption">
 								<div class="block-caption">
@@ -135,7 +135,7 @@
 
 					
 					<figure class="grid-block first">
-						<a href="/site/detail/iron-and-wine-ghost-on-ghost">
+						<a href="{site_url}site/detail/iron-and-wine-ghost-on-ghost">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/GOG_Standard_2Y.jpg" alt="" width="824" height="702">
 							<div class="figcaption">
 								<div class="block-caption">
@@ -153,7 +153,7 @@
 
 					
 					<figure class="grid-block col">
-						<a href="/site/detail/once-in-a-lullaby">
+						<a href="{site_url}site/detail/once-in-a-lullaby">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/OnceInALullaby_2X_Renta.jpg" alt="" width="336" height="702">
 							<div class="figcaption">
 								<div class="block-caption">
@@ -178,7 +178,7 @@
 
 						
 						<figure>
-							<a href="/site/detail/new-yorker-guantanamo">
+							<a href="{site_url}site/detail/new-yorker-guantanamo">
 								<img src="http://hos-app.pixelpushstudio.com/images/uploads/Guantanamo_Crops_Retina_2X.jpg" alt="" width="336" height="702">
 								<div class="figcaption">
 									<div class="block-caption">
@@ -200,7 +200,7 @@
 					<div class="grid-block">	
 						
 						<figure>
-							<a href="/site/detail/subaru">
+							<a href="{site_url}site/detail/subaru">
 								<img src="http://hos-app.pixelpushstudio.com/images/uploads/CityHall_Y.jpg" alt="" width="824" height="336">
 								<div class="figcaption">
 									<div class="block-caption">
@@ -218,7 +218,7 @@
 						
 						
 						<figure>
-							<a href="/site/detail/inuksuit">
+							<a href="{site_url}site/detail/inuksuit">
 								<img src="http://hos-app.pixelpushstudio.com/images/uploads/Inuksuit_Standard_Y.jpg" alt="" width="824" height="336">
 								<div class="figcaption">
 									<div class="block-caption">
@@ -243,7 +243,7 @@
 
 					
 					<figure class="grid-block first">
-						<a href="/site/detail/wired">
+						<a href="{site_url}site/detail/wired">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/Wired_Standard_Y.jpg" alt="" width="824" height="336">
 							<div class="figcaption">
 								<div class="block-caption">
@@ -262,7 +262,7 @@
 
 					
 					<figure class="grid-block col">
-						<a href="/site/detail/wilco-terminal-5">
+						<a href="{site_url}site/detail/wilco-terminal-5">
 							<img src="http://hos-app.pixelpushstudio.com/images/uploads/Wilco_Fan_Standard_X.jpg" alt="" width="336" height="336">
 							<div class="figcaption">
 								<div class="block-caption">

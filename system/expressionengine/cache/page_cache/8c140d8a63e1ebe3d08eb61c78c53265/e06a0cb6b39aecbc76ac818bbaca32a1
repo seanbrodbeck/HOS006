@@ -69,7 +69,7 @@
 
 						<p>Wondermade makes superior handmade marshmallows. With flavors unexpected and delightful, this small company from Orlando, FL has made quite the stir.</p>
 					</div>
-					<p class="btn-alt"><a href="/site/detail/wondermade">See The Full Project</a></p>						
+					<p class="btn-alt"><a href="{site_url}site/detail/wondermade">See The Full Project</a></p>						
 				</div>
 
 				<div class="col module">

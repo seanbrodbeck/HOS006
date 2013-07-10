@@ -197,6 +197,7 @@ $(function() {
 		}
 
 		function outputItem(item) {
+			
 			var likeWord = (item.likes == 1)?'Like':'Likes';
 			var block = $('<div class="block-instagram" data-id="' + item.id + '" />');
 			var link = $('<a href="' + item.link + '">');

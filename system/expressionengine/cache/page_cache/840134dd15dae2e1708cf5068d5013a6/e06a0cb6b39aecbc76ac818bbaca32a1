@@ -62,7 +62,7 @@
 						<p>Wilco is a great American rock band. They’ve been tinkering with, and reinventing, their brand of pop Americana since 1994.
 </p>
 					</div>
-					<p class="btn-alt"><a href="/site/detail/wilco-collection">See The Full Project</a></p>						
+					<p class="btn-alt"><a href="{site_url}site/detail/wilco-collection">See The Full Project</a></p>						
 				</div>
 
 				<div class="col module">
