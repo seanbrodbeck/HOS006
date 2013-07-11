@@ -1,4 +1,7 @@
-
+        <script type="text/javascript">
+            var $siteURL = '{site_url}';
+        </script>
+		
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 		<script src="{site_url}public/a/j/plugins.js"></script>
 		<script src="{site_url}public/a/j/vendor/jquery.royalslider.custom.min.js"></script>
@@ -77,14 +80,14 @@
 
 			$('body:not(.home) .search-wrap')
 			  .waypoint(function(direction) {
-			    if (direction === 'down') { 
+			    if (direction === 'down' && $(window).width() >= 400) { 
 			    	$(".hover-trigger").fadeIn("fast");
 			    	$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
 			    	$("body").css("padding-top", $totalHeight);
 			    }
 			  }, { offset: 20 })
 			  .waypoint(function(direction) {
-			    if (direction === 'up') { 
+			    if (direction === 'up' && $(window).width() >= 400) { 
 			    	$(".hover-trigger").fadeOut("fast");
 			    	$container.removeClass("fixed").css("top", 0);
 			    	$("body").css("padding-top", 0);
@@ -95,18 +98,21 @@
 
 			  $('.home .home-ps')
 			    .waypoint(function(direction) {
-			      if (direction === 'down') { 
+			      if (direction === 'down' && $(window).width() >= 400) { 
 			      	$(".hover-trigger").fadeIn("fast");
-			      	$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
+                    console.log('up');
+                    $container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
+
 			      	$("body").css("padding-top", $totalHeight);
 			      }
 			    }, { offset: 20 })
 			    .waypoint(function(direction) {
-			      if (direction === 'up') { 
+			      if (direction === 'up' && $(window).width() >= 400) { 
 			      	$(".hover-trigger").fadeOut("fast");
 			      	$container.removeClass("fixed").css("top", 0);
 			      	$("body").css("padding-top", 0);
 			      	$(".hover-trigger span").fadeIn();
+                      console.log('down');
 			      }
 			    }, { offset: 20 });
 	
@@ -118,18 +124,27 @@
 				});
 
 			});
-
-			$container.mouseleave(function() {
-				$(this).removeClass("expanded").animate({
-					top:  -$totalHeight
-				});
-				$(".hover-trigger span").fadeIn();
-			});				
-
-			$container.waypoint(function() {
-				$(this).addClass("top")
-				console.log("add top class");
-			});	
+			
+			
+            //Don't change header position if in mobile layout
+            
+                $container.mouseleave(function() {
+          
+        				$(this).removeClass("expanded").animate({
+        					top:  -$totalHeight
+        				});
+        				$(".hover-trigger span").fadeIn();
+    			
+    			});				
+    
+    			$container.waypoint(function() {
+    			    $(this).addClass("top")
+    				//console.log("add top class");
+    			});
+                
+            
+            
+				
 				
 	</script>
 
@@ -192,7 +207,7 @@
 				var children = $('section#' + page + ' input.children').val();
 				children.replace('|', '&');
 
-				$.get('/inc/archives/' + category + '/' + children, function(data) {
+				$.get($siteURL + 'inc/archives/' + category + '/' + children, function(data) {
   					$('#archive-holder').html(data);
   				});
 				

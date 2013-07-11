@@ -1,5 +1,6 @@
 var api = {};
 $(function() {
+	//alert($siteURL);
 	// Functionality Enabling/Disabling
 	enableWorkSlider();
 	//enableInstagramFeed();
@@ -108,10 +109,10 @@ $(function() {
 
 			if(section.data('loaded') != true)
 			{	
-				section.find('h1').after('<div class="loading"><img src="/public/a/i/ajax-loader.gif"></div>');
+				section.find('h1').after('<div class="loading"><img src="'+ $siteURL +'public/a/i/ajax-loader.gif"></div>');
 				
 				
-				section.find('div.page-content').hide().load('/inc/' + page, function(){
+				section.find('div.page-content').hide().load($siteURL + 'inc/' + page, function(){
 					
 					section.find('div.loading').remove();
 					$(this).fadeIn(1000);
@@ -210,7 +211,7 @@ $(function() {
 
 		function requestData() {
 			$.ajax({
-				url: '/a/j/data/instagram-10.json',
+				url: $siteURL + '/a/j/data/instagram-10.json',
 				success: function(response){
 					var items = [];
 					options.pagination = response.pagination;
