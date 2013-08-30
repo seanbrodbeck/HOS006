@@ -15,7 +15,7 @@ $config['app_version'] = '240';
 $config['install_lock'] = "";
 $config['license_number'] = "";
 $config['debug'] = '1';
-$config['cp_url'] = 'http://clients.facultycreative.com/hos/hos005/admin.php';
+$config['cp_url'] = 'http://clients.facultycreative.com/hos/hos005dev/admin.php';
 $config['doc_url'] = "http://expressionengine.com/user_guide/";
 $config['is_system_on'] = "y";
 $config['allow_extensions'] = 'y';
@@ -36,7 +36,7 @@ $config['cookie_prefix'] = '';
 |	http://example.com/
 |
 */
-$config['base_url']	= 'http://clients.facultycreative.com/hos/hos005/';
+$config['base_url']	= 'http://clients.facultycreative.com/hos/hos005dev/';
 
 /*
 |--------------------------------------------------------------------------

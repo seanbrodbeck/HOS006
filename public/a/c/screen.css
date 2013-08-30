@@ -281,13 +281,15 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
   text-transform: none;
   letter-spacing: 0;
   color: #939392; }
+  
+`* .mailing-list input[type="text"],.split2 input[type="text"]{line-height:0;}`
 
 .meta, h6, th, .btn, .btn-alt a, .block-caption em, .block-caption-more .meta span, .adjunct-header .adjunct-link a, .capabilities li, .blog .share-trigger, .case-study .col:not(.first) h2, .case-study .grid-block:not(.first) h2, .case-study .meta-header, .hover-trigger span, nav.main-nav a, .share-trigger a, footer h3, footer input[type="text"], footer input[type="email"], footer input[type="tel"], footer input[type="url"], footer textarea, footer input[type="password"], footer select, footer .dd-select, footer .dd-container label, .address strong {
   font: 700 10.5px/26px proxima-nova, sans-serif;
   text-transform: uppercase;
   margin-bottom: 42px;
   letter-spacing: 2px;
-  color: #939392; }
+  color: #939392;}
 
 .intro {
   font: 18px/24px chaparral-pro, sans-serif;
@@ -621,7 +623,7 @@ img[width="336"][height="702"] {
     .grid-block .figcaption:hover .block-caption, .grid-block .figcaption:focus .block-caption {
       background: #3b3b3b; }
     .grid-block .figcaption:hover .block-caption-more, .grid-block .figcaption:focus .block-caption-more {
-      max-height: 200px; }
+       }
 
 .block-caption {
   -webkit-transition: all 0.16s linear;
@@ -713,10 +715,10 @@ img[width="336"][height="702"] {
     .adjunct-header .adjunct-link {
       float: none;
       max-width: 100%; } }
-
+.split3_2-1-alt{overflow:hidden; display:inline;}
 .cards .col, .cards .grid-block {
   background: #fff;
-  margin-bottom: 42px; }
+  margin-bottom: 2.5%; }
   .cards .col > a, .cards .grid-block > a {
     display: block; }
 .cards h3 {
@@ -819,7 +821,7 @@ img[width="336"][height="702"] {
     margin-bottom: 16px; }
 
 .about-list {
-  margin-bottom: 42px; }
+  margin-bottom: 42px; height:500px;}
   .about-list .head-wrap {
     margin-bottom: 20px; }
     .about-list .head-wrap:after {
@@ -836,7 +838,7 @@ img[width="336"][height="702"] {
     letter-spacing: 0;
     color: rgba(0, 0, 0, 0.35);
     float: left;
-    margin: 0 20px 0 0; }
+    margin: 0 20px 0 0; cursor:pointer; }
     .about-list h3:last-of-type {
       margin-right: 0; }
     .about-list h3.on {
@@ -858,7 +860,7 @@ img[width="336"][height="702"] {
     list-style: none;
     font: 15px/1.3 proxima-nova, sans-serif;
     color: #939392;
-    margin: 0 0 7px 0; }
+    margin: 0 0 7px 0; line-height:14.5px; }
   .about-list .accolades {
     font: 18px/24px chaparral-pro, sans-serif; }
   .about-list .tab-list {
@@ -1089,8 +1091,6 @@ header {
     }
     
 }
-
-
 .hover-trigger {
   position: fixed;
   width: 100%;
@@ -1447,8 +1447,7 @@ footer {
     footer {
       padding-top: 42px; } }
 
-.mailing-list input {
-  width: 70%; }
+.mailing-list input {width: 70%;}
 .mailing-list .btn, .mailing-list .btn-alt a, .btn-alt .mailing-list a {
   width: 30%;
   margin-left: -4px; }
@@ -2131,10 +2130,10 @@ footer .split2 .col, footer .split2 .grid-block {
   -webkit-backface-visibility: hidden; }
 
 .grab-cursor {
-  cursor: url(grab.png) 8 8, move; }
+  cursor: url(../i/grab.png) 8 8, move; }
 
 .grabbing-cursor {
-  cursor: url(grabbing.png) 8 8, move; }
+  cursor: url(../i/grabbing.png) 8 8, move; }
 
 .rsNoDrag {
   cursor: auto; }
@@ -2147,7 +2146,7 @@ footer .split2 .col, footer .split2 .grid-block {
   height: 100%;
   display: block;
   z-index: 20;
-  background: url(blank.gif);
+  background: url(../i/blank.gif);
   -webkit-backface-visibility: hidden; }
 
 .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrameHolder, .rsDefault .rsThumbs {
@@ -2212,13 +2211,13 @@ footer .split2 .col, footer .split2 .grid-block {
   margin-left: -16px;
   position: absolute;
   cursor: pointer;
-  background: url("rs-default.png");
-  background-color: rgba(0, 0, 0, 0.75);
-  *background-color: #111;
-  border-radius: 2px; }
+  background: url("../i/rs-default.png");
+  background-color: rgba(221, 226, 228, 0.7);
+  *background-color: #dde2e4;
+  }
 
 .rsDefault .rsArrowIcn:hover {
-  background-color: rgba(0, 0, 0, 0.9); }
+  background-color: rgba(221, 226, 228, 0.9); }
 
 .rsDefault.rsHor .rsArrowLeft .rsArrowIcn {
   background-position: -64px -32px; }
@@ -2250,22 +2249,21 @@ footer .split2 .col, footer .split2 .grid-block {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  background: #000;
-  background: rgba(0, 0, 0, 0.75);
   text-align: center;
   line-height: 18px;
   overflow: hidden; }
 
 .rsDefault .rsBullet {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   margin: 0 5px 1px;
   border-radius: 50%;
   background: #777;
-  background: rgba(255, 255, 255, 0.5); }
+  background: rgba(255, 255, 255, 0.5);
+  cursor:pointer;  }
 
 .rsDefault .rsBullet.rsNavSelected {
   background-color: #FFF; }
@@ -2619,3 +2617,294 @@ footer .split2 .col, footer .split2 .grid-block {
 html {
   height: 100%;
   overflow-x: hidden; }
+
+/* basic scrollbar styling */
+/* vertical scrollbar */
+.mCSB_container{
+	width:auto;
+	margin-right:30px;
+	overflow:hidden;
+}
+.mCSB_container.mCS_no_scrollbar{
+	margin-right:0;
+}
+.mCS_disabled>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar,
+.mCS_destroyed>.mCustomScrollBox>.mCSB_container.mCS_no_scrollbar{
+	margin-right:30px;
+}
+.mCustomScrollBox>.mCSB_scrollTools{
+	width:16px;
+	height:100%;
+	top:0;
+	right:0;
+}
+.mCSB_scrollTools .mCSB_draggerContainer{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0; 
+	height:auto;
+}
+.mCSB_scrollTools a+.mCSB_draggerContainer{
+	margin:20px 0;
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+	width:4px;
+	height:100%;
+	margin:0 auto;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+.mCSB_scrollTools .mCSB_dragger{
+	cursor:pointer;
+	width:100%;
+	height:30px;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width:6px;
+	height:100%;
+	margin:0 auto;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	text-align:center;
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown{
+	display:block;
+	position:relative;
+	height:20px;
+	overflow:hidden;
+	margin:0 auto;
+	cursor:pointer;
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+	top:100%;
+	margin-top:-40px;
+}
+/* horizontal scrollbar */
+.mCSB_horizontal>.mCSB_container{
+	height:auto;
+	margin-right:0;
+	margin-bottom:30px;
+	overflow:hidden;
+}
+.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar{
+	margin-bottom:0;
+}
+.mCS_disabled>.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar,
+.mCS_destroyed>.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar{
+	margin-right:0;
+	margin-bottom:30px;
+}
+.mCSB_horizontal.mCustomScrollBox>.mCSB_scrollTools{
+	width:100%;
+	height:16px;
+	top:auto;
+	right:auto;
+	bottom:0;
+	left:0;
+	overflow:hidden;
+}
+.mCSB_horizontal>.mCSB_scrollTools a+.mCSB_draggerContainer{
+	margin:0 20px;
+}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_draggerRail{
+	width:100%;
+	height:2px;
+	margin:7px 0;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger{
+	width:30px;
+	height:100%;
+}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width:100%;
+	height:4px;
+	margin:6px auto;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_buttonRight{
+	display:block;
+	position:relative;
+	width:20px;
+	height:100%;
+	overflow:hidden;
+	margin:0 auto;
+	cursor:pointer;
+	float:left;
+}
+.mCSB_horizontal>.mCSB_scrollTools .mCSB_buttonRight{
+	margin-left:-40px;
+	float:right;
+}
+.mCustomScrollBox{
+	-ms-touch-action:none; /*MSPointer events - direct all pointer events to js*/
+}
+
+/* default scrollbar colors and backgrounds (default theme) */
+.mCustomScrollBox>.mCSB_scrollTools{
+	opacity:0.75;
+	filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
+}
+.mCustomScrollBox:hover>.mCSB_scrollTools{
+	opacity:1;
+	filter:"alpha(opacity=100)"; -ms-filter:"alpha(opacity=100)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_draggerRail{
+	background:white;
+
+
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background:grey;	
+
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+	filter:"alpha(opacity=85)"; -ms-filter:"alpha(opacity=85)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	background:rgba(255,255,255,0.9);
+	filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp,
+.mCSB_scrollTools .mCSB_buttonDown,
+.mCSB_scrollTools .mCSB_buttonLeft,
+.mCSB_scrollTools .mCSB_buttonRight{
+	background-image:url(../mCSB_buttons.png);
+	background-repeat:no-repeat;
+	opacity:0.4;
+	filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp{
+	background-position:0 0;
+	/* 
+	sprites locations are 0 0/-16px 0/-32px 0/-48px 0 (light) and -80px 0/-96px 0/-112px 0/-128px 0 (dark) 
+	*/
+}
+.mCSB_scrollTools .mCSB_buttonDown{
+	background-position:0 -20px;
+	/* 
+	sprites locations are 0 -20px/-16px -20px/-32px -20px/-48px -20px (light) and -80px -20px/-96px -20px/-112px -20px/-128px -20px (dark) 
+	*/
+}
+.mCSB_scrollTools .mCSB_buttonLeft{
+	background-position:0 -40px;
+	/* 
+	sprites locations are 0 -40px/-20px -40px/-40px -40px/-60px -40px (light) and -80px -40px/-100px -40px/-120px -40px/-140px -40px (dark) 
+	*/
+}
+.mCSB_scrollTools .mCSB_buttonRight{
+	background-position:0 -56px;
+	/* 
+	sprites locations are 0 -56px/-20px -56px/-40px -56px/-60px -56px (light) and -80px -56px/-100px -56px/-120px -56px/-140px -56px (dark) 
+	*/
+}
+.mCSB_scrollTools .mCSB_buttonUp:hover,
+.mCSB_scrollTools .mCSB_buttonDown:hover,
+.mCSB_scrollTools .mCSB_buttonLeft:hover,
+.mCSB_scrollTools .mCSB_buttonRight:hover{
+	opacity:0.75;
+	filter:"alpha(opacity=75)"; -ms-filter:"alpha(opacity=75)"; /* old ie */
+}
+.mCSB_scrollTools .mCSB_buttonUp:active,
+.mCSB_scrollTools .mCSB_buttonDown:active,
+.mCSB_scrollTools .mCSB_buttonLeft:active,
+.mCSB_scrollTools .mCSB_buttonRight:active{
+	opacity:0.9;
+	filter:"alpha(opacity=90)"; -ms-filter:"alpha(opacity=90)"; /* old ie */
+}
+
+/* custom styling */
+/* content_1 scrollbar */
+.content_1>.mCustomScrollBox>.mCSB_scrollTools{
+	height:96%;
+	top:2%;
+}
+/* content_2 scrollbar */
+.content_2 .mCSB_scrollTools .mCSB_draggerRail{
+	width:6px;
+	box-shadow:1px 1px 1px rgba(255,255,255,0.1);
+}
+.content_2 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	background:rgba(255,255,255,0.4);
+	filter:"alpha(opacity=40)"; -ms-filter:"alpha(opacity=40)"; /* old ie */
+}
+.content_2 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{
+	background:rgba(255,255,255,0.5);
+	filter:"alpha(opacity=50)"; -ms-filter:"alpha(opacity=50)"; /* old ie */
+}
+.content_2 .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.content_2 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	background:rgba(255,255,255,0.6);
+	filter:"alpha(opacity=60)"; -ms-filter:"alpha(opacity=60)"; /* old ie */
+}
+/* content_3 scrollbar */
+.content_3>.mCustomScrollBox>.mCSB_scrollTools{
+	height:94%;
+	top:3%;
+}
+.content_3 .mCSB_scrollTools .mCSB_draggerRail{
+	width:0;
+	border-right:1px dashed #09C;
+}
+.content_3 .mCSB_scrollTools .mCSB_dragger{
+	height:11px;
+}
+.content_3 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width:11px;
+	-webkit-border-radius:11px;
+	-moz-border-radius:11px;
+	border-radius:11px;
+	background:#09C;
+}
+/* content_4 scrollbar */
+.content_4>.mCustomScrollBox>.mCSB_scrollTools{
+	height:94%;
+	top:3%;
+}
+.content_4 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+	width:8px;
+	-webkit-border-radius:2px;
+	-moz-border-radius:2px;
+	border-radius:2px;
+	background:#d0b9a0;
+	-webkit-box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+	-moz-box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+	box-shadow:1px 1px 5px rgba(0,0,0,0.5);
+}
+.content_4 .mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.content_4 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	background:#dfcdb9;
+}
+.content_4 .mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,
+.content_4 .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{
+	-webkit-box-shadow:0 0 3px rgba(0,0,0,0.5);
+	-moz-box-shadow:0 0 3px rgba(0,0,0,0.5);
+	box-shadow:0 0 3px rgba(0,0,0,0.5);
+}
+/* content_5 scrollbar */
+.content_5>.mCustomScrollBox>.mCSB_scrollTools{
+	width: 98%;
+	margin: 0 1%;
+}
+/* content_6 scrollbar */
+.content_6>.mCustomScrollBox>.mCSB_scrollTools{
+	width:88%;
+	margin: 0 6%;
+}
+/* content_8 scrollbar */
+.content_8 .mCSB_scrollTools .mCSB_draggerRail{
+	width:0px;
+	border-left:1px solid rgba(0,0,0,0.8);
+	border-right:1px solid rgba(255,255,255,0.2);
+}
