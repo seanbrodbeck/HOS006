@@ -11,16 +11,49 @@
 |
 */
 
+
+$siteBase = 'http://localhost:8888/hos/hos005/';
+$folderBase = '/Users/bueno/Sites/hos/hos005/';
+
+
+/*
+$siteBase = 'http://clients.facultycreative.com/hos/hos005dev/';
+$folderBase = '/var/www/vhosts/facultycreative.com/clients.facultycreative.com/hos/hos005dev/';
+*/
+
+
 $config['app_version'] = '240';
 $config['install_lock'] = "";
 $config['license_number'] = "";
 $config['debug'] = '1';
-$config['cp_url'] = 'http://clients.facultycreative.com/hos/hos005dev/admin.php';
-$config['doc_url'] = "http://expressionengine.com/user_guide/";
+$config['cp_url'] = $siteBase.'admin.php';
+$config['doc_url'] = "http://ellislab.com/expressionengine/user-guide/";
 $config['is_system_on'] = "y";
 $config['allow_extensions'] = 'y';
 $config['site_label'] = 'The Heads of State';
 $config['cookie_prefix'] = '';
+
+
+$config['site_url'] = $siteBase;
+
+$config['tmpl_file_basepath']   = $folderBase."system/expressionengine/templates/";
+
+$config['theme_folder_url'] = $siteBase."themes/";
+$config['theme_folder_path'] = $folderBase."themes/";
+
+$config['captcha_url'] = $siteBase."images/captchas/";
+$config['captcha_path'] = $folderBase."images/captchas/";
+
+$config['emoticon_url'] = $siteBase."images/smileys/";
+
+$config['avatar_url'] = $siteBase."images/avatars/";
+$config['avatar_path'] = $folderBase."images/avatars/";
+
+$config['photo_url'] = $siteBase."images/member_photos/";
+$config['photo_path'] = $folderBase."images/member_photos/";
+
+$config['sig_img_url'] = "http://example.com/images/signature_attachments/";
+$config['sig_img_path'] = $folderBase."images/signature_attachments/";
 
 
 // END EE config items
@@ -36,7 +69,7 @@ $config['cookie_prefix'] = '';
 |	http://example.com/
 |
 */
-$config['base_url']	= 'http://clients.facultycreative.com/hos/hos005dev/';
+$config['base_url']	= $siteBase;
 
 /*
 |--------------------------------------------------------------------------
