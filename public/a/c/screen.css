@@ -1114,6 +1114,7 @@ header {
     top: 0 !important; } }
 .hover-trigger {
   position: fixed;
+  padding-left: 10px;
   width: 100%;
   display: none;
   background: rgba(59, 59, 59, 0.8);
@@ -1129,8 +1130,14 @@ header {
     padding-left: 30px; }
 
 @media (max-width: 400px) {
+  header {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 999; }
+
   .hover-trigger {
-    display: none !important; } }
+    display: block; } }
 .logo {
   float: left;
   max-width: 300px;

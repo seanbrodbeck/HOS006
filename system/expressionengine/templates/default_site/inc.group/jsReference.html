@@ -80,9 +80,10 @@
 			$container = $(".header-inner-wrapper")
 			$totalHeight = $container.outerHeight();
 			
+			console.log($(window).width());
 			$('body:not(.home) .search-wrap')
 			  .waypoint(function(direction) {
-			    if (direction === 'down' && $(window).width() >= 400) { 
+			    if (direction === 'down' && $(window).width() > 400) { 
 			    	$(".hover-trigger").fadeIn("fast");
 			    	//$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
 					$container.removeClass("top").css("top", -$totalHeight);
@@ -90,7 +91,7 @@
 			    }
 			  }, { offset: 20 })
 			  .waypoint(function(direction) {
-			    if (direction === 'up' && $(window).width() >= 400) { 
+			    if (direction === 'up' && $(window).width() > 400) { 
 			    	$(".hover-trigger").fadeOut("fast");
 			    	//$container.removeClass("fixed").css("top", 0);
 					$container.css("top", 0);
@@ -102,7 +103,7 @@
 
 			  $('.home .home-ps')
 			    .waypoint(function(direction) {
-			      if (direction === 'down' && $(window).width() >= 400) { 
+			      if (direction === 'down' && $(window).width() > 400) { 
 			      	$(".hover-trigger").fadeIn("fast");
                     //console.log('up');
                     //$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
@@ -112,7 +113,7 @@
 			      }
 			    }, { offset: 20 })
 			    .waypoint(function(direction) {
-			      if (direction === 'up' && $(window).width() >= 400) { 
+			      if (direction === 'up' && $(window).width() > 400) { 
 			      	$(".hover-trigger").fadeOut("fast");
 			      	//$container.removeClass("fixed").css("top", 0);
 					$container.css("top", 0);
@@ -125,11 +126,33 @@
 	
 
 			$('.hover-trigger').hover(function() {
-				$(".hover-trigger span").fadeOut();
-				$(".header-inner-wrapper").addClass("expanded").animate({
-	  				top: 0
-				});
-
+				if($(window).width() > 400){
+					$(".hover-trigger span").fadeOut();
+					$(".header-inner-wrapper").addClass("expanded").animate({
+		  				top: 0
+					});
+				}
+			});
+			
+			$('.hover-trigger').on('click', function(){
+				console.log('test');
+				if($(window).width() <= 400){
+					$("header").slideDown();
+				}	
+			});
+			
+			$(document).mouseup(function (e){
+			  
+			    if($(window).width() <= 400){
+				   
+				    var container = $('header');
+				
+				    if (!container.is(e.target) // if the target of the click isn't the container...
+				        && container.has(e.target).length === 0) // ... nor a descendant of the container
+				    {
+				       $("header").slideUp();
+				    }
+			    }
 			});
 			
 			
