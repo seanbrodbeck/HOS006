@@ -109,7 +109,7 @@ $maxMainWidth: $max-main-width;
 
 %h2 {
 //%h7 { 
-	font: 400 22px/27px $sans;
+	font: 400 22px/27px $serif;
 	text-transform: none;
 	letter-spacing: 2px;
 	color: $black;
@@ -194,7 +194,7 @@ $maxMainWidth: $max-main-width;
 	}
 
 	@media (max-width: 500px) { 
-		padding: 0 20px;
+		//padding: 0 20px;
 	}	
 }
 
@@ -238,7 +238,7 @@ $maxMainWidth: $max-main-width;
 body { 
 	color: $text-body;
 	font: #{$base-font-size}/1.5 $serif;
-	background: url(/public/a/i/light_toast.png) repeat 0 0;
+	background: url(../i/light_toast.png) repeat 0 0;
 }
 
 
@@ -305,7 +305,7 @@ blockquote {
 		.case-study & {
 			font: 16px/2 $serif;
 			color: $black;
-			padding-left: 30px;
+			/* padding-left: 30px; */
 			margin-top: -$base*2;
 		}
 	}
@@ -480,12 +480,12 @@ textarea {
 
 
 .date { 
-	@extend %meta;
+	//@extend %meta;
 	margin-bottom: $base;
 }
 
 .caption {
-	@extend %meta;
+	//@extend %meta;
 	font-style: italic;
 	h2 + & { margin-top: -$base-medium; }
 }
@@ -506,13 +506,21 @@ h2 + .subhead {
 img[width="336"][height="702"]{ margin-bottom: 0; }
 .split3_2-1.tall div.first figure:first-of-type { margin-bottom: 3.5%; }
 .work-landing figure a:hover img { 
-	opacity: .9;
+	opacity: .7;
+	filter: alpha(opacity=70);
 	@include transition;
 
 }
 
 .work-landing #archive-holder figure a:hover img { 
 	opacity: .6;
+	filter: alpha(opacity=60);
+	@include transition;
+}
+
+.work-detail .split3_1-2  .col img:hover{
+	opacity: .7;
+	filter: alpha(opacity=70);
 	@include transition;
 }
 
@@ -536,7 +544,7 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 				background: rgba($black, 1);
 			}
 			.block-caption-more {
-	    			max-height: 200px; 
+	    			//max-height: 200px; 
 			}
 		}
 	}
@@ -681,7 +689,7 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 
 .see-more { 
 	display: none;
-	background: $gray-light url(/public/a/i/border-top.png)repeat-x 0 top;
+	background: $gray-light url(../i/border-top.png)repeat-x 0 top;
 	overflow: hidden;
 	.drawer { display: none; }
 	h2  {
@@ -782,6 +790,7 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 
 .about-list {
 	margin-bottom: $base-large;
+	height: 424px;
 	@extend %box-padding;
 	.head-wrap {
 		@include clearfix;
@@ -796,6 +805,7 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 		color: rgba(0,0,0,.35);
 		float: left;
 		margin: 0 20px 0 0;
+		cursor: pointer;
 		&:last-of-type {
 			margin-right: 0;
 		}
@@ -826,6 +836,7 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 		font: 15px/1.3 $sans;
 		color: $black-light;
 		margin: 0 0 $base/2 0;
+		line-height: 12.5px;
 	}
 
 	
@@ -838,7 +849,17 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 
 }
 
-
+@media (max-width: 700px) {
+    .about .split3_2-1-alt .col, .about .split3_2-1-alt .grid-block, .about .split3 .col, .split3 .grid-block{
+         display: block !important;
+           width: 100% !important; 
+           margin-left: 0 !important;
+    }
+       .col.about-us, .about-us.grid-block, .about-list{
+           display: block !important;
+           width: 100% !important; 
+      }
+} 
 
 
 /*-------------------------------------------
@@ -860,7 +881,7 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 		.likes { 
 			@extend %h4;
 			padding-left: 23px;
-			background: url(/public/a/i/instagram-heart.png) no-repeat 0 center;
+			background: url(../i/instagram-heart.png) no-repeat 0 center;
 		}
 		em { 
 			@extend %h5;
@@ -886,9 +907,9 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 			color: $black-medium;
 		}
 	}
-	.main, .sub {
+	.sub {
 		max-height: 3200px;
-		overflow: scroll;
+		overflow-y: scroll;
 		margin-bottom: 40px;
 	}
 	article p {
@@ -1068,7 +1089,15 @@ article .figcaption {
 section.page {
   min-height: 1500px;
   margin-top: 30px;
+  
 }
+
+@media (max-width: 700px) {
+	section.page{
+		min-height: 500px;
+	}
+}
+
 section.page div.loading {
   margin-left: auto;
   margin-right: auto;

@@ -3,7 +3,7 @@
    	 Header
 -------------------------------------------*/
 header { 
-	background: url(/public/a/i/bg-header-alt.png) repeat-x 0 bottom;
+	background: url(../i/bg-header-alt.png) repeat-x 0 bottom;
 	overflow: hidden;
 	position: relative;
 	z-index: 10;
@@ -42,6 +42,18 @@ header {
 	}
 }
 
+@media (max-width: 400px) {
+	.header-inner-wrapper.fixed, .header-inner-wrapper{
+        position: relative; top: 0 !important;
+    }	
+}
+
+@media (max-width: 400px) {
+	.header-inner-wrapper.fixed, .header-inner-wrapper{
+        position: relative; top: 0 !important;
+    }
+}
+
 .hover-trigger {
 	position: fixed;
 	width: 100%;
@@ -56,11 +68,14 @@ header {
 		width: $maxContentWidth;
 		text-align: left;
 		color: #fff;
-		background: url(/public/a/i/collapsed-nav-keystone.png) no-repeat 0 4px;
+		background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
 		padding-left: 30px;
 	}
 }
 
+@media (max-width: 400px) {
+	.hover-trigger{display: none !important;}
+}
 
 .logo { 
 	float: left;
@@ -72,7 +87,7 @@ header {
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	color: $black;
-	background: url(/public/a/i/logomark-1.png) no-repeat 0 0;
+	background: url(../i/logomark-1.png) no-repeat 0 0;
 	background-size: 29px 29px;
 	padding: 6px 0 10px 45px;
 	margin-bottom: 0;
@@ -176,7 +191,7 @@ nav { @include clearfix;
 		margin-left: 0;
 		&:last-of-type { margin-right: 0; }
 		&.on { 
-			background: url(/public/a/i/carot-subnav-on.png) no-repeat center bottom;
+			background: url(../i/carot-subnav-on.png) no-repeat center bottom;
 			a { 
 				color: #fff;
 				text-shadow: 1px 2px 1px rgba($black, .2);
@@ -221,3 +236,7 @@ div.expanded .subnav li.on { background: none; }
 	}
 }
 
+/*-------------------------------------------
+
+   	 End Header
+-------------------------------------------*/

@@ -75,7 +75,10 @@
 	}
 }
 
-.split3_2-1-alt {  
+.split3_2-1-alt {
+	overflow:hidden; 
+	display:inline;
+	  
 	@include clearfix;
 	.col { 
 		width: 31.6%;

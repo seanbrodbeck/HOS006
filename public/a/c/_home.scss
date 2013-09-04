@@ -4,7 +4,7 @@
 -------------------------------------------*/
 .home-ps  { padding-top: 40px; }
 .brand-buffer { 
-	background: url(/public/a/i/border-top.png) repeat-x 0 0, url(/public/a/i/border.png) repeat-x 0 bottom; 
+	background: url(../i/border-top.png) repeat-x 0 0, url(../i/border.png) repeat-x 0 bottom; 
 	background-color: $gray-light;
 	padding: 150px 0;
 
@@ -24,11 +24,23 @@
 .masthead {
 	margin-top: -15px;
 	padding-bottom: 15px;
-	background: url(/public/a/i/bg-header-alt.png) repeat-x 0 bottom;
+	background: url(../i/bg-header-alt.png) repeat-x 0 bottom;
 	overflow: hidden;
 	img {
 		width: 100%;
 		margin-bottom: 0;
 		
+	}
+	
+	.default-curtain{
+		display: block;
+	}
+	
+	.iphone-h-curtain{
+		display: none;
+	}
+	
+	.iphone-v-curtain{
+		display:  none;
 	}
 }
