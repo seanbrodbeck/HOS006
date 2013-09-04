@@ -1,7 +1,7 @@
 3.2.10 (Media Mark)
-3bb24daf110566e0e0a252a23393b33c0a63abe5
+c7344abe68757b3239af4bffe3ceae994cd031eb
 o:Sass::Tree::RootNode
-:@template"” /******************************
+:@template"∆ /******************************
 *
 *  RoyalSlider Default Skin 
 *
@@ -414,7 +414,7 @@
 .rsDefault .rsPreloader {
 	width:20px;
 	height:20px;
-	background-image:url(../preloaders/preloader-white.gif);
+	background-image:url(../i/ajax-loader.gif);
 
 	left:50%;
 	top:50%;
@@ -739,7 +739,7 @@ hover;	;-;@0;iè;.0;"To;
 *  7. Preloader
 *
 ****************/;@;iïo;;i ;[o;;i ;["
-width;[ ;o;;	;;"	20px;@;@;iú;;o;;i ;["height;[ ;o;;	;;"	20px;@;@;iù;;o;;i ;["background-image;[ ;o;	;	;;"+url(../preloaders/preloader-white.gif);@;iû;@;iû;;o;;i ;["	left;[ ;o;;	;;"50%;@;@;i†;;o;;i ;["top;[ ;o;;	;;"50%;@;@;i°;;o;;i ;["margin-left;[ ;o;;	;;"
+width;[ ;o;;	;;"	20px;@;@;iú;;o;;i ;["height;[ ;o;;	;;"	20px;@;@;iù;;o;;i ;["background-image;[ ;o;	;	;;"url(../i/ajax-loader.gif);@;iû;@;iû;;o;;i ;["	left;[ ;o;;	;;"50%;@;@;i†;;o;;i ;["top;[ ;o;;	;;"50%;@;@;i°;;o;;i ;["margin-left;[ ;o;;	;;"
 -10px;@;@;i¢;;o;;i ;["margin-top;[ ;o;;	;;"
 -10px;@;@;i£;;;@;[".rsDefault .rsPreloader;iõ;o;;" ;iõ;[o;;[o;
 ;0;@x;o;; { ;iõ;[o;!;["rsDefault;@x;iõo;
