@@ -5,7 +5,7 @@ Screen Styles
 
 *************************************************
 */
-/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
+/* normalize.css v1.0.1 | MIT License | git.io/normalize */
 article,
 aside,
 details,
@@ -309,7 +309,8 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
   text-transform: none;
   color: #3b3b3b;
   text-align: center;
-  letter-spacing: 0; }
+  letter-spacing: 0;
+  margin-bottom: 28px; }
   @media (max-width: 920px) {
     .positioning-statement span, .case-studies .hero h2 span {
       display: block; } }
@@ -318,13 +319,13 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
   font: italic bold 18px/35px chaparral-pro, sans-serif;
   color: #939392;
   text-align: center;
-  margin-bottom: 56px; }
+  margin-bottom: 28px; }
   .positioning-statement + .subhead {
-    margin-top: -42px; }
+    margin-top: -28px; }
     @media (max-width: 700px) {
       .positioning-statement + .subhead {
         width: 80%;
-        margin: -42px auto 42px;
+        margin: -28px auto 28px;
         line-height: 1.5; } }
 
 .subhead-alt, .case-studies .hero p {
@@ -332,7 +333,7 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
   color: #6e6e6e;
   text-align: center;
   width: 60%;
-  margin: -16px auto 56px; }
+  margin: -16px auto 28px; }
 
 .case-studies .hero {
   margin-top: -76px;
