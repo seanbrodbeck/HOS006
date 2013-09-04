@@ -104,7 +104,7 @@
 			    .waypoint(function(direction) {
 			      if (direction === 'down' && $(window).width() >= 400) { 
 			      	$(".hover-trigger").fadeIn("fast");
-                    console.log('up');
+                    //console.log('up');
                     //$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
 					$container.removeClass("top").css("top", -$totalHeight);
 			      	//$("body").css("padding-top", $totalHeight);
@@ -118,7 +118,7 @@
 					$container.css("top", 0);
 			      	//$("body").css("padding-top", 0);
 			      	$(".hover-trigger span").fadeIn();
-                      console.log('down');
+                      //console.log('down');
 					aux = 0;
 			      }
 			    }, { offset: 20 });
@@ -159,9 +159,11 @@
 	</script>
 
 	<script>
+		/*
 		$(document).ready(function(){
 		
-			// hover over any part of block show description
+			
+// hover over any part of block show description
 			$('.grid-block a').hover(
 				 function () {
 				   $(this).find('.block-caption-more').css({"max-height":"250px"});
@@ -263,4 +265,5 @@
 				$(".accolades, .clients").hide();
 				$(".about-list .speaking").show();
 			});
+*/
 	</script>

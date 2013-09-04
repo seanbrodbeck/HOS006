@@ -581,10 +581,10 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 	padding: 0 $base*1.5;
 	overflow: hidden;
     max-height: 0;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     .meta { 
     	margin-top: 18px;
     	@extend %h5;
@@ -603,6 +603,21 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 	@media (max-width: 768px) {
     	display: none;
     }    
+}
+
+.block-caption-more.open{
+	max-height: 500px;	
+	-webkit-transition: all 0.8s ease;
+	-moz-transition: all 0.8s ease;
+	-ms-transition: all 0.8s ease;
+	-o-transition: all 0.8s ease;
+	transition: all 0.8s ease;
+}
+
+@media (max-width: 768px) {
+	.block-caption-more.open, .block-caption-more{
+		max-height: 500px;
+	}	
 }
 
 .grid-carousel { 

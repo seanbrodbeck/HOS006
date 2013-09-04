@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$active_group = 'expressionengine';
+$active_group = 'local';
 $active_record = TRUE;
 
 $db['expressionengine']['hostname'] = '216.70.96.207';
@@ -31,7 +31,7 @@ $db['local']['cache_on'] = FALSE;
 $db['local']['autoinit'] = FALSE;
 $db['local']['char_set'] = 'utf8';
 $db['local']['dbcollat'] = 'utf8_general_ci';
-$db['local']['cachedir'] = '/Users/gpotts/Sites/gpotts/hos/hos005/system/expressionengine/cache/db_cache/';
+$db['local']['cachedir'] = '/Users/bueno/Sites/hos/hos005/system/expressionengine/cache/db_cache/';
 
 /* End of file database.php */
 /* Location: ./system/expressionengine/config/database.php */

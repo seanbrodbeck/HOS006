@@ -1,4 +1,4 @@
-var api = {};
+	var api = {};
 $(function() {
 	//alert($siteURL);
 	// Functionality Enabling/Disabling
@@ -272,7 +272,16 @@ jQuery(document).ready(function($) {
  	}) 	
  	/* Scroll to top on load */
 	//$('html, body').stop().animate({ scrollTop: 0 }, 500);
-
+	
+	//Scroll curtain up on click
+	$('#masthead').on('click', function(){
+		/*
+var scrollOffset = $('#home-ps').offset().top;
+		$("html, body").animate({ scrollTop: scrollOffset-100 });
+*/	
+		$(this).slideUp();
+	});
+	
 
 });
 
@@ -369,17 +378,112 @@ $(window).resize(function (){
 $(document).ready(function(){
 	var $label = $(".col img:first-child").attr("data-caption");
 	$(".work-detail .meta").text($label);
+	
+	// hover over any part of block show description
+	$('.grid-block a').hover(
+		 function () {
+		   //$(this).find('.block-caption-more').css({"max-height":"250px"});
+		   $(this).find('.block-caption-more').addClass('open');
+		 }, 
+		 function () {
+		 	$(this).find('.block-caption-more').removeClass('open');
+		    //$(this).find('.block-caption-more').css({"max-height":"0px"});
+		 }
+	 );
+
+	// Show search modal
+	$('#search-modal-button').click(function(e){
+		e.preventDefault();
+		$('#search-modal').fadeIn(500);
+		$('#search-modal-keywords').focus();
+	});
+
+	// Close search modal
+	$('#search-modal-close').click(function(e){
+		e.preventDefault();
+		$('#search-modal').fadeOut(100);
+	});
+
+	// Catch the search modal submit event
+	// and do the searches via ajax
+	$('#search-modal-form').submit(function(e){
+		e.preventDefault();
+
+		// grab the keywords field
+		var keywords = $('#search-modal-keywords').val();
+		
+		// clear any existing results
+		$('.search-results .wrap').html('');
+
+		// set the two hidden keywords field
+		// values to the user input
+		$('#blog-keywords').val(keywords);
+		$('#work-keywords').val(keywords);
+
+		// perform the ajax post for the blog search
+		var action = $('#blog-search-form').attr('action');
+		var form = $('#blog-search-form').serialize();
+
+		$.post(action, form, function(data){
+			$('.search-results .wrap').append(data);
+		});
+
+		// perform ajax post for the work search
+		var action = $('#work-search-form').attr('action');
+		var form = $('#work-search-form').serialize();
+
+		$.post(action, form, function(data){
+			$('.search-results .wrap').append(data);
+		});
+
+	});
+
+	// Load archives
+	$('.see-more h2 a').click(function(e){
+		e.preventDefault();
+		
+		var page = $('nav.subnav ul li.on a').data('page');
+
+		var category = $('section#' + page + ' input.category').val();
+		var children = $('section#' + page + ' input.children').val();
+		children.replace('|', '&');
+
+		$.get($siteURL + 'inc/archives/' + category + '/' + children, function(data) {
+				$('#archive-holder').html(data);
+			});
+		
+	});
+
+	$(document).on('click','.subnav a',function(e){
+			if  ($('nav.subnav ul li.on a').data('page') == "branding" || $('nav.subnav ul li.on a').data('page') == "books" || $('nav.subnav ul li.on a').data('page') == "ads-collateral") {
+				$(".see-more").hide();
+			}
+			else {
+				$(".see-more").show();
+			}
+	});
+
+
+
+	$(document).on('click','.about-list .clients-head',function(e){
+		$(".head-wrap h3").removeClass("on");
+			$(this).addClass("on");
+			$(".accolades, .speaking").hide();
+			$(".about-list .clients").show();
+	});
+	$(document).on('click','.about-list .accolades-head',function(e){
+			$(".head-wrap h3").removeClass("on");
+			$(this).addClass("on");
+		$(".clients, .speaking").hide();
+		$(".about-list .accolades").show(); 			
+	});
+	$(document).on('click','.about-list .speaking-head',function(e){
+		$(".head-wrap h3").removeClass("on");
+			$(this).addClass("on");
+		$(".accolades, .clients").hide();
+		$(".about-list .speaking").show();
+	});
+	
 })
-
-
-// $(document).ready(function(){
-// 	if ($(window).width() < 800){
-// 		var $slider = $(".social-footer .blog-panel")
-// 		slider.destroy(); 
-// 	}
-// });
-
-
-
 
 
