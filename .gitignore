@@ -13,3 +13,5 @@ sized/
 thumbs/
 _thumbs/
 */expressionengine/cache/*
+/images/
+public/a/c/.sass-cache/

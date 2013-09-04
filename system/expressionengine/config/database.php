@@ -18,5 +18,20 @@ $db['expressionengine']['char_set'] = 'utf8';
 $db['expressionengine']['dbcollat'] = 'utf8_general_ci';
 $db['expressionengine']['cachedir'] = '/Users/hc_wagner/Sites/hos-app/system/expressionengine/cache/db_cache/';
 
+$db['local']['hostname'] = 'localhost:8889';
+$db['local']['username'] = 'root';
+$db['local']['password'] = 'root';
+$db['local']['database'] = 'headsofstate';
+$db['local']['dbdriver'] = 'mysql';
+$db['local']['pconnect'] = FALSE;
+$db['local']['dbprefix'] = 'exp_';
+$db['local']['swap_pre'] = 'exp_';
+$db['local']['db_debug'] = FALSE;
+$db['local']['cache_on'] = FALSE;
+$db['local']['autoinit'] = FALSE;
+$db['local']['char_set'] = 'utf8';
+$db['local']['dbcollat'] = 'utf8_general_ci';
+$db['local']['cachedir'] = '/Users/gpotts/Sites/gpotts/hos/hos005/system/expressionengine/cache/db_cache/';
+
 /* End of file database.php */
 /* Location: ./system/expressionengine/config/database.php */
