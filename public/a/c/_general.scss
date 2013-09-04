@@ -514,24 +514,42 @@ h2 + .subhead {
 .tall figure:last-of-type { margin-bottom: 0; }
 img[width="336"][height="702"]{ margin-bottom: 0; }
 .split3_2-1.tall div.first figure:first-of-type { margin-bottom: 3.5%; }
-.work-landing figure a:hover img { 
+
+figure a img { 
+	opacity: 1.0;
+	filter: alpha(opacity=100);
+	@include transition;
+
+}
+
+figure a:hover img { 
 	opacity: .7;
 	filter: alpha(opacity=70);
 	@include transition;
 
 }
 
-.work-landing #archive-holder figure a:hover img { 
+/*
+figure a:hover img { 
+	opacity: .7;
+	filter: alpha(opacity=70);
+	@include transition;
+
+}
+
+.grid-block #archive-holder figure a:hover img { 
 	opacity: .6;
 	filter: alpha(opacity=60);
 	@include transition;
 }
 
-.work-detail .split3_1-2  .col img:hover{
+.grid-block .col img:hover{
 	opacity: .7;
 	filter: alpha(opacity=70);
 	@include transition;
 }
+*/
+
 
 
 .grid-block { 
@@ -984,7 +1002,6 @@ img[width="336"][height="702"]{ margin-bottom: 0; }
 
 html .insta-panel { 
 	display: none; 
-	width: $maxContentWidth;
 }
 
 

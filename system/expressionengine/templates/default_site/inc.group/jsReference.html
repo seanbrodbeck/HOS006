@@ -20,14 +20,16 @@
 		        	controlNavigation: 'none',
 		        	loop: true,
 		        	arrowsNav: false,
-		        	autoHeight:true
+		        	autoHeight:true,
+		        	sliderDrag:false
 
 		        }); 
 		        $(".royalSlider2").royalSlider({
     				controlNavigation: 'none',
     				arrowsNav: false,
     				autoHeight:true,
-    				loop: true
+    				loop: true,
+    				sliderDrag:false
 
     			});  	
 		        $(".cs-royalSlider").royalSlider({
@@ -79,8 +81,7 @@
 			var aux;
 			$container = $(".header-inner-wrapper")
 			$totalHeight = $container.outerHeight();
-			
-			console.log($(window).width());
+
 			$('body:not(.home) .search-wrap')
 			  .waypoint(function(direction) {
 			    if (direction === 'down' && $(window).width() > 400) { 

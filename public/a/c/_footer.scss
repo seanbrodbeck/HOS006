@@ -15,7 +15,7 @@
 		}
 	}
 
-	.next, .prev{background:url("../i/arrows.png") no-repeat 0 0; width:42px; height:49px; position:absolute; top:102px; text-indent:-9999px;}
+	.next, .prev{background:url("../i/arrows.png") no-repeat 0 0; width:42px; height:49px; position:absolute; top:102px; text-indent:-9999px; z-index: 999; cursor: pointer;}
 	
 	.next{background-position:-42px 0; right:0px;}
 	.next:hover{background-position:-42px -49px;}
@@ -87,16 +87,22 @@
 		.pager {
 			display: none !important;
 		}
+		
+		
 		.split3 .col {
 			width: 376px;
-			//max-width: 376px;
+			padding-top: 20px;
 			margin: 0 auto 30px !important;
-			min-height: 750px !important;
-			max-height: 900px !important;
+			min-height: 0 !important;
 			float: none;
+			
 			.article {
 				display: block;
 			}
+		}
+		
+		.insta-panel .split3 .col{
+			padding-top: 0;
 		}
 	}
 	@media (max-width: 400px) {
@@ -105,9 +111,7 @@
 				display: none;
 			}
 			.ss-icon:first-of-type {
-				clear: left;
-				float: left;
-				display: block;
+				
 			}
 		}
 	}
@@ -116,7 +120,7 @@
 			width: 300px;
 			//max-width: 376px;
 			margin: 0 auto 30px !important;
-			min-height: 750px !important;
+			min-height: 0 !important;
 			float: none;
 			
 		}
