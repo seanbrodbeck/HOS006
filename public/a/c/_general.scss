@@ -187,6 +187,7 @@ $maxMainWidth: $max-main-width;
 	color: $black;
 	text-align: center;
  	letter-spacing: 0;
+	margin-bottom: $base-medium;
 	span { 
 		@media (max-width: 920px) { 
 			display: block;
@@ -203,11 +204,11 @@ $maxMainWidth: $max-main-width;
 	font: italic bold 18px/35px $serif;
 	color: $black-light;
 	text-align: center;
-	margin-bottom: $base-xlarge;
-	.positioning-statement + & { margin-top: -$base-large; 
+	margin-bottom: $base-medium;
+	.positioning-statement + & { margin-top: -$base-medium; 
 	 	@media (max-width: 700px) { 
 			width: 80%;
-			margin: -$base-large auto $base-large;
+			margin: -$base-medium auto $base-medium;
 			line-height: 1.5;
 		}
 	}
@@ -218,7 +219,7 @@ $maxMainWidth: $max-main-width;
 	color: $black-medium;
 	text-align: center;
 	width: 60%;
-	margin: -16px auto $base-xlarge;
+	margin: -16px auto $base-medium;
 }
 
 .case-studies .hero {
