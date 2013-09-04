@@ -608,6 +608,10 @@ figure a:hover img {
   -o-transition: all 0.16s linear;
   transition: all 0.16s linear; }
 
+@media (max-width: 768px) {
+  figure a:hover img {
+    opacity: 1.0;
+    filter: alpha(opacity=100); } }
 /*
 figure a:hover img { 
 	opacity: .7;

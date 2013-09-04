@@ -515,6 +515,7 @@ h2 + .subhead {
 img[width="336"][height="702"]{ margin-bottom: 0; }
 .split3_2-1.tall div.first figure:first-of-type { margin-bottom: 3.5%; }
 
+ 
 figure a img { 
 	opacity: 1.0;
 	filter: alpha(opacity=100);
@@ -528,6 +529,13 @@ figure a:hover img {
 	@include transition;
 
 }
+
+@media (max-width: 768px) {
+    figure a:hover img { 
+		opacity: 1.0;
+		filter: alpha(opacity=100);
+	}
+} 
 
 /*
 figure a:hover img { 
