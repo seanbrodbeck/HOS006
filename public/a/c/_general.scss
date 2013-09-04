@@ -174,7 +174,15 @@ $maxMainWidth: $max-main-width;
 	& + .meta { margin-top: -$base-large; }
 }
 
+.hidden-phone{
+	display: block;
+}
 
+@media (max-width: 768px) {
+	.hidden-phone{
+		display: none;
+	}
+}
 // h2 or h3
 %text-large { 
 	font-size: 23px;

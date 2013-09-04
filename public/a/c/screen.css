@@ -5,7 +5,7 @@ Screen Styles
 
 *************************************************
 */
-/* normalize.css v1.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 article,
 aside,
 details,
@@ -300,6 +300,12 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
 .meta + .meta {
   margin-top: -42px; }
 
+.hidden-phone {
+  display: block; }
+
+@media (max-width: 768px) {
+  .hidden-phone {
+    display: none; } }
 .social-footer .adjunct-header li a {
   font-size: 23px;
   line-height: 40px; }
@@ -1482,8 +1488,7 @@ footer {
       padding-top: 42px; } }
 
 .mailing-list input[type="text"] {
-  width: 70%;
-  line-height: 0; }
+  width: 70%; }
 .mailing-list .btn, .mailing-list .btn-alt a, .btn-alt .mailing-list a {
   width: 30%;
   margin-left: -4px; }
