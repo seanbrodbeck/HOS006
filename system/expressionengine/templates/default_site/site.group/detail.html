@@ -58,7 +58,12 @@
 
 				<div class="col">
 					{work_detail_images}
+					{if image != ''}
 					<img src="{image}" data-caption="{image-caption}" alt="" />
+					{/if}
+					{if vimeo != ''}
+					    {vimeo}
+					{/if}
 					{/work_detail_images}
 				</div>
 
