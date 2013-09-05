@@ -18,6 +18,8 @@
 	.content { padding-top: $base*2; }
 }
 
+.work .rsSlide{position: relative !important;}
+.work .rsOverflow{height: auto !important;}
 
 .main { 
 	float: left;
@@ -75,7 +77,10 @@
 	}
 }
 
-.split3_2-1-alt {  
+.split3_2-1-alt {
+	overflow:hidden; 
+	display:inline;
+	  
 	@include clearfix;
 	.col { 
 		width: 31.6%;

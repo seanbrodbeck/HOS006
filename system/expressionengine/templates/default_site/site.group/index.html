@@ -22,7 +22,7 @@
 		<div class="hover-trigger"><span>Menu</span></div>
 
 		<div class="search-wrap">
-			<div class="masthead">
+			<div class="masthead" id="masthead">
 				<img src="{site_url}public/a/i/curtain-new.jpg" class="default-curtain" alt="" />
 				
 				<img src="{site_url}public/a/i/curtain-iphone-h.jpg" alt="" class="iphone-h-curtain"/>
@@ -32,7 +32,7 @@
 			</div>
 
 
-			<div class="wrap home-ps">
+			<div id="home-ps" class="wrap home-ps">
 
 				<!--<h2 class="positioning-statement">An&nbsp;Agency. A&nbsp;Workshop. <span>A&nbsp;Think&nbsp;Tank. A&nbsp;Clubhouse.</span></h2>-->
 				<!--<p class="subhead">Providing image-making and design strategy to a diverse list of clients since&nbsp;2002.</p>-->
@@ -57,7 +57,8 @@
 									</div>
 									<div class="block-caption-more">
 										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
-										<p>{summary}</p>
+										<p>
+										{exp:excerpt limit="50" limit_type="words" indicator="..."}{summary}{/exp:excerpt}</p>
 									</div>
 								</div><!--/figcaption-->
 							</a>
@@ -75,7 +76,7 @@
 									</div>
 									<div class="block-caption-more">
 										<p class="meta"><span>{year_published}</span> | {feature_title_b}</p>
-										<p>{summary}</p>
+										<p>{exp:excerpt limit="50" limit_type="words" indicator="..."}{summary}{/exp:excerpt}</p>
 									</div>
 								</div><!--/figcaption-->
 							</a>
@@ -294,8 +295,8 @@
 
 			{/exp:channel:entries}																
 			</div><!-- /wrap-->
-
-		{embed="inc/social-footer"}
+	
+			{embed="inc/social-footer"}
 		
 		</div><!-- search-wrap-->
 

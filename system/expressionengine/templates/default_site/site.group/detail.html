@@ -23,7 +23,7 @@
 
 		{embed="inc/search-modal"}
 		<div class="hover-trigger"><span>Menu</span></div>
-	{categories}{category_id}{/categories}
+	<!-- {categories}{category_id}{/categories} -->
 		{exp:channel:prev_entry category="{categories}{category_id}{/categories}"}
 		<a class="prev pager ss-icon ss-standard ss-navigaterright" href="{path='site/detail'}">Previous</a>
 		{/exp:channel:prev_entry}
@@ -58,7 +58,12 @@
 
 				<div class="col">
 					{work_detail_images}
+					{if image != ''}
 					<img src="{image}" data-caption="{image-caption}" alt="" />
+					{/if}
+					{if vimeo != ''}
+					    {vimeo}
+					{/if}
 					{/work_detail_images}
 				</div>
 
