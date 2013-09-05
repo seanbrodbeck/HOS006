@@ -576,13 +576,15 @@ figure a:hover img {
 		float: none;
 	}
 	
-	.grid-block img {margin: 0 auto 10px !important; width: 90%;}
+	.grid-block img {margin: 0 auto 0 !important; width: 90%;}
 	
 	figure{
 		margin-bottom: 0 !important;
 	}
 	
 	.figcaption{position: relative !important; width: 90% !important; margin: 0 auto 10px;}
+	
+	img + .caption, img + .figcaption{margin-top: 0px;}
 }
 
 
@@ -772,7 +774,7 @@ figure a:hover img {
 -------------------------------------------*/
 .about .hero { 
 	margin-top: -76px; 
-	padding-top: 104px;
+	padding-top: 35px;
 }
 
 .carousel { 
