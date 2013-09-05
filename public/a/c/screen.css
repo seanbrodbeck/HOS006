@@ -1135,6 +1135,18 @@ header {
   .header-inner-wrapper.fixed, .header-inner-wrapper {
     position: relative;
     top: 0 !important; } }
+.search-wrap {
+  margin-top: 121px; }
+
+@media (min-width: 768px) and (max-width: 979px) {
+  .search-wrap {
+    margin-top: 155px; } }
+@media (max-width: 400px) {
+  .search-wrap {
+    margin-top: -35px; } }
+#search-modal {
+  display: none; }
+
 .hover-trigger {
   position: fixed;
   padding-left: 10px;
