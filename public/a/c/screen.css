@@ -1620,7 +1620,7 @@ footer .split2 .col, footer .split2 .grid-block {
   float: left;
   width: 69.2437%;
   margin-right: 2.52101%; }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     .main {
       width: 100%;
       margin-right: 0; } }

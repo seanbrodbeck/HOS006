@@ -25,7 +25,7 @@
 	float: left;
 	@include flex-grid(7, 6); 
 	margin-right: $flex-gutter;
-	@media (max-width: 600px) {
+	@media (max-width: 768px) {
 		width: 100%;
 		margin-right: 0;
 	}
