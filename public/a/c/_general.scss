@@ -976,9 +976,10 @@ figure a:hover img {
 	padding: 14px; 
 	background: rgba(0,0,0,.1);
 	position: fixed; 
+	z-index: 999;
 	right: 0; 
 	color: #fff; 
-	z-index: 8;
+
 	@media screen and (max-width: 767px) {
 		padding: 5px;
 	}
@@ -986,6 +987,7 @@ figure a:hover img {
 	&.prev { 
 		left: 0; 
 		right: inherit;
+		z-index: 999;
 	}
 	.social-footer & { 
 		position: absolute;
