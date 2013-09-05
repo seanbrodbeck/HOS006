@@ -942,6 +942,9 @@ figure a:hover img {
   margin-bottom: 40px; }
 .blog article p {
   line-height: 1.5; }
+@media (max-width: 850px) {
+  .blog img {
+    height: auto; } }
 
 .pager {
   display: none;

@@ -966,7 +966,11 @@ figure a:hover img {
 	article p {
 		line-height: 1.5;
 	}
-
+    img {
+        @media (max-width: 850px) {
+            height: auto;
+        }
+    }
 }
 
 
