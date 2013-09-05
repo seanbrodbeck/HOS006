@@ -1138,11 +1138,17 @@ header {
 .search-wrap.case-studies {
   margin-top: 0; }
 
+.search-wrap.blog {
+  margin-top: 0; }
+
 @media (max-width: 768px) {
   .search-wrap {
     margin-top: 0px; }
 
   .search-wrap.case-studies {
+    margin-top: 20px; }
+
+  .search-wrap.blog {
     margin-top: 20px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {
