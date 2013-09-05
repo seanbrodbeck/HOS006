@@ -848,8 +848,7 @@ figure a:hover img {
 
 
 .about-list {
-	margin-bottom: $base-large;
-	height: 424px;
+	margin-bottom: 13px;
 	@extend %box-padding;
 	.head-wrap {
 		@include clearfix;
@@ -871,6 +870,9 @@ figure a:hover img {
 		&.on {
 			color: #3b3b3b;
 		}
+        @media (max-width: 1000px) {
+            font-size: 16px;
+        }
 	}
 	ul { 
 		position: relative;

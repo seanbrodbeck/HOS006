@@ -848,8 +848,7 @@ figure a:hover img {
     margin-bottom: 16px; }
 
 .about-list {
-  margin-bottom: 42px;
-  height: 424px; }
+  margin-bottom: 13px; }
   .about-list .head-wrap {
     margin-bottom: 20px; }
     .about-list .head-wrap:after {
@@ -872,6 +871,9 @@ figure a:hover img {
       margin-right: 0; }
     .about-list h3.on {
       color: #3b3b3b; }
+    @media (max-width: 1000px) {
+      .about-list h3 {
+        font-size: 16px; } }
   .about-list ul {
     position: relative;
     margin-bottom: 0; }
