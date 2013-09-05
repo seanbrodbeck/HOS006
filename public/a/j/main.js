@@ -255,7 +255,7 @@ jQuery(document).ready(function($) {
  		$(this).addClass("on");
  		$(".blog-panel").fadeIn("fast");
  		$(".insta-panel").fadeOut("fast");
- 		//$('.royalSlider').royalSlider('updateSliderSize', true);
+ 		$('.royalSlider').royalSlider('updateSliderSize', true);
  		event.preventDefault();
  	});
  	$(".insta-trigger").click(function(event){
@@ -264,7 +264,7 @@ jQuery(document).ready(function($) {
  		$(".royalSlider").data('royalSlider');
 		$(".insta-panel").fadeIn("fast");
  		$(".blog-panel").fadeOut("fast");
- 		//$('.royalSlider').royalSlider('updateSliderSize', true); 
+ 		$('.royalSlider').royalSlider('updateSliderSize', true); 
  		event.preventDefault();
  	}) 	
  	/* Scroll to top on load */
