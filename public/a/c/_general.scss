@@ -92,14 +92,7 @@ $maxMainWidth: $max-main-width;
 
 .color-test { height: 100px; width: 100px; float: left; margin: 0 40px 40px 0; }
 
-@media (max-width: 768px) {
-	.grid-block{
-		display: block;
-		width: 100% !important;
-		text-align: center;
-	}
-	
-}
+
 
 
 /*-------------------------------------------
@@ -547,26 +540,6 @@ figure a:hover img {
 	}
 } 
 
-/*
-figure a:hover img { 
-	opacity: .7;
-	filter: alpha(opacity=70);
-	@include transition;
-
-}
-
-.grid-block #archive-holder figure a:hover img { 
-	opacity: .6;
-	filter: alpha(opacity=60);
-	@include transition;
-}
-
-.grid-block .col img:hover{
-	opacity: .7;
-	filter: alpha(opacity=70);
-	@include transition;
-}
-*/
 
 
 
@@ -595,6 +568,22 @@ figure a:hover img {
 	}
 }
 
+@media (max-width: 768px) {
+	.grid-block{
+		display: block;
+		width: 100% !important;
+		text-align: center;
+		float: none;
+	}
+	
+	.grid-block img {margin: 0 auto 10px !important; width: 90%;}
+	
+	figure{
+		margin-bottom: 0 !important;
+	}
+	
+	.figcaption{position: relative !important; width: 90% !important; margin: 0 auto 10px;}
+}
 
 
 .block-caption { 
@@ -616,8 +605,9 @@ figure a:hover img {
 				display: none;
 			}
 	}
-	@media (max-width: 700px) { 
-			display: none;
+	@media (max-width: 768px) { 
+			display: block;
+			position: relative;
 		//font: 7px/1.5 chaparral-pro, sans-serif;
 	}
 }

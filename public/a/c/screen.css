@@ -247,11 +247,6 @@ a.line {
   float: left;
   margin: 0 40px 40px 0; }
 
-@media (max-width: 768px) {
-  .grid-block {
-    display: block;
-    width: 100% !important;
-    text-align: center; } }
 /*-------------------------------------------
  
     	Typography
@@ -617,26 +612,6 @@ figure a:hover img {
   figure a:hover img {
     opacity: 1.0;
     filter: alpha(opacity=100); } }
-/*
-figure a:hover img { 
-	opacity: .7;
-	filter: alpha(opacity=70);
-	@include transition;
-
-}
-
-.grid-block #archive-holder figure a:hover img { 
-	opacity: .6;
-	filter: alpha(opacity=60);
-	@include transition;
-}
-
-.grid-block .col img:hover{
-	opacity: .7;
-	filter: alpha(opacity=70);
-	@include transition;
-}
-*/
 .grid-block {
   float: left;
   position: relative; }
@@ -653,6 +628,24 @@ figure a:hover img {
     .grid-block .figcaption:hover .block-caption, .grid-block .figcaption:focus .block-caption {
       background: #3b3b3b; }
 
+@media (max-width: 768px) {
+  .grid-block {
+    display: block;
+    width: 100% !important;
+    text-align: center;
+    float: none; }
+
+  .grid-block img {
+    margin: 0 auto 10px !important;
+    width: 90%; }
+
+  figure {
+    margin-bottom: 0 !important; }
+
+  .figcaption {
+    position: relative !important;
+    width: 90% !important;
+    margin: 0 auto 10px; } }
 .block-caption {
   -webkit-transition: all 0.16s linear;
   -moz-transition: all 0.16s linear;
@@ -672,9 +665,10 @@ figure a:hover img {
     @media (max-width: 840px) {
       .block-caption em {
         display: none; } }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     .block-caption {
-      display: none; } }
+      display: block;
+      position: relative; } }
 
 .block-caption-more {
   background: #fff;
@@ -1138,6 +1132,9 @@ header {
 .search-wrap {
   margin-top: 121px; }
 
+@media (max-width: 768px) {
+  .search-wrap {
+    margin-top: 0px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {
     margin-top: 155px; } }
@@ -1731,9 +1728,6 @@ footer .split2 .col, footer .split2 .grid-block {
   margin-right: 2.52101%; }
 .split3_1-2.tall .grid-block:not(.first) figure:first-child {
   margin-bottom: 30px; }
-  @media screen and (max-width: 700px) {
-    .split3_1-2.tall .grid-block:not(.first) figure:first-child {
-      margin-bottom: 9%; } }
 .split3_1-2.tall .grid-block:not(.first) figure:last-child {
   margin-bottom: 0; }
 

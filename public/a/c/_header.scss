@@ -56,6 +56,10 @@ header {
 
 .search-wrap{margin-top:121px;}
 
+@media (max-width: 768px) {
+	.search-wrap{margin-top:0px;}
+}
+
 @media (min-width: 768px) and (max-width: 979px) {  
 .search-wrap{margin-top:155px;}
 }
@@ -64,7 +68,7 @@ header {
 .search-wrap{margin-top:-35px;}
 }
 
-#search-modal {display: none;}
+#search-modal {display: none}
 
 
 .hover-trigger {
