@@ -54,6 +54,19 @@ header {
     }
 }
 
+.search-wrap{margin-top:121px;}
+
+@media (min-width: 768px) and (max-width: 979px) {  
+.search-wrap{margin-top:155px;}
+}
+
+@media (max-width: 400px) {
+.search-wrap{margin-top:-35px;}
+}
+
+#search-modal {margin-top: 107px;}
+
+
 .hover-trigger {
 	position: fixed;
 	padding-left: 10px;
@@ -74,7 +87,7 @@ header {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 768px) {
 	header{display: none; position: fixed; width: 100%; z-index: 999;}
 	.hover-trigger{display: block;}
 }
