@@ -43,14 +43,16 @@
 
 						<h1>{title}</h1>
 
-						<p class="meta"></p>
-
 						<p class="intro">{intro_line}</p>
 
 						<p>{summary}</p>
-
-						<p class="meta meta-alt">Client | <em>{client_name}</em></p>
-						{if art_direction}<p class="meta">Art Direction | <em>{art_direction}</em></p>{/if}
+					
+						<p>CLIENT | <em>{client_name}</em><br/>
+						
+						{if art_direction}
+						ART DIRECTION | <em>{art_direction}</em><br/>
+						{/if}
+						{year_published}</p>
 
 					</div>
 
