@@ -14,24 +14,28 @@
 	
 
 		<script>
-		    jQuery(document).ready(function($) {
+		    jQuery(document).ready(function($) {										
+				
 		        $(".royalSlider").royalSlider({
 		        	controlNavigation: 'none',
 		        	loop: true,
 		        	arrowsNav: false,
-		        	autoHeight:true
+		        	autoHeight:true,
+		        	sliderDrag:false
 
 		        }); 
 		        $(".royalSlider2").royalSlider({
     				controlNavigation: 'none',
     				arrowsNav: false,
     				autoHeight:true,
-    				loop: true
+    				loop: true,
+    				sliderDrag:false
 
     			});  	
 		        $(".cs-royalSlider").royalSlider({
-		        	controlNavigation: 'none',
-		        	arrowsNav: false,
+		        	controlNavigation: 'bullets',
+		        	arrowsNav: true,
+					arrowsNavAutoHide: true,					
 		        	autoScaleSlider:true,
 		        	loop: true, 
 		        	autoScaleSliderWidth: '1190', 
@@ -74,23 +78,25 @@
 			$('.styled-select').ddslick();
 		</script>
 		<script>
-
+			var aux;
 			$container = $(".header-inner-wrapper")
 			$totalHeight = $container.outerHeight();
 
 			$('body:not(.home) .search-wrap')
 			  .waypoint(function(direction) {
-			    if (direction === 'down' && $(window).width() >= 400) { 
+			    if (direction === 'down' && $(window).width() > 400) { 
 			    	$(".hover-trigger").fadeIn("fast");
-			    	$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
-			    	$("body").css("padding-top", $totalHeight);
+			    	//$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
+					$container.removeClass("top").css("top", -$totalHeight);
+			    	//$("body").css("padding-top", $totalHeight);
 			    }
 			  }, { offset: 20 })
 			  .waypoint(function(direction) {
-			    if (direction === 'up' && $(window).width() >= 400) { 
+			    if (direction === 'up' && $(window).width() > 400) { 
 			    	$(".hover-trigger").fadeOut("fast");
-			    	$container.removeClass("fixed").css("top", 0);
-			    	$("body").css("padding-top", 0);
+			    	//$container.removeClass("fixed").css("top", 0);
+					$container.css("top", 0);
+			    	//$("body").css("padding-top", 0);
 			    	$(".hover-trigger span").fadeIn();
 			    }
 			  }, { offset: 20 });
@@ -98,47 +104,75 @@
 
 			  $('.home .home-ps')
 			    .waypoint(function(direction) {
-			      if (direction === 'down' && $(window).width() >= 400) { 
+			      if (direction === 'down' && $(window).width() > 400) { 
 			      	$(".hover-trigger").fadeIn("fast");
-                    console.log('up');
-                    $container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
-
-			      	$("body").css("padding-top", $totalHeight);
+                    //console.log('up');
+                    //$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
+					$container.removeClass("top").css("top", -$totalHeight);
+			      	//$("body").css("padding-top", $totalHeight);
+					aux = 1;
 			      }
 			    }, { offset: 20 })
 			    .waypoint(function(direction) {
-			      if (direction === 'up' && $(window).width() >= 400) { 
+			      if (direction === 'up' && $(window).width() > 400) { 
 			      	$(".hover-trigger").fadeOut("fast");
-			      	$container.removeClass("fixed").css("top", 0);
-			      	$("body").css("padding-top", 0);
+			      	//$container.removeClass("fixed").css("top", 0);
+					$container.css("top", 0);
+			      	//$("body").css("padding-top", 0);
 			      	$(".hover-trigger span").fadeIn();
-                      console.log('down');
+                      //console.log('down');
+					aux = 0;
 			      }
 			    }, { offset: 20 });
 	
 
 			$('.hover-trigger').hover(function() {
-				$(".hover-trigger span").fadeOut();
-				$(".header-inner-wrapper").addClass("expanded").animate({
-	  				top: 0
-				});
-
+				if($(window).width() > 400){
+					$(".hover-trigger span").fadeOut();
+					$(".header-inner-wrapper").addClass("expanded").animate({
+		  				top: 0
+					});
+				}
+			});
+			
+			$('.hover-trigger').on('click', function(){
+				console.log('test');
+				if($(window).width() <= 400){
+					$("header").slideDown();
+				}	
+			});
+			
+			$(document).mouseup(function (e){
+			  
+			    if($(window).width() <= 400){
+				   
+				    var container = $('header');
+				
+				    if (!container.is(e.target) // if the target of the click isn't the container...
+				        && container.has(e.target).length === 0) // ... nor a descendant of the container
+				    {
+				       $("header").slideUp();
+				    }
+			    }
 			});
 			
 			
             //Don't change header position if in mobile layout
             
                 $container.mouseleave(function() {
-          
-        				$(this).removeClass("expanded").animate({
-        					top:  -$totalHeight
-        				});
+						if(aux == 1){
+						
+							$(this).removeClass("expanded").animate({
+								
+									top:  -$totalHeight
+							});
+						}
         				$(".hover-trigger span").fadeIn();
     			
     			});				
     
     			$container.waypoint(function() {
-    			    $(this).addClass("top")
+    			    //$(this).addClass("top")
     				//console.log("add top class");
     			});
                 
@@ -149,7 +183,20 @@
 	</script>
 
 	<script>
+		/*
 		$(document).ready(function(){
+		
+			
+// hover over any part of block show description
+			$('.grid-block a').hover(
+				 function () {
+				   $(this).find('.block-caption-more').css({"max-height":"250px"});
+				 }, 
+				 function () {
+				   $(this).find('.block-caption-more').css({"max-height":"0px"});
+				 }
+			 );
+		
 			// Show search modal
 			$('#search-modal-button').click(function(e){
 				e.preventDefault();
@@ -233,16 +280,14 @@
 			$(document).on('click','.about-list .accolades-head',function(e){
  				$(".head-wrap h3").removeClass("on");
  				$(this).addClass("on");
- 				$(".about-list .clients, .about-list .speaking").fadeOut(function(){
- 					$(".about-list .accolades").fadeIn();
- 				});
- 				
+				$(".clients, .speaking").hide();
+				$(".about-list .accolades").show(); 			
 			});
 			$(document).on('click','.about-list .speaking-head',function(e){
 				$(".head-wrap h3").removeClass("on");
  				$(this).addClass("on");
- 				$(".about-list .accolades, .about-list .clients").fadeOut(function(){
- 					$(".about-list .speaking").fadeIn();
- 				});
+				$(".accolades, .clients").hide();
+				$(".about-list .speaking").show();
 			});
+*/
 	</script>

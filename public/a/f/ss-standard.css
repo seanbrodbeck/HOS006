@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: "SSStandard";
-  src: url('ss-standard.eot');
+  src: local("SSStandard"), url('ss-standard.eot');
   src: url('ss-standard.eot?#iefix') format('embedded-opentype'),
        url('ss-standard.woff') format('woff'),
        url('ss-standard.ttf')  format('truetype'),

@@ -7,14 +7,20 @@
 	position: relative;
 	min-height: 500px;
 	background: $black-lightest;
-	padding-top: 20px;
-	padding-bottom: $base*7;
+	padding-top: 10px;
+	padding-bottom: 30px;
 	@media (max-width: 1330px) {
 		.royalSlider {
 			padding: 0 50px;
 		}
 	}
 
+	.next, .prev{background:url("../i/arrows.png") no-repeat 0 0; width:42px; height:49px; position:absolute; top:102px; text-indent:-9999px; z-index: 999; cursor: pointer;}
+	
+	.next{background-position:-42px 0; right:0px;}
+	.next:hover{background-position:-42px -49px;}
+	.prev{background-position:0 0; left:0px;}
+	.prev:hover{background-position:0 -49px;}
 
 	@media (max-width: 700px) {
 		padding-bottom: $base*3;
@@ -63,7 +69,7 @@
 
 	@media (min-width: 801px) {
 		.split3 .col {
-			min-height: 750px !important;
+			min-height: 660px !important;
 			max-height: 900px !important;
 
 		}
@@ -81,16 +87,22 @@
 		.pager {
 			display: none !important;
 		}
+		
+		
 		.split3 .col {
 			width: 376px;
-			//max-width: 376px;
+			padding-top: 20px;
 			margin: 0 auto 30px !important;
-			min-height: 750px !important;
-			max-height: 900px !important;
+			min-height: 0 !important;
 			float: none;
+			
 			.article {
 				display: block;
 			}
+		}
+		
+		.insta-panel .split3 .col{
+			padding-top: 0;
 		}
 	}
 	@media (max-width: 400px) {
@@ -99,9 +111,7 @@
 				display: none;
 			}
 			.ss-icon:first-of-type {
-				clear: left;
-				float: left;
-				display: block;
+				
 			}
 		}
 	}
@@ -110,7 +120,7 @@
 			width: 300px;
 			//max-width: 376px;
 			margin: 0 auto 30px !important;
-			min-height: 750px !important;
+			min-height: 0 !important;
 			float: none;
 			
 		}
@@ -145,7 +155,11 @@ footer {
 		.split2 { 
 			border-bottom: 1px solid $black-light;
 			padding-bottom: $base-medium - 6;
-			margin-bottom: $base-medium;	
+			margin-bottom: $base-medium;
+			
+			input[type="text"]{
+				line-height:0;	
+			}	
 		}
 
 		@media (max-width: 768px) { 
@@ -213,7 +227,7 @@ footer {
 	}
 	.dd-container, .dd-select { width: 100% !important; }
 	.dd-container { 		
-		label { @extend %h6; margin-bottom: 0; }
+		label { @extend %h6; margin-bottom: 0; color: #939392;}
 	}
 	.dd-select { background-color: #454545 !important; }
 	.dd-selected { padding: 0 10px; }
@@ -248,7 +262,7 @@ footer {
 } //end footer
 
 .mailing-list { 
-	input { width: 70%; }
+	input[type="text"] { width: 70%;}
 	.btn { 
 		width: 30%;
 		margin-left: -4px;
@@ -259,7 +273,7 @@ footer {
 .copyright { 
 	clear: both;
 	font-style: italic;
-	background: url(/public/a/i/icon-footer.png) no-repeat right $base;
+	background: url(../i/icon-footer.png) no-repeat right $base;
 	padding-top: $base;
 	border-top: 1px solid $black-light;
 }
@@ -316,7 +330,10 @@ footer .ss-social {
 
 .social-header {
 
-	h3 { margin-bottom: $base/2; }
+	h3 { 
+		margin-bottom: $base/2; 
+		text-transform:uppercase;
+	}
 	p { 
 		margin-left: -6px;
 		margin-bottom: 0 !important;

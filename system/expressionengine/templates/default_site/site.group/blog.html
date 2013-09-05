@@ -81,6 +81,7 @@
 		{embed="inc/jsReference"}
 
 		<script src="{site_url}public/a/j/waypoints-infinite.min.js"></script>
+		<script src="{site_url}public/a/j/mcustomscrollbar.min.js"></script>
 		<script>
 
 			var $wall = $('.infinite-container');
@@ -107,7 +108,9 @@
 					$('#infscr-loading').animate({opacity: .8},2000).fadeOut('normal');
 				}
 			});
-
+			
+			$('.sub').mCustomScrollbar();
+			
 		</script>
 
 	</body>

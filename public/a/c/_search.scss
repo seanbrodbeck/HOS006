@@ -17,6 +17,7 @@
 		box-shadow: none;
 		font: 70px/1 $serif;
 		color: #fff;
+		width: 100%;
 	}
 	header + & { margin-top: -76px; }
 	.close { 
@@ -35,7 +36,23 @@
 
 	}
 	.adjunct-link { margin-top: 0; }
+	
+	@media screen and (max-width: 700px) {
+		.topper .wrap {
+			padding: 20px 0 15px; 
+		} 
+		
+		input[type="text"]{
+			font: 40px/1 $sans;
+		}
+		
+		.close{padding: 10px 15px;} 
+		
+	}
 }
+
+
+#search-modal-button{color:#939392;}
 
 .results-count { 
 	float: left;
