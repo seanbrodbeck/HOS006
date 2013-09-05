@@ -340,6 +340,9 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
   text-align: center;
   width: 60%;
   margin: -16px auto 28px; }
+  @media (max-width: 768px) {
+    .subhead-alt, .case-studies .hero p {
+      width: 90%; } }
 
 .case-studies .hero {
   margin-top: -76px;

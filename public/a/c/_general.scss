@@ -231,7 +231,13 @@ $maxMainWidth: $max-main-width;
 	text-align: center;
 	width: 60%;
 	margin: -16px auto $base-medium;
+	
+	@media (max-width: 768px) {
+		width: 90%;
+	}
 }
+
+
 
 .case-studies .hero {
 	margin-top: -76px;
