@@ -1144,6 +1144,9 @@ header {
 .search-wrap.blog {
   margin-top: 0; }
 
+.search-wrap.about {
+  margin-top: 45px; }
+
 @media (max-width: 768px) {
   .search-wrap {
     margin-top: 0px; }
@@ -1152,6 +1155,9 @@ header {
     margin-top: 20px; }
 
   .search-wrap.blog {
+    margin-top: 20px; }
+
+  .search-wrap.about {
     margin-top: 20px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {
