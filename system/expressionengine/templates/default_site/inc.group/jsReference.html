@@ -74,8 +74,16 @@
 
 			// 	});					
 			});
-
-			$('.styled-select').ddslick();
+			
+        $('.styled-select').ddslick({
+            onSelected: function (data) {
+                var actualField = $('#'+data.original.context.name+'Final');
+                if(actualField.length) {
+                    actualField.val(data.selectedData.value);   
+                }
+            }
+        });
+			
 		</script>
 		<script>
 			var aux;
