@@ -186,7 +186,7 @@ $maxMainWidth: $max-main-width;
 
 @media (max-width: 768px) {
 	.hidden-phone{
-		display: none;
+		display: none !important;
 	}
 }
 // h2 or h3
