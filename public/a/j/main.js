@@ -1,4 +1,13 @@
-	var api = {};
+function showArchive(subPage){
+	if  (subPage == "branding" || subPage == "in-house" || subPage == "ads-collateral") {
+				$(".see-more").hide();
+	}else {
+		$(".see-more").show();
+
+	}
+}
+
+var api = {};
 $(function() {
 	//alert($siteURL);
 	// Functionality Enabling/Disabling
@@ -77,26 +86,21 @@ $(function() {
 				loadPage(page);
 			}
 		}
-
+		
+		
+		
 		function enableListeners() {
 			$(document).on('click','.subnav a',function(e){
 				setCurrentIndex($(e.target).parent().index());
 				e.preventDefault();
 
 				loadPage($(this).attr('data-page'));
-				//$('.wrap.work').royalSlider('updateSliderSize', true);
 				options.royalSlider.updateSliderSize(true);
 				// reset archive drawer on page change
- 				$(".see-more .drawer").slideUp("fast").html('');
- 					
 
- 				if  ($('nav.subnav ul li.on a').data('page') == "branding" || $('nav.subnav ul li.on a').data('page') == "in-house" || $('nav.subnav ul li.on a').data('page') == "ads-collateral") {
- 					$(".see-more").hide();
- 				}
- 				else {
- 					$(".see-more").show();
 
- 				}
+				//Show Archive Link if correct section
+ 				showArchive($('nav.subnav ul li.on a').data('page'));
 
 			});
 		}
@@ -104,6 +108,7 @@ $(function() {
 		function loadPage(page) {
 			var section = $('section.page#' + page);
 
+			
 			if(section.data('loaded') != true)
 			{	
 				section.find('h1').after('<div class="loading"><img src="'+ $siteURL +'public/a/i/ajax-loader.gif"></div>');
@@ -135,6 +140,8 @@ $(function() {
 				options.royalSlider.updateSliderSize(true);
 			}, 7000);
 			
+	
+
 		}
 
 		$(window).resize(function(){
@@ -322,25 +329,6 @@ $(window).resize(function (){
 	});
 });
 
-// $(document).ready(function (){
-// 	$('.split3_2-1-alt.cards').each(function(){  
-// 	     var $columns = $('.col',this);
-// 	     var maxHeight = Math.max.apply(Math, $columns.map(function(){
-// 	         return $(this).height();
-// 	     }).get());
-// 	     $columns.height(maxHeight);
-// 	});
-// });	
-
-// $(window).resize(function (){
-// 	$('.split3_2-1-alt.cards').each(function(){  
-// 	     var $columns = $('.col',this);
-// 	     var maxHeight = Math.max.apply(Math, $columns.map(function(){
-// 	         return $(this).height();
-// 	     }).get());
-// 	     $columns.height(maxHeight);
-// 	});
-// });	
 
 $(window).load(function (){
 	var $headerHeight = $("header").height();
@@ -376,20 +364,24 @@ $(document).ready(function(){
 	var $label = $(".col img:first-child").attr("data-caption");
 	$(".work-detail .meta").text($label);
 	
-	// hover over any part of block show description
-/*
-	$('.grid-block a').hover(
-		 function () {
-		   //$(this).find('.block-caption-more').css({"max-height":"250px"});
-		   $(this).find('.block-caption-more').addClass('open');
-		 }, 
-		 function () {
-		 	$(this).find('.block-caption-more').removeClass('open');
-		    //$(this).find('.block-caption-more').css({"max-height":"0px"});
-		 }
-	 );
-*/
+	/* if page is refreshed or linked to check for subpage to load archive */
 	
+	//Show Archive Link if correct section
+	//Show Arhicve from page load
+	if($('.subnav')){
+		showArchive($('.subnav ul li.on a').data('page'));
+	}
+	
+	//Show Archive From click
+	$(document).on('click','.subnav a',function(e){
+		var subSection = $('nav.subnav ul li.on a').data('page');
+
+		//Show Archive Link if correct section
+		showArchive(subSection);
+	});
+
+
+	/* Set up Class for CSS transtion of description */
 	$(document).on('mouseover', '.grid-block a',  function(){
 		$(this).find('.block-caption-more').addClass('open');
 	});
@@ -460,16 +452,6 @@ $(document).ready(function(){
 			});
 		
 	});
-
-	$(document).on('click','.subnav a',function(e){
-			if  ($('nav.subnav ul li.on a').data('page') == "branding" || $('nav.subnav ul li.on a').data('page') == "books" || $('nav.subnav ul li.on a').data('page') == "ads-collateral") {
-				$(".see-more").hide();
-			}
-			else {
-				$(".see-more").show();
-			}
-	});
-
 
 
 	$(document).on('click','.about-list .clients-head',function(e){
