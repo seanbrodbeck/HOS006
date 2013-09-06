@@ -11,7 +11,7 @@
 
 		<div class="hover-trigger"><span>Menu</span></div>
 		
-		<div class="search-wrap">
+		<div class="search-wrap blog">
 	
 			<div class="wrap content">
 				{exp:channel:entries channel="blog_landing" limit="1"}
@@ -57,7 +57,7 @@
 				{/exp:channel:entries}
 				</div><!--/main -->
 
-				<div class="sub" data-load="instagram">
+				<div class="sub hidden-phone" data-load="instagram">
 				{exp:tgl_instagram:user_feed username="theheadsofstate" limit="30" cache="30"}
 
 					<div class="block-instagram">

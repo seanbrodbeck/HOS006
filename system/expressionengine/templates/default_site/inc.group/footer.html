@@ -2,7 +2,8 @@
 	<div class="wrap">
 
 		<div class="col-1">
-			<h2>Contact Us</h2>
+		
+			<h2 class="contact-us">Contact Us</h2>
 
 			<div class="split2">
 
@@ -57,7 +58,7 @@
 				</div>
 				<div class="col">
 					<select class="styled-select" style="width: 100%" name="business">
-						<option>How May We Direct Your Call?</option>
+						<option value="-----">How May We Direct Your Call?</option>
 						<option value="New Business">New Business</option>
 						<option value="Old Business">Old Business</option>
 						<option value="Love Letters">Love Letters</option>
@@ -65,6 +66,8 @@
 						<option value="General Questions">General Questions</option>
 					</select>
 
+                    <input type="hidden" id="businessFinal" name="business" value="" />
+                        
 					<textarea name="message"></textarea>
 
 					<input type="submit" class="btn" value="Submit">

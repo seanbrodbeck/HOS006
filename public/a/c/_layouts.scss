@@ -25,7 +25,7 @@
 	float: left;
 	@include flex-grid(7, 6); 
 	margin-right: $flex-gutter;
-	@media (max-width: 600px) {
+	@media (max-width: 768px) {
 		width: 100%;
 		margin-right: 0;
 	}
@@ -105,9 +105,6 @@
 	}
 	&.tall .grid-block:not(.first) figure:first-child {
 		margin-bottom: 30px;
-		@media screen and (max-width: 700px) {
-			margin-bottom: 9%;
-		}
 	}
 	&.tall .grid-block:not(.first) figure:last-child {
 		margin-bottom: 0;
@@ -143,7 +140,7 @@
 
 	}
 	&.tall .grid-block:not(.first) figure:first-child {
-		margin-bottom: 30px;
+		/* margin-bottom: 30px; */
 		@media screen and (max-width: 700px) {
 			margin-bottom: 9%;
 		}
