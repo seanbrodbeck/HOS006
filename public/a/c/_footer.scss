@@ -55,6 +55,10 @@
 	}
 	.pager { top: 102px !important; }
 	
+	.split3 .col.block-instagram {
+    	min-height: 0 !important;
+    	height: auto;
+	}
 
 	@media (max-width: 840px) {
 		.split3 .col {

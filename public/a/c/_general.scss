@@ -948,7 +948,7 @@ figure a:hover img {
 			@extend %h5;
 			color: $black-lightest;
 			float: right;
-			@media (max-width: 700px) {
+			@media (max-width: 900px) {
 				display: none;
 			}				
 		}
