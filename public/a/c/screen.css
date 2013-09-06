@@ -1423,14 +1423,18 @@ div.expanded .subnav li.on {
     height: auto; }
   @media (max-width: 840px) {
     .social-footer .split3 .col, .social-footer .split3 .grid-block {
-      min-height: 550px !important;
-      max-height: 600px !important; }
+      /*
+      			min-height: 550px !important;
+      			max-height: 600px !important;
+      */ }
       .social-footer .split3 .col .article, .social-footer .split3 .grid-block .article {
         display: none; } }
   @media (min-width: 801px) {
     .social-footer .split3 .col, .social-footer .split3 .grid-block {
+      /*
       min-height: 660px !important;
-      max-height: 900px !important; } }
+      max-height: 900px !important;
+      */ } }
   @media (min-width: 701px) and (max-width: 839px) {
     .social-footer .split3 .col, .social-footer .split3 .grid-block {
       min-height: 450px !important;
