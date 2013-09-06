@@ -97,6 +97,7 @@
 			    	//$container.removeClass("top").addClass("fixed").css("top", -$totalHeight);
 					$container.removeClass("top").css("top", -$totalHeight);
 			    	//$("body").css("padding-top", $totalHeight);
+			    	aux = 1;
 			    }
 			  }, { offset: 20 })
 			  .waypoint(function(direction) {
@@ -106,6 +107,7 @@
 					$container.css("top", 0);
 			    	//$("body").css("padding-top", 0);
 			    	$(".hover-trigger span").fadeIn();
+			    	aux = 1;
 			    }
 			  }, { offset: 20 });
 
@@ -144,7 +146,6 @@
 			});
 			
 			$('.hover-trigger').on('click', function(){
-				console.log('test');
 				if($(window).width() <= 768){
 					$("header").slideDown();
 				}	
@@ -168,14 +169,15 @@
             //Don't change header position if in mobile layout
             
                 $container.mouseleave(function() {
-						if(aux == 1){
-						
-							$(this).removeClass("expanded").animate({
-								
-									top:  -$totalHeight
-							});
-						}
-        				$(".hover-trigger span").fadeIn();
+                	console.log('Mouse Leave');
+					if(aux == 1){
+					
+						$(this).removeClass("expanded").animate({
+							
+								top:  -$totalHeight
+						});
+					}
+    				$(".hover-trigger span").fadeIn();
     			
     			});				
     

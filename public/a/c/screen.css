@@ -1065,6 +1065,8 @@ article .figcaption {
    	Work Detail
 
 -------------------------------------------*/
+.work-detail iframe {
+  min-height: 400px; }
 .work-detail img {
   max-height: 95%; }
 .work-detail .first.col h1, .work-detail .first.grid-block h1 {
@@ -1161,6 +1163,9 @@ header {
 .search-wrap.about {
   margin-top: 45px; }
 
+.search-wrap.work {
+  margin-top: 170px; }
+
 @media (max-width: 768px) {
   .search-wrap {
     margin-top: 0px; }
@@ -1172,6 +1177,9 @@ header {
     margin-top: 20px; }
 
   .search-wrap.about {
+    margin-top: 75px; }
+
+  .search-wrap.work {
     margin-top: 75px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {

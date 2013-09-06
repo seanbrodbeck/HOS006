@@ -1,10 +1,12 @@
+
 		{embed="inc/head"}
+
 		<body class="work-detail">
 		<!--[if lt IE 7]>
 			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 		<![endif]-->
-		<div class="header-wrapper">
-			<div class="header-inner-wrapper">
+		
+			<div class="header-inner-wrapper fixed">
 				{embed="inc/header"}
 
 				{exp:channel:entries channel="work" limit="1"}
@@ -19,7 +21,7 @@
 					</ul>
 				</nav>
 			</div>
-		</div>
+	
 
 		{embed="inc/search-modal"}
 		<div class="hover-trigger"><span>Menu</span></div>
@@ -33,7 +35,7 @@
 		{/exp:channel:next_entry}
 
 
-		<div class="wrap content search-wrap">
+		<div class="wrap work content search-wrap">
 
 			<div class="split3_1-2">
 
@@ -58,10 +60,10 @@
 
 				</div>
 
-				<div class="col">
+				<div class="col {if vimeo != ''}vimeo-col{/if}">
 					{work_detail_images}
 					{if image != ''}
-					<img src="{image}" data-caption="{image-caption}" alt="" />
+						<img src="{image}" data-caption="{image-caption}" alt="" />
 					{/if}
 					{if vimeo != ''}
 					    {vimeo}
