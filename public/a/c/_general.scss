@@ -83,6 +83,9 @@ $flex-gutter: percentage($grid-gutter/$max-page-width);
 	background: #fff; 
 	@extend %box-shadow; 
 	@extend %box-padding;
+	p:last-child {
+		margin-bottom: 0;
+	}
 }
 
 
@@ -840,9 +843,6 @@ figure a:hover img {
 		&  { 
 			@include flex-grid(4, 3);
 		}	
-	}
-	p:last-child {
-		margin-bottom: 16px;
 	}
 }
 

@@ -240,6 +240,8 @@ a.line {
 
 .module {
   background: #fff; }
+  .module p:last-child {
+    margin-bottom: 0; }
 
 .color-test {
   height: 100px;
@@ -844,8 +846,6 @@ figure a:hover img {
   @media (max-width: 800px) {
     .capabilities {
       width: 38.48739%; } }
-  .capabilities p:last-child {
-    margin-bottom: 16px; }
 
 .about-list {
   margin-bottom: 13px; }
