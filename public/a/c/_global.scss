@@ -70,6 +70,9 @@ a.line { display: inline-block; }
 	-ms-transition: $trans $time $ease;
 	-o-transition: $trans $time $ease;
 	transition: $trans $time $ease;  
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
 }
 
 @mixin no-transition() {

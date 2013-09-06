@@ -680,7 +680,8 @@ figure a:hover img {
 		@include clearfix;
 		float: left;
 		max-width: 65%;
-		margin-bottom: $base-medium;
+		margin-top:10px;
+		margin-bottom: 8px;
 		@media (max-width: 700px) {
 			float: none; 
 			max-width: 100%;
