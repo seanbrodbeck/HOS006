@@ -89,21 +89,22 @@
 						<div class="cushion">
 							<p class="meta">{title}</p>
 							<p>{bio}</p>
+							<p class="about-contacts"></p>
+							{if instagram != ""}
+							<a href="http://instagram.com/{instagram}" target="_blank" class="about-instagram"></a>
+							{/if}
 						</div>
 					</article>
 					{/personel}
 				</section><!-- split3-->
 
-
-
-
 			</div><!-- /wrap-->
+			
 		</div><!-- / search-wrap-->
 		{/exp:channel:entries}
 
 		{embed="inc/footer"}
 		{embed="inc/jsReference"}
-
 	
 	</body>
 </html>
