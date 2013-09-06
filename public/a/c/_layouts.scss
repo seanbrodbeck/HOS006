@@ -140,7 +140,7 @@
 
 	}
 	&.tall .grid-block:not(.first) figure:first-child {
-		margin-bottom: 30px;
+		/* margin-bottom: 30px; */
 		@media screen and (max-width: 700px) {
 			margin-bottom: 9%;
 		}
