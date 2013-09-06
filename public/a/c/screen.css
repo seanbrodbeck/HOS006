@@ -745,7 +745,8 @@ figure a:hover img {
 .adjunct-header ul {
   float: left;
   max-width: 65%;
-  margin-bottom: 28px; }
+  margin-top: 10px;
+  margin-bottom: 8px; }
   .adjunct-header ul:after {
     content: ".";
     display: block;
