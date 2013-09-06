@@ -768,6 +768,18 @@ figure a:hover img {
 .cards .cushion {
   margin-top: -14px;
   position: relative; }
+  .cards .cushion .about-contacts {
+    margin-bottom: 28px; }
+    .cards .cushion .about-contacts:before {
+      content: "____";
+      position: relative;
+      left: 0;
+      color: #939392; }
+  .cards .cushion .about-instagram {
+    width: 15px;
+    height: 12px;
+    display: block;
+    background: url(../i/instagram-heart.png) no-repeat 0 center; }
 
 /*-------------------------------------------
 

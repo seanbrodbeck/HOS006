@@ -734,6 +734,21 @@ figure a:hover img {
 		position: relative;
 		@extend %box-padding;
 		//padding-bottom: $base-xlarge;
+		.about-contacts {
+		    margin-bottom: 28px;
+		    &:before {
+        		content: "____";
+    			position: relative;
+    			left: 0;
+    			color: $black-light;
+			}
+		}
+        .about-instagram {
+		    width: 15px;
+		    height: 12px;
+		    display: block;
+			background: url(../i/instagram-heart.png) no-repeat 0 center;
+		}
 	}
 
 
