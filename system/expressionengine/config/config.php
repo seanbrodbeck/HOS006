@@ -13,7 +13,7 @@
 
 
 $siteBase = 'http://localhost:8888/hos/hos005/';
-$folderBase = '/Users/bueno/Sites/hos/hos005/';
+$folderBase = '/Applications/MAMP/htdocs/hos/hos005/';
 
 
 /*
