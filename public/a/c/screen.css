@@ -307,7 +307,7 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
 
 @media (max-width: 768px) {
   .hidden-phone {
-    display: none; } }
+    display: none !important; } }
 .social-footer .adjunct-header li a {
   font-size: 23px;
   line-height: 40px; }
@@ -764,7 +764,7 @@ figure a:hover img {
   .adjunct-header li:first-child {
     margin-left: 0; }
 .adjunct-header .adjunct-link {
-  margin: 14px 0 0;
+  margin: 16px 0 0;
   float: right;
   max-width: 25%; }
   .adjunct-header .adjunct-link a {
