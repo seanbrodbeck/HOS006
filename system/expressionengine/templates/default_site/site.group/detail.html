@@ -60,10 +60,10 @@
 
 				</div>
 
-				<div class="col">
+				<div class="col {if vimeo != ''}vimeo-col{/if}">
 					{work_detail_images}
 					{if image != ''}
-					<img src="{image}" data-caption="{image-caption}" alt="" />
+						<img src="{image}" data-caption="{image-caption}" alt="" />
 					{/if}
 					{if vimeo != ''}
 					    {vimeo}

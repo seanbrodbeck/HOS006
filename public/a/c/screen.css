@@ -1053,6 +1053,8 @@ article .figcaption {
    	Work Detail
 
 -------------------------------------------*/
+.work-detail iframe {
+  min-height: 400px; }
 .work-detail img {
   max-height: 95%; }
 .work-detail .first.col h1, .work-detail .first.grid-block h1 {

@@ -1113,7 +1113,9 @@ article .figcaption {
 
 -------------------------------------------*/
 .work-detail {
-
+	
+	iframe {min-height: 400px;}
+	
 	img { max-height: 95%; }
 
 	.first.col { 
