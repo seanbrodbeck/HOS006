@@ -12,8 +12,8 @@
 */
 
 
-$siteBase = 'http://localhost:8888/hos/hos005/';
-$folderBase = '/Users/bueno/Sites/hos/hos005/';
+$siteBase = 'http://staging.theheadsofstate.com/';
+$folderBase = '/home/24032/domains/staging.theheadsofstate.com/html/';
 
 
 /*
@@ -29,7 +29,7 @@ $config['debug'] = '1';
 $config['cp_url'] = $siteBase.'admin.php';
 $config['doc_url'] = "http://ellislab.com/expressionengine/user-guide/";
 $config['is_system_on'] = "y";
-$config['allow_extensions'] = 'y';
+$config['allow_extensions'] = "y";
 $config['site_label'] = 'The Heads of State';
 $config['cookie_prefix'] = '';
 
