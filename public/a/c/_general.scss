@@ -680,7 +680,8 @@ figure a:hover img {
 		@include clearfix;
 		float: left;
 		max-width: 65%;
-		margin-bottom: $base-medium;
+		margin-top:10px;
+		margin-bottom: 8px;
 		@media (max-width: 700px) {
 			float: none; 
 			max-width: 100%;
@@ -734,6 +735,21 @@ figure a:hover img {
 		position: relative;
 		@extend %box-padding;
 		//padding-bottom: $base-xlarge;
+		.about-contacts {
+		    margin-bottom: 28px;
+		    &:before {
+        		content: "____";
+    			position: relative;
+    			left: 0;
+    			color: $black-light;
+			}
+		}
+        .about-instagram {
+		    width: 15px;
+		    height: 12px;
+		    display: block;
+			background: url(../i/instagram-heart.png) no-repeat 0 center;
+		}
 	}
 
 
@@ -1113,7 +1129,9 @@ article .figcaption {
 
 -------------------------------------------*/
 .work-detail {
-
+	
+	iframe {min-height: 400px;}
+	
 	img { max-height: 95%; }
 
 	.first.col { 

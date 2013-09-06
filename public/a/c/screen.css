@@ -433,6 +433,9 @@ a {
   -ms-transition: all 0.16s linear;
   -o-transition: all 0.16s linear;
   transition: all 0.16s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   text-decoration: none; }
   p a {
     text-decoration: underline; }
@@ -489,6 +492,9 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="url"], t
   -ms-transition: all 0.16s linear;
   -o-transition: all 0.16s linear;
   transition: all 0.16s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   -webkit-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px 1px 2px 0px rgba(0, 0, 0, 0.5); }
@@ -513,7 +519,10 @@ select {
   -moz-transition: all 0.16s linear;
   -ms-transition: all 0.16s linear;
   -o-transition: all 0.16s linear;
-  transition: all 0.16s linear; }
+  transition: all 0.16s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
   .btn:hover, .btn-alt a:hover, .btn:focus, .btn-alt a:focus {
     background: #333333;
     color: #fff; }
@@ -602,7 +611,10 @@ figure a img {
   -moz-transition: all 0.16s linear;
   -ms-transition: all 0.16s linear;
   -o-transition: all 0.16s linear;
-  transition: all 0.16s linear; }
+  transition: all 0.16s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
 
 figure a:hover img {
   opacity: .7;
@@ -611,7 +623,10 @@ figure a:hover img {
   -moz-transition: all 0.16s linear;
   -ms-transition: all 0.16s linear;
   -o-transition: all 0.16s linear;
-  transition: all 0.16s linear; }
+  transition: all 0.16s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden; }
 
 @media (max-width: 768px) {
   figure a:hover img {
@@ -660,6 +675,9 @@ figure a:hover img {
   -ms-transition: all 0.16s linear;
   -o-transition: all 0.16s linear;
   transition: all 0.16s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   background: rgba(59, 59, 59, 0.7);
   padding: 10px 21px 7px; }
   .block-caption h3 {
@@ -727,7 +745,8 @@ figure a:hover img {
 .adjunct-header ul {
   float: left;
   max-width: 65%;
-  margin-bottom: 28px; }
+  margin-top: 10px;
+  margin-bottom: 8px; }
   .adjunct-header ul:after {
     content: ".";
     display: block;
@@ -768,6 +787,18 @@ figure a:hover img {
 .cards .cushion {
   margin-top: -14px;
   position: relative; }
+  .cards .cushion .about-contacts {
+    margin-bottom: 28px; }
+    .cards .cushion .about-contacts:before {
+      content: "____";
+      position: relative;
+      left: 0;
+      color: #939392; }
+  .cards .cushion .about-instagram {
+    width: 15px;
+    height: 12px;
+    display: block;
+    background: url(../i/instagram-heart.png) no-repeat 0 center; }
 
 /*-------------------------------------------
 
@@ -1053,6 +1084,8 @@ article .figcaption {
    	Work Detail
 
 -------------------------------------------*/
+.work-detail iframe {
+  min-height: 400px; }
 .work-detail img {
   max-height: 95%; }
 .work-detail .first.col h1, .work-detail .first.grid-block h1 {
@@ -1149,6 +1182,9 @@ header {
 .search-wrap.about {
   margin-top: 45px; }
 
+.search-wrap.work {
+  margin-top: 170px; }
+
 @media (max-width: 768px) {
   .search-wrap {
     margin-top: 0px; }
@@ -1160,6 +1196,9 @@ header {
     margin-top: 20px; }
 
   .search-wrap.about {
+    margin-top: 75px; }
+
+  .search-wrap.work {
     margin-top: 75px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {
@@ -1415,14 +1454,18 @@ div.expanded .subnav li.on {
     height: auto; }
   @media (max-width: 840px) {
     .social-footer .split3 .col, .social-footer .split3 .grid-block {
-      min-height: 550px !important;
-      max-height: 600px !important; }
+      /*
+      			min-height: 550px !important;
+      			max-height: 600px !important;
+      */ }
       .social-footer .split3 .col .article, .social-footer .split3 .grid-block .article {
         display: none; } }
   @media (min-width: 801px) {
     .social-footer .split3 .col, .social-footer .split3 .grid-block {
+      /*
       min-height: 660px !important;
-      max-height: 900px !important; } }
+      max-height: 900px !important;
+      */ } }
   @media (min-width: 701px) and (max-width: 839px) {
     .social-footer .split3 .col, .social-footer .split3 .grid-block {
       min-height: 450px !important;

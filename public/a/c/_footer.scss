@@ -62,8 +62,10 @@
 
 	@media (max-width: 840px) {
 		.split3 .col {
+/*
 			min-height: 550px !important;
 			max-height: 600px !important;
+*/
 			.article {
 				display: none;
 			}
@@ -73,8 +75,10 @@
 
 	@media (min-width: 801px) {
 		.split3 .col {
+			/*
 			min-height: 660px !important;
 			max-height: 900px !important;
+			*/
 
 		}
 	}
