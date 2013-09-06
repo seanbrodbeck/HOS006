@@ -1499,6 +1499,8 @@ footer {
     color: #fff;
     margin-bottom: 28px;
     text-transform: uppercase; }
+    footer h2.contact-us {
+      margin-bottom: 20px; }
   footer h3 {
     color: #fff; }
   footer input[type="text"], footer input[type="email"], footer input[type="tel"], footer input[type="url"], footer textarea, footer input[type="password"] {

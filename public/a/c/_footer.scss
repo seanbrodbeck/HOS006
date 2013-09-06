@@ -194,6 +194,9 @@ footer {
 		color: #fff;
 		margin-bottom: $base-medium;
 		text-transform: uppercase;
+		&.contact-us {
+    		margin-bottom: 20px;
+		}
 	}
 
 	h3 { 
