@@ -373,3 +373,15 @@ footer .dd-options li:first-child { display: none; }
 footer .split2 .col {
 	margin-bottom: 0  !important;
 }
+
+label.error {
+    color: red;
+    font: 700 12px/15px proxima-nova, sans-serif;
+    margin-top: -10px;
+}
+
+#mailing_form {
+    label.error {
+        margin-top: -38px;
+    } 
+}
