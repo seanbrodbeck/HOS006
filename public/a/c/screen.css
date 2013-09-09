@@ -1275,6 +1275,11 @@ nav ul {
     clear: both;
     visibility: hidden;
     font-size: 0; }
+  @media (max-width: 900px) {
+    nav ul {
+      margin: 0 auto;
+      float: none;
+      width: 400px; } }
 nav.main-nav {
   float: right;
   margin-top: 7px;

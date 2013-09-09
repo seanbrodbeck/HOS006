@@ -130,6 +130,11 @@ nav { @include clearfix;
 		margin-right: 10px; 
 		float: left;
 		margin-bottom: 32px;
+		@media (max-width: 900px) { 
+			margin: 0 auto;
+			float: none;
+			width: 400px;
+		}
 	}
 	&.main-nav { 
 		float: right;
