@@ -189,6 +189,18 @@ $maxMainWidth: $max-main-width;
 		display: none !important;
 	}
 }
+
+
+.visible-phone{
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.visible-phone{
+		display: block !important;
+	}
+}
+
 // h2 or h3
 %text-large { 
 	font-size: 23px;
@@ -554,6 +566,7 @@ figure a:hover img {
 
 .grid-block { 
 	@extend %block;
+	margin-bottom: 28px;
 	float: left;
 	position: relative;
 	a { display: block; }
@@ -583,13 +596,16 @@ figure a:hover img {
 		width: 100% !important;
 		text-align: center;
 		float: none;
+		margin-bottom: 0% !important;
 	}
 	
-	.grid-block img {margin: 0 auto 0 !important; width: 90%;}
+	.grid-block img {margin: 0 auto 0; width: 90%;}
 	
 	figure{
-		margin-bottom: 0 !important;
+		margin-bottom: 26px !important;
 	}
+	
+	figure.grid-block{margin-bottom: 26px !important;}
 	
 	.figcaption{position: relative !important; width: 90% !important; margin: 0 auto 10px;}
 	

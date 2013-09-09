@@ -33,9 +33,9 @@
 
 			<p class="f-email ss-standard ss-mail"><a href="mailto:studio@theheadsofstate.com">studio@theheadsofstate.com</a></p>
 
-			<form class="mailing-list" action="http://theheadsofstate.createsend.com/t/y/s/wjjui/" method="post">
+			<form class="mailing-list" id="mailing_form" action="http://theheadsofstate.createsend.com/t/y/s/wjjui/" method="post">
 				<label class="move">Join Our Mailing List</label>
-				<input type="text" name="cm-wjjui-wjjui" id="wjjui-wjjui" placeholder="Join our mailing list">
+				<input type="text" name="cm-wjjui-wjjui" id="wjjui-wjjui" class="required email" placeholder="Join our mailing list">
 				<input type="submit" class="btn" value="Sign Up">
 			</form>
 
@@ -47,14 +47,15 @@
 
 			{exp:freeform:form 
 				form:class="split2"
+				form:id="contact_form"
 				form_name="contact"
 				return="site/contact-confirmation" 
 			}
 				<div class="col first">
-					<input type="text" placeholder="Name" name="name"/>
-					<input type="email" placeholder="Email" name="email"/>
-					<input type="tel" placeholder="Phone" name="phone"/>
-					<input type="text" placeholder="Company" name="company"/>
+					<input type="text" placeholder="Name" name="name" class="required" />
+					<input type="email" placeholder="Email" name="email" class="required email" />
+					<input type="tel" placeholder="Phone" name="phone" />
+					<input type="text" placeholder="Company" name="company" />
 				</div>
 				<div class="col">
 					<select class="styled-select" style="width: 100%" name="business">
@@ -68,7 +69,7 @@
 
                     <input type="hidden" id="businessFinal" name="business" value="" />
                         
-					<textarea name="message"></textarea>
+					<textarea name="message" class="required"></textarea>
 
 					<input type="submit" class="btn" value="Submit">
 				</div>
