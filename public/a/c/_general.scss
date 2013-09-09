@@ -625,6 +625,7 @@ figure a:hover img {
 		line-height: 1.2
 	}
 	em { 
+	    white-space: nowrap;
 		@extend %h6;
 		font-weight: 700;
 			@media (max-width: 840px) { 
@@ -748,7 +749,7 @@ figure a:hover img {
 	.cushion { 
 		margin-top: -$base; 
 		position: relative;
-		@extend %box-padding;
+		padding: 15px 34px;
 		//padding-bottom: $base-xlarge;
 		.about-contacts {
 		    margin-bottom: 28px;
@@ -772,7 +773,11 @@ figure a:hover img {
 	}
 }
 
-
+.rsContent article {
+    p.meta {
+        margin-bottom: 0;
+    }
+}
 
 /*-------------------------------------------
 
