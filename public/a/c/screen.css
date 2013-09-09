@@ -694,10 +694,9 @@ figure a:hover img {
   .block-caption h3 {
     color: #fff;
     display: inline-block;
-    margin: 0;
+    margin: 0 15px 0 0;
     line-height: 1.2; }
   .block-caption em {
-    margin-left: 15px;
     font-weight: 700; }
     @media (max-width: 840px) {
       .block-caption em {
