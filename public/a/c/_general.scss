@@ -748,8 +748,11 @@ figure a:hover img {
 	.cushion { 
 		margin-top: -$base; 
 		position: relative;
-		@extend %box-padding;
+		padding: 15px 34px;
 		//padding-bottom: $base-xlarge;
+		p.meta {
+    		margin-bottom: 0;
+		}
 		.about-contacts {
 		    margin-bottom: 28px;
 		    &:before {

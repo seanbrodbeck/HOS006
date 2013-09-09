@@ -232,7 +232,7 @@ a.line {
   float: left;
   margin: 0 0 10px 10px; }
 
-.module, .cards .cushion, .col.about-us, .about-us.grid-block, .capabilities, .about-list {
+.module, .col.about-us, .about-us.grid-block, .capabilities, .about-list {
   padding: 21px 34px; }
 
 .module, .cards .col, .cards .grid-block, .carousel.rsDefault, .block-instagram {
@@ -796,7 +796,10 @@ figure a:hover img {
   line-height: 1.5; }
 .cards .cushion {
   margin-top: -14px;
-  position: relative; }
+  position: relative;
+  padding: 15px 34px; }
+  .cards .cushion p.meta {
+    margin-bottom: 0; }
   .cards .cushion .about-contacts {
     margin-bottom: 28px; }
     .cards .cushion .about-contacts:before {
