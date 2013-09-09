@@ -17,13 +17,14 @@ header {
 	}
 	
 	.inner-wrap { 
-		padding-top: $base-large; 
+		padding-top: 33px; 
 		background: #fff; 
 		margin-bottom: 19px;
 	}
 
 	@media (max-width: 768px) { 
 		margin-bottom: 20px;
+		display: none; position: fixed; width: 100%; z-index: 999;
 	}
 	
 
@@ -64,7 +65,7 @@ header {
 .search-wrap.blog{margin-top: 0;}
 .search-wrap.about{margin-top: 45px;}
 .search-wrap.work, .search-wrap.detail {
-    margin-top: 170px;
+    margin-top: 165px;
     .image-loading:last-child img {
         margin-bottom: 0;
     }
@@ -110,7 +111,6 @@ header {
 }
 
 @media (max-width: 768px) {
-	header{display: none; position: fixed; width: 100%; z-index: 999;}
 	.hover-trigger{display: block;}
 }
 
