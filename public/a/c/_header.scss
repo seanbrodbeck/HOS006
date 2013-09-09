@@ -107,16 +107,6 @@ header {
 .logo { 
 	float: left;
 	max-width: 300px ;
-	font: 400 22px/1 $sans;
-	@media (max-width: 400px) {
-		font-size: 21px;
-	}
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	color: $black;
-	background: url(../i/logomark-1.png) no-repeat 0 0;
-	background-size: 29px 29px;
-	padding: 6px 0 10px 45px;
 	margin-bottom: 0;
 
 	@media (max-width: 900px) { 
