@@ -801,15 +801,23 @@ figure a:hover img {
   .cards .cushion .about-contacts {
     margin-bottom: 28px; }
     .cards .cushion .about-contacts:before {
-      content: "____";
       position: relative;
       left: 0;
       color: #939392; }
-  .cards .cushion .about-instagram {
-    width: 15px;
-    height: 12px;
+  .cards .cushion a.about-instagram {
     display: block;
-    background: url(../i/instagram-heart.png) no-repeat 0 center; }
+    color: #939392;
+    font-family: proxima-nova, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px; }
+    .cards .cushion a.about-instagram .ss-social {
+      position: relative;
+      top: 3px;
+      font-size: 14px;
+      margin-right: 5px; }
+  .cards .cushion a.about-instagram:hover {
+    color: #000; }
 
 /*-------------------------------------------
 
