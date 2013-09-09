@@ -1,0 +1,57 @@
+.image-loading {
+    position: relative;
+    display: inline-block;
+    /*float: left;*/
+    width: 100%;
+}
+
+
+.image-loading .loading-progress {
+	width: 20px;
+	height: 20px;
+	.border-radius(50%);
+	position: absolute;
+	background: rgba(0,0,0,0.4);
+	left: 50%;
+	top: 50%;
+	margin-left: -10px;
+	margin-top: -10px;
+	display: block;
+	-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,1), 0px 1px 2px rgba(255,255,255,0.8);
+	   -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,1), 0px 1px 2px rgba(255,255,255,0.8);
+	        box-shadow: inset 0px 1px 1px rgba(0,0,0,1), 0px 1px 2px rgba(255,255,255,0.8);
+}
+
+.image-loading .loading-progress .inner {
+	content:'';
+	background: white;
+	width: 4px;
+	height: 4px;
+	-webkit-border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -2px;
+	margin-top: -2px;
+	display: block;
+	.animation(fadeTwitch 100ms linear infinite);
+	-webkit-filter: blur(1px);
+}
+
+@-webkit-keyframes fadeTwitch {
+    0% { opacity: 0.2; }	
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+@-moz-keyframes fadeTwitch {
+    0% { opacity: 0.2; }	
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+@keyframes fadeTwitch {
+    0% { opacity: 0.2; }	
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}

@@ -676,7 +676,7 @@ figure a:hover img {
   .figcaption {
     position: relative !important;
     width: 90% !important;
-    margin: 0 auto 10px; }
+    margin: 0 auto 0; }
 
   img + .caption, img + .figcaption {
     margin-top: 0px; } }
@@ -801,15 +801,23 @@ figure a:hover img {
   .cards .cushion .about-contacts {
     margin-bottom: 28px; }
     .cards .cushion .about-contacts:before {
-      content: "____";
       position: relative;
       left: 0;
       color: #939392; }
-  .cards .cushion .about-instagram {
-    width: 15px;
-    height: 12px;
+  .cards .cushion a.about-instagram {
     display: block;
-    background: url(../i/instagram-heart.png) no-repeat 0 center; }
+    color: #939392;
+    font-family: proxima-nova, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px; }
+    .cards .cushion a.about-instagram .ss-social {
+      position: relative;
+      top: 3px;
+      font-size: 14px;
+      margin-right: 5px; }
+  .cards .cushion a.about-instagram:hover {
+    color: #000; }
 
 /*-------------------------------------------
 
@@ -1090,7 +1098,7 @@ article .figcaption {
   .case-study .capabilities .btn-alt {
     position: absolute;
     bottom: 30px;
-    width: 39%;
+    width: 90%;
     padding: 0; } }
 
 /*-------------------------------------------
@@ -1196,9 +1204,9 @@ header {
 .search-wrap.about {
   margin-top: 45px; }
 
-.search-wrap.work {
+.search-wrap.work, .search-wrap.detail {
   margin-top: 170px; }
-  .search-wrap.work img:last-child {
+  .search-wrap.work img:last-child, .search-wrap.detail img:last-child {
     margin-bottom: 0; }
 
 @media (max-width: 768px) {
@@ -1910,7 +1918,7 @@ label.error {
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
     font-style: 18px; }
   .masthead img {
     width: 100%;
