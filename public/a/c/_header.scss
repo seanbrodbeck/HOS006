@@ -58,7 +58,12 @@ header {
 .search-wrap.case-studies{margin-top: 0;}
 .search-wrap.blog{margin-top: 0;}
 .search-wrap.about{margin-top: 45px;}
-.search-wrap.work{margin-top: 170px;}
+.search-wrap.work {
+    margin-top: 170px;
+    img:last-child {
+        margin-bottom: 0;
+    }
+}
 
 @media (max-width: 768px) {
 	.search-wrap{margin-top:0px;}
