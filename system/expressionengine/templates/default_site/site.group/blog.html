@@ -36,7 +36,9 @@
 								<a class="ss-social ss-icon" href="#">Like</a>
 								<a class="ss-social ss-icon" href="https://twitter.com/intent/tweet?url={title_permalink="site/article"}&hashtags=theheadsofstate">twitter</a>
 							</p>
-							<p>{article_intro_text}&hellip;</p>
+							
+							<p>{exp:excerpt limit="35" limit_type="words" indicator=""}{blog-body}{/exp:excerpt}&hellip;</p>
+							
 							<p class="more"><a href="{title_permalink="site/article"}">Read the full article&hellip;</a></p>	
 						</div>
 					</article>	
