@@ -1885,9 +1885,16 @@ footer .split2 .col, footer .split2 .grid-block {
 
 .masthead {
   margin-top: -15px;
+  position: relative;
   padding-bottom: 15px;
   background: url(../i/bg-header-alt.png) repeat-x 0 bottom;
   overflow: hidden; }
+  .masthead .ss-navigatedown {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 15px;
+    font-style: 18px; }
   .masthead img {
     width: 100%;
     margin-bottom: 0; }
