@@ -99,20 +99,53 @@ header {
 	background: rgba(59,59,59, .8);
 	top: 0;
 	z-index: 99; //1 under footer
-	span { 
-		margin: 0 auto 0;
+	
+	.mobile-logo { 
+		margin: 0 0 0 10px;
+		@extend %h6;
+		display: none;
+		width: 200px;
+		text-align: left;
+		float: left;
+		color: #fff;
+		background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
+		padding-left: 30px;
+	}
+	.menu{
+		float: left;
 		@extend %h6;
 		display: block;
-		width: $maxContentWidth;
-		text-align: left;
 		color: #fff;
+		margin: 0 10px 0 0;
 		background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
 		padding-left: 30px;
 	}
 }
 
 @media (max-width: 768px) {
-	.hover-trigger{display: block;}
+	.hover-trigger{
+		display: block;
+		
+		.mobile-logo { 
+			margin: 0 0 0 10px;
+			@extend %h6;
+			display: block;
+			width: 200px;
+			text-align: left;
+			float: left;
+			color: #fff;
+			background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
+			padding-left: 30px;
+		}
+		.menu{float: right;
+			@extend %h6;
+			display: block;
+			color: #fff;
+			margin: 0 10px 0 0;
+			background: none;
+		}
+		
+	}
 }
 
 .logo { 

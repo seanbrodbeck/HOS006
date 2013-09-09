@@ -284,7 +284,7 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
   letter-spacing: 0;
   color: #939392; }
 
-.meta, h6, th, .btn, .btn-alt a, .block-caption em, .block-caption-more .meta span, .adjunct-header .adjunct-link a, .capabilities li, .blog .share-trigger, .case-study .col:not(.first) h2, .case-study .grid-block:not(.first) h2, .case-study .meta-header, .hover-trigger span, nav.main-nav a, .share-trigger a, footer h3, footer input[type="text"], footer input[type="email"], footer input[type="tel"], footer input[type="url"], footer textarea, footer input[type="password"], footer select, footer .dd-select, footer .dd-container label, .address strong {
+.meta, h6, th, .btn, .btn-alt a, .block-caption em, .block-caption-more .meta span, .adjunct-header .adjunct-link a, .capabilities li, .blog .share-trigger, .case-study .col:not(.first) h2, .case-study .grid-block:not(.first) h2, .case-study .meta-header, .hover-trigger .mobile-logo, .hover-trigger .menu, nav.main-nav a, .share-trigger a, footer h3, footer input[type="text"], footer input[type="email"], footer input[type="tel"], footer input[type="url"], footer textarea, footer input[type="password"], footer select, footer .dd-select, footer .dd-container label, .address strong {
   font: 700 10.5px/26px proxima-nova, sans-serif;
   text-transform: uppercase;
   margin-bottom: 42px;
@@ -1253,18 +1253,41 @@ header {
   background: rgba(59, 59, 59, 0.8);
   top: 0;
   z-index: 99; }
-  .hover-trigger span {
-    margin: 0 auto 0;
-    display: block;
-    width: 1190px;
+  .hover-trigger .mobile-logo {
+    margin: 0 0 0 10px;
+    display: none;
+    width: 200px;
     text-align: left;
+    float: left;
     color: #fff;
+    background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
+    padding-left: 30px; }
+  .hover-trigger .menu {
+    float: left;
+    display: block;
+    color: #fff;
+    margin: 0 10px 0 0;
     background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
     padding-left: 30px; }
 
 @media (max-width: 768px) {
   .hover-trigger {
-    display: block; } }
+    display: block; }
+    .hover-trigger .mobile-logo {
+      margin: 0 0 0 10px;
+      display: block;
+      width: 200px;
+      text-align: left;
+      float: left;
+      color: #fff;
+      background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
+      padding-left: 30px; }
+    .hover-trigger .menu {
+      float: right;
+      display: block;
+      color: #fff;
+      margin: 0 10px 0 0;
+      background: none; } }
 .logo {
   float: left;
   max-width: 300px;
