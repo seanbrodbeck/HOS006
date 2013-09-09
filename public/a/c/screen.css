@@ -798,7 +798,7 @@ figure a:hover img {
 .cards .cushion {
   margin-top: -14px;
   position: relative;
-  padding: 15px 34px; }
+  padding: 15px 34px 25px 34px; }
   .cards .cushion .about-contacts {
     margin-bottom: 28px; }
     .cards .cushion .about-contacts:before {
@@ -1171,7 +1171,8 @@ header {
       .work-landing header, .work-detail header {
         margin-bottom: 20px; } }
   header .inner-wrap {
-    padding-top: 33px;
+    padding-top: 38px;
+    padding-bottom: 10px;
     background: #fff;
     margin-bottom: 19px; }
   @media (max-width: 768px) {
@@ -1216,7 +1217,7 @@ header {
   margin-top: 45px; }
 
 .search-wrap.work, .search-wrap.detail {
-  margin-top: 165px; }
+  margin-top: 185px; }
   .search-wrap.work .image-loading:last-child img, .search-wrap.detail .image-loading:last-child img {
     margin-bottom: 0; }
 
