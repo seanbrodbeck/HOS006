@@ -1225,8 +1225,8 @@ header {
   .search-wrap.about {
     margin-top: 75px; }
 
-  .search-wrap.work {
-    margin-top: 75px; } }
+  .search-wrap.work, .search-wrap.detail {
+    margin-top: 15px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {
     margin-top: 155px; } }
