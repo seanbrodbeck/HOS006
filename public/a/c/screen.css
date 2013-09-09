@@ -639,6 +639,7 @@ figure a:hover img {
     opacity: 1.0;
     filter: alpha(opacity=100); } }
 .grid-block {
+  margin-bottom: 28px;
   float: left;
   position: relative; }
   .grid-block a {
@@ -659,14 +660,18 @@ figure a:hover img {
     display: block;
     width: 100% !important;
     text-align: center;
-    float: none; }
+    float: none;
+    margin-bottom: 0% !important; }
 
   .grid-block img {
-    margin: 0 auto 0 !important;
+    margin: 0 auto 0;
     width: 90%; }
 
   figure {
-    margin-bottom: 0 !important; }
+    margin-bottom: 26px !important; }
+
+  figure.grid-block {
+    margin-bottom: 26px !important; }
 
   .figcaption {
     position: relative !important;
