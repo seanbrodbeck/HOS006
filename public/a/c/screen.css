@@ -1206,7 +1206,7 @@ header {
 
 .search-wrap.work, .search-wrap.detail {
   margin-top: 170px; }
-  .search-wrap.work img:last-child, .search-wrap.detail img:last-child {
+  .search-wrap.work .image-loading:last-child img, .search-wrap.detail .image-loading:last-child img {
     margin-bottom: 0; }
 
 @media (max-width: 768px) {
