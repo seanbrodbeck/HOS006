@@ -308,6 +308,12 @@ h4, ul.inline label, p.inline label, .block-caption h3, .cards h3, .block-instag
 @media (max-width: 768px) {
   .hidden-phone {
     display: none !important; } }
+.visible-phone {
+  display: none; }
+
+@media (max-width: 768px) {
+  .visible-phone {
+    display: block !important; } }
 .social-footer .adjunct-header li a {
   font-size: 23px;
   line-height: 40px; }
@@ -1238,17 +1244,7 @@ header {
 .logo {
   float: left;
   max-width: 300px;
-  font: 400 22px/1 proxima-nova, sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #3b3b3b;
-  background: url(../i/logomark-1.png) no-repeat 0 0;
-  background-size: 29px 29px;
-  padding: 6px 0 10px 45px;
   margin-bottom: 0; }
-  @media (max-width: 400px) {
-    .logo {
-      font-size: 21px; } }
   @media (max-width: 900px) {
     .logo {
       margin: 0 auto;
@@ -1279,6 +1275,11 @@ nav ul {
     clear: both;
     visibility: hidden;
     font-size: 0; }
+  @media (max-width: 900px) {
+    nav ul {
+      margin: 0 auto;
+      float: none;
+      width: 400px; } }
 nav.main-nav {
   float: right;
   margin-top: 7px;
