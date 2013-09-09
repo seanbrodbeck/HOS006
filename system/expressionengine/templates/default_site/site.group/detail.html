@@ -1,64 +1,66 @@
+    {embed="inc/head"}
 
-		{embed="inc/head"}
-
-		<body class="work-detail">
-		<!--[if lt IE 7]>
-			<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-		<![endif]-->
-		
-			<div class="header-inner-wrapper fixed">
-				{embed="inc/header"}
-
-				{exp:channel:entries channel="work" limit="1"}
-				<nav class="subnav">
-					<ul>
-						<li class="{categories limit="1"}{if category_url_title == "branding"}on{/if}{/categories}"> <a href="{site_url}site/work/#work-1">Branding</a></li>
-						<li class="{categories limit="1"}{if category_url_title == "ads-collateral"}on{/if}{/categories}"><a href="{site_url}site/work/#work-2">Ads &amp; Collateral</a></li>
-						<li class="{categories limit="1"}{if category_url_title == "illustration"}on{/if}{/categories}"><a href="{site_url}site/work/#work-3">Illustration</a></li>
-						<li class="{categories limit="1"}{if category_url_title == "posters"}on{/if}{/categories}"><a href="{site_url}site/work/#work-4">Posters</a></li>
-						<li class="{categories limit="1"}{if category_url_title == "books-covers"}on{/if}{/categories}"><a href="{site_url}site/work/#work-5">Books &amp; Covers</a></li>
-						<li class="{categories limit="1"}{if category_url_title == "in-house"}on{/if}{/categories}"><a href="{site_url}site/work/#work-6">In House</a></li>
-					</ul>
-				</nav>
-			</div>
+	<body class="work-detail">
+	<!--[if lt IE 7]>
+		<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->
 	
+		<div class="header-inner-wrapper fixed">
+			{embed="inc/header"}
 
-		{embed="inc/search-modal"}
-		<div class="hover-trigger"><span>Menu</span></div>
-	<!-- {categories}{category_id}{/categories} -->
-		{exp:channel:prev_entry category="{categories}{category_id}{/categories}"}
-		<a class="prev pager ss-icon ss-standard ss-navigaterright hidden-phone" href="{path='site/detail'}">Previous</a>
-		{/exp:channel:prev_entry}
+			{exp:channel:entries channel="work" limit="1"}
+			
+			<nav class="subnav">
+				<ul>
+					<li class="{categories limit="1"}{if category_url_title == "branding"}on{/if}{/categories}"> <a href="{site_url}site/work/#work-1">Branding</a></li>
+					<li class="{categories limit="1"}{if category_url_title == "ads-collateral"}on{/if}{/categories}"><a href="{site_url}site/work/#work-2">Ads &amp; Collateral</a></li>
+					<li class="{categories limit="1"}{if category_url_title == "illustration"}on{/if}{/categories}"><a href="{site_url}site/work/#work-3">Illustration</a></li>
+					<li class="{categories limit="1"}{if category_url_title == "posters"}on{/if}{/categories}"><a href="{site_url}site/work/#work-4">Posters</a></li>
+					<li class="{categories limit="1"}{if category_url_title == "books-covers"}on{/if}{/categories}"><a href="{site_url}site/work/#work-5">Books &amp; Covers</a></li>
+					<li class="{categories limit="1"}{if category_url_title == "in-house"}on{/if}{/categories}"><a href="{site_url}site/work/#work-6">In House</a></li>
+				</ul>
+			</nav>
+		</div>
 
-		{exp:channel:next_entry category="{categories}{category_id}{/categories}"}
-		<a class="next pager ss-icon ss-standard ss-navigaterleft hidden-phone" href="{path='site/detail'}">Next</a>
-		{/exp:channel:next_entry}
 
+        {embed="inc/search-modal"}
+        
+        <div class="hover-trigger"><span>Menu</span></div>
+    
+        <!-- {categories}{category_id}{/categories} -->
+        {exp:channel:prev_entry channel="work" category="{categories}{category_id}{/categories}"}
+        <a class="prev pager ss-icon ss-standard ss-navigaterright hidden-phone" href="{path='site/detail'}">Previous</a>
+        {/exp:channel:prev_entry}
 
-		<div class="wrap work content search-wrap">
+        {exp:channel:next_entry channel="work" category="{categories}{category_id}{/categories}"}
+        <a class="next pager ss-icon ss-standard ss-navigaterleft hidden-phone" href="{path='site/detail'}">Next</a>
+        {/exp:channel:next_entry}
 
-			<div class="split3_1-2">
+        <div class="wrap work content search-wrap">
 
-				<div class="col first">
+		    <div class="split3_1-2">
 
-					<div class="module">
+			    <div class="col first">
 
-						<h1>{title}</h1>
+				    <div class="module">
 
-						<p class="intro">{intro_line}</p>
+					    <h1>{title}</h1>
 
-						<p>{summary}</p>
-					
-						<p>CLIENT | <em>{client_name}</em><br/>
-						
-						{if art_direction}
-						ART DIRECTION | <em>{art_direction}</em><br/>
-						{/if}
-						{year_published}</p>
+                        <p class="intro">{intro_line}</p>
 
-					</div>
+                        <p>{summary}</p>
+				
+                        <p>
+                        CLIENT | <em>{client_name}</em><br/>
+                        {if art_direction}
+                        ART DIRECTION | <em>{art_direction}</em><br/>
+                        {/if}
+                        {year_published}
+                        </p>
 
-				</div>
+                    </div>
+
+                </div>
 
 				<div class="col {if vimeo != ''}vimeo-col{/if}">
 					{work_detail_images}
@@ -71,11 +73,13 @@
 					{/work_detail_images}
 				</div>
 
-			</div>
-			{/exp:channel:entries}
+            </div>
+            
+		{/exp:channel:entries}
+        </div><!-- /wrap-->
+        
+        {embed="inc/footer"}
+        {embed="inc/jsReference"}
+    </body>
 
-		</div><!-- /wrap-->
-		{embed="inc/footer"}
-		{embed="inc/jsReference"}
-	</body>
 </html>
