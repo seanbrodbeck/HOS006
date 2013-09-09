@@ -3132,7 +3132,7 @@ label.error {
 .image-loading {
   position: relative;
   display: block;
-  background: #000;
+  /*     background: #000; */
   /*float: left;*/
   width: 100%; }
 
