@@ -798,8 +798,6 @@ figure a:hover img {
   margin-top: -14px;
   position: relative;
   padding: 15px 34px; }
-  .cards .cushion p.meta {
-    margin-bottom: 0; }
   .cards .cushion .about-contacts {
     margin-bottom: 28px; }
     .cards .cushion .about-contacts:before {
@@ -820,6 +818,9 @@ figure a:hover img {
       margin-right: 5px; }
   .cards .cushion a.about-instagram:hover {
     color: #000; }
+
+.rsContent article p.meta {
+  margin-bottom: 0; }
 
 /*-------------------------------------------
 

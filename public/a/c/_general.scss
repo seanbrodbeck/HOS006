@@ -750,9 +750,6 @@ figure a:hover img {
 		position: relative;
 		padding: 15px 34px;
 		//padding-bottom: $base-xlarge;
-		p.meta {
-    		margin-bottom: 0;
-		}
 		.about-contacts {
 		    margin-bottom: 28px;
 		    &:before {
@@ -775,7 +772,11 @@ figure a:hover img {
 	}
 }
 
-
+.rsContent article {
+    p.meta {
+        margin-bottom: 0;
+    }
+}
 
 /*-------------------------------------------
 
