@@ -1195,6 +1195,8 @@ header {
 
 .search-wrap.work {
   margin-top: 170px; }
+  .search-wrap.work img:last-child {
+    margin-bottom: 0; }
 
 @media (max-width: 768px) {
   .search-wrap {
