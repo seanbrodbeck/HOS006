@@ -76,7 +76,7 @@ $(function() {
 
 		function setupHTML() {
 			// the branding page is always loaded with the template
-			$('section.page#branding').data('loaded', true);
+			$('section.page#ads-collateral').data('loaded', true);
 
 			// determine if there's a url hash, and if so, we need to load that page too
 			if(getCurrentIndex() != 0)
