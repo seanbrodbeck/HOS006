@@ -676,7 +676,7 @@ figure a:hover img {
   .figcaption {
     position: relative !important;
     width: 90% !important;
-    margin: 0 auto 10px; }
+    margin: 0 auto 0; }
 
   img + .caption, img + .figcaption {
     margin-top: 0px; } }
@@ -801,15 +801,23 @@ figure a:hover img {
   .cards .cushion .about-contacts {
     margin-bottom: 28px; }
     .cards .cushion .about-contacts:before {
-      content: "____";
       position: relative;
       left: 0;
       color: #939392; }
-  .cards .cushion .about-instagram {
-    width: 15px;
-    height: 12px;
+  .cards .cushion a.about-instagram {
     display: block;
-    background: url(../i/instagram-heart.png) no-repeat 0 center; }
+    color: #939392;
+    font-family: proxima-nova, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px; }
+    .cards .cushion a.about-instagram .ss-social {
+      position: relative;
+      top: 3px;
+      font-size: 14px;
+      margin-right: 5px; }
+  .cards .cushion a.about-instagram:hover {
+    color: #000; }
 
 /*-------------------------------------------
 
@@ -857,10 +865,13 @@ figure a:hover img {
     margin-top: -70px; }
 
 .col.about-us, .about-us.grid-block {
+  min-height: 465px;
   position: relative;
   padding-bottom: 0; }
   .col.about-us h2, .about-us.grid-block h2 {
     margin-bottom: 7px; }
+  .col.about-us div p:last-child, .about-us.grid-block div p:last-child {
+    margin-bottom: 10px; }
   @media (max-width: 800px) {
     .col.about-us, .about-us.grid-block {
       width: 48.7395%; } }
@@ -1087,7 +1098,7 @@ article .figcaption {
   .case-study .capabilities .btn-alt {
     position: absolute;
     bottom: 30px;
-    width: 39%;
+    width: 90%;
     padding: 0; } }
 
 /*-------------------------------------------
@@ -1193,9 +1204,9 @@ header {
 .search-wrap.about {
   margin-top: 45px; }
 
-.search-wrap.work {
+.search-wrap.work, .search-wrap.detail {
   margin-top: 170px; }
-  .search-wrap.work img:last-child {
+  .search-wrap.work img:last-child, .search-wrap.detail img:last-child {
     margin-bottom: 0; }
 
 @media (max-width: 768px) {
@@ -1907,7 +1918,7 @@ label.error {
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
     font-style: 18px; }
   .masthead img {
     width: 100%;
@@ -3118,6 +3129,77 @@ label.error {
 
   .masthead .iphone-v-curtain {
     display: block; } }
+.image-loading {
+  position: relative;
+  display: block;
+  /*     background: #000; */
+  /*float: left;*/
+  width: 100%; }
+
+.image-loading .loading-progress {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  left: 50%;
+  top: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  display: block;
+  -webkit-box-shadow: inset 0px 1px 1px black, 0px 1px 2px rgba(255, 255, 255, 0.8);
+  -moz-box-shadow: inset 0px 1px 1px black, 0px 1px 2px rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0px 1px 1px black, 0px 1px 2px rgba(255, 255, 255, 0.8); }
+
+.image-loading .loading-progress .inner {
+  content: '';
+  background: white;
+  width: 4px;
+  height: 4px;
+  -webkit-border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2px;
+  margin-top: -2px;
+  display: block;
+  /*
+  	.animation(fadeTwitch 100ms linear infinite);
+  	-webkit-filter: blur(1px);
+  */ }
+
+@-webkit-keyframes fadeTwitch {
+  0% {
+    opacity: 0.2; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0.2; } }
+
+@-moz-keyframes fadeTwitch {
+  0% {
+    opacity: 0.2; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0.2; } }
+
+@keyframes fadeTwitch {
+  0% {
+    opacity: 0.2; }
+
+  50% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0.2; } }
+
 html {
   height: 100%;
   overflow-x: hidden; }

@@ -607,7 +607,7 @@ figure a:hover img {
 	
 	figure.grid-block{margin-bottom: 26px !important;}
 	
-	.figcaption{position: relative !important; width: 90% !important; margin: 0 auto 10px;}
+	.figcaption{position: relative !important; width: 90% !important; margin: 0 auto 0;}
 	
 	img + .caption, img + .figcaption{margin-top: 0px;}
 }
@@ -754,22 +754,23 @@ figure a:hover img {
 		.about-contacts {
 		    margin-bottom: 28px;
 		    &:before {
-        		content: "____";
     			position: relative;
     			left: 0;
     			color: $black-light;
 			}
 		}
-        .about-instagram {
-		    width: 15px;
-		    height: 12px;
+        a.about-instagram {
 		    display: block;
-			background: url(../i/instagram-heart.png) no-repeat 0 center;
+		    color: $black-light;
+			font-family: $sans;
+		    font-size: 12px;
+		    font-weight: 600;
+		    letter-spacing: 2px;
+		    
+		    .ss-social{position: relative; top: 3px; font-size: 14px; margin-right: 5px;}
 		}
+		a.about-instagram:hover{color: #000;}
 	}
-
-
-
 }
 
 
@@ -827,13 +828,16 @@ figure a:hover img {
 }
 
 .col.about-us { //no-image / link ---same as above excpet doesnt have negative margain //about page content blocks no images
+    min-height: 465px;
 	h2 { 
 		@extend %h3;
 		margin-bottom: $base/2;
-	} 
+	}
+	div p:last-child {
+    	margin-bottom: 10px;
+	}
 	position: relative;
 	@extend %box-padding;
-	
 	
 	@media (max-width: 800px) {
 		& { 
@@ -1131,7 +1135,7 @@ article .figcaption {
 			.btn-alt { 
 				position: absolute;
 				bottom: 30px;
-				width: 39%;
+				width: 90%;
 				padding: 0;
 			}
 		}		
