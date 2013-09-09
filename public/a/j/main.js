@@ -247,6 +247,15 @@ $(function() {
 
 
 jQuery(document).ready(function($) {
+
+    // validation for footer forms
+    $("#contact_form").validate();
+    $("#mailing_form").validate({
+        errorPlacement: function(error, element) {
+            error.appendTo(element.parent("form"));
+        }
+    });
+
  	$(".contact-trigger a").click(function(event){
 		event.preventDefault();
 		$('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);

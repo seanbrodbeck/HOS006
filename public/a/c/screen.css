@@ -1681,6 +1681,14 @@ footer .dd-options li:first-child {
 footer .split2 .col, footer .split2 .grid-block {
   margin-bottom: 0  !important; }
 
+label.error {
+  color: red;
+  font: 700 12px/15px proxima-nova, sans-serif;
+  margin-top: -10px; }
+
+#mailing_form label.error {
+  margin-top: -38px; }
+
 /*-------------------------------------------
 
    	 Layouts
@@ -1773,8 +1781,7 @@ footer .split2 .col, footer .split2 .grid-block {
       max-width: 25%; } }
 
 .split3_2-1-alt {
-  overflow: hidden;
-  display: inline; }
+  overflow: hidden; }
   .split3_2-1-alt:after {
     content: ".";
     display: block;
