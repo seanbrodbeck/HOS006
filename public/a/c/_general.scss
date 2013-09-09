@@ -189,6 +189,18 @@ $maxMainWidth: $max-main-width;
 		display: none !important;
 	}
 }
+
+
+.visible-phone{
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.visible-phone{
+		display: block !important;
+	}
+}
+
 // h2 or h3
 %text-large { 
 	font-size: 23px;
