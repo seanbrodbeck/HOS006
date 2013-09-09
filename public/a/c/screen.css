@@ -1421,8 +1421,7 @@ div.expanded .subnav li.on {
   position: relative;
   min-height: 500px;
   background: #cecece;
-  padding-top: 10px;
-  padding-bottom: 30px; }
+  padding-top: 10px; }
   @media (max-width: 1330px) {
     .social-footer .royalSlider {
       padding: 0 50px; } }
