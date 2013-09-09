@@ -857,10 +857,13 @@ figure a:hover img {
     margin-top: -70px; }
 
 .col.about-us, .about-us.grid-block {
+  min-height: 465px;
   position: relative;
   padding-bottom: 0; }
   .col.about-us h2, .about-us.grid-block h2 {
     margin-bottom: 7px; }
+  .col.about-us div p:last-child, .about-us.grid-block div p:last-child {
+    margin-bottom: 10px; }
   @media (max-width: 800px) {
     .col.about-us, .about-us.grid-block {
       width: 48.7395%; } }

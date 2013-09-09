@@ -827,13 +827,16 @@ figure a:hover img {
 }
 
 .col.about-us { //no-image / link ---same as above excpet doesnt have negative margain //about page content blocks no images
+    min-height: 465px;
 	h2 { 
 		@extend %h3;
 		margin-bottom: $base/2;
-	} 
+	}
+	div p:last-child {
+    	margin-bottom: 10px;
+	}
 	position: relative;
 	@extend %box-padding;
-	
 	
 	@media (max-width: 800px) {
 		& { 
