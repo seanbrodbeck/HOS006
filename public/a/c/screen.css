@@ -676,7 +676,7 @@ figure a:hover img {
   .figcaption {
     position: relative !important;
     width: 90% !important;
-    margin: 0 auto 10px; }
+    margin: 0 auto 0; }
 
   img + .caption, img + .figcaption {
     margin-top: 0px; } }
