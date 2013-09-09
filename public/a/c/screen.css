@@ -1781,8 +1781,7 @@ label.error {
       max-width: 25%; } }
 
 .split3_2-1-alt {
-  overflow: hidden;
-  display: inline; }
+  overflow: hidden; }
   .split3_2-1-alt:after {
     content: ".";
     display: block;
