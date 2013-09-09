@@ -407,11 +407,11 @@ $(document).ready(function(){
 
 
 	/* Set up Class for CSS transtion of description */
-	$(document).on('mouseover', '.grid-block a',  function(){
+	$(document).on('mouseover', '.grid-block a .figcaption',  function(){
 		$(this).find('.block-caption-more').addClass('open');
 	});
 	
-	$(document).on('mouseout', '.grid-block a', function(){
+	$(document).on('mouseout', '.grid-block a .figcaption', function(){
 		$(this).find('.block-caption-more').removeClass('open');
 	});
 	

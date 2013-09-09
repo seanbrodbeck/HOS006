@@ -1170,10 +1170,13 @@ header {
     padding-top: 42px;
     background: #fff;
     margin-bottom: 19px; }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     header {
       margin-bottom: 20px; } }
 
+@media (max-width: 768px) {
+  header .wrap {
+    padding: 0; } }
 .header-inner-wrapper.top {
   top: 0 !important; }
 .header-inner-wrapper.fixed {
@@ -1206,7 +1209,7 @@ header {
 
 .search-wrap.work, .search-wrap.detail {
   margin-top: 170px; }
-  .search-wrap.work img:last-child, .search-wrap.detail img:last-child {
+  .search-wrap.work .image-loading:last-child img, .search-wrap.detail .image-loading:last-child img {
     margin-bottom: 0; }
 
 @media (max-width: 768px) {
@@ -1222,8 +1225,8 @@ header {
   .search-wrap.about {
     margin-top: 75px; }
 
-  .search-wrap.work {
-    margin-top: 75px; } }
+  .search-wrap.work, .search-wrap.detail {
+    margin-top: 15px; } }
 @media (min-width: 768px) and (max-width: 979px) {
   .search-wrap {
     margin-top: 155px; } }
@@ -1307,17 +1310,25 @@ nav.main-nav {
       width: 500px;
       margin: 0 auto;
       float: none; } }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     nav.main-nav {
       width: 100%;
-      margin: 14px auto; }
+      margin: 14px auto 0; }
       nav.main-nav ul {
         margin: 0 auto;
-        float: none; }
+        float: none;
+        width: 95%; }
       nav.main-nav li {
         float: none;
-        text-align: center;
-        margin-left: 0; } }
+        margin-left: 0; }
+        nav.main-nav li a {
+          font: 700 12.5px/26px proxima-nova, sans-serif;
+          padding: 5px 10px;
+          display: block;
+          border-bottom: 2px solid #cecece;
+          margin-bottom: 0; }
+      nav.main-nav li:last-child a {
+        border-bottom: 0; } }
 nav li {
   float: left;
   margin-bottom: 0; }
@@ -1338,9 +1349,9 @@ nav .ss-standard {
   box-shadow: inset 1px 1px 1px 1px rgba(59, 59, 59, 0.1); }
   .work-detail .subnav {
     margin-bottom: 0; }
-  @media (max-width: 700px) {
+  @media (max-width: 768px) {
     .subnav {
-      margin-top: -34px;
+      margin-top: 26px;
       overflow-x: scroll;
       padding: 0 20px; } }
   .subnav ul {
@@ -1421,8 +1432,7 @@ div.expanded .subnav li.on {
   position: relative;
   min-height: 500px;
   background: #cecece;
-  padding-top: 10px;
-  padding-bottom: 30px; }
+  padding-top: 10px; }
   @media (max-width: 1330px) {
     .social-footer .royalSlider {
       padding: 0 50px; } }

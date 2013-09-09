@@ -22,12 +22,17 @@ header {
 		margin-bottom: 19px;
 	}
 
-	@media (max-width: 700px) { 
+	@media (max-width: 768px) { 
 		margin-bottom: 20px;
 	}
+	
 
 }
 
+@media (max-width: 768px) {
+	header .wrap{padding: 0;} 
+	
+}
 
 .header-inner-wrapper { 
 	&.top { top: 0 !important;}
@@ -60,7 +65,7 @@ header {
 .search-wrap.about{margin-top: 45px;}
 .search-wrap.work, .search-wrap.detail {
     margin-top: 170px;
-    img:last-child {
+    .image-loading:last-child img {
         margin-bottom: 0;
     }
 }
@@ -70,7 +75,7 @@ header {
 	.search-wrap.case-studies{margin-top: 20px;}
 	.search-wrap.blog{margin-top: 20px;}
 	.search-wrap.about{margin-top: 75px;}
-	.search-wrap.work{margin-top: 75px;}
+	.search-wrap.work, .search-wrap.detail{margin-top: 15px;}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {  
@@ -150,18 +155,27 @@ nav { @include clearfix;
 			margin: 0 auto;
 			float: none;
 		}
-		@media (max-width: 600px) { 
+		@media (max-width: 768px) { 
 			width: 100%;
-			margin: $base auto;
+			margin: $base auto 0;
 			ul {
 				margin: 0 auto;
 				float: none;
+				width: 95%;
 			}
 			li { 
 				float: none;
-				text-align: center;
 				margin-left: 0;
+				
+				a{
+					font: 700 12.5px/26px proxima-nova, sans-serif;
+					padding: 5px 10px;
+					display: block;
+					border-bottom: 2px solid $gray-light;
+					margin-bottom: 0;
+				}
 			}
+			li:last-child a{border-bottom: 0;}
 		}
 	}
 	li {
@@ -188,8 +202,8 @@ nav { @include clearfix;
 	background: $gray-light;
 	box-shadow: inset 1px 1px 1px 1px rgba($black, .1);
 	.work-detail & { margin-bottom: 0; }
-	@media (max-width: 700px){
-		margin-top: -34px;
+	@media (max-width: 768px){
+		margin-top: 26px;
 		overflow-x: scroll; 
 		padding: 0 20px;
 	}
