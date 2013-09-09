@@ -103,12 +103,11 @@ header {
 	.mobile-logo { 
 		margin: 0 0 0 10px;
 		@extend %h6;
-		display: none;
+		display: none !important;
 		width: 200px;
 		text-align: left;
 		float: left;
 		color: #fff;
-		background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
 		padding-left: 30px;
 	}
 	.menu{
@@ -129,7 +128,7 @@ header {
 		.mobile-logo { 
 			margin: 0 0 0 10px;
 			@extend %h6;
-			display: block;
+			display: block !important;
 			width: 200px;
 			text-align: left;
 			float: left;

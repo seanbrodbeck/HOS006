@@ -1255,12 +1255,11 @@ header {
   z-index: 99; }
   .hover-trigger .mobile-logo {
     margin: 0 0 0 10px;
-    display: none;
+    display: none !important;
     width: 200px;
     text-align: left;
     float: left;
     color: #fff;
-    background: url(../i/collapsed-nav-keystone.png) no-repeat 0 4px;
     padding-left: 30px; }
   .hover-trigger .menu {
     float: left;
@@ -1275,7 +1274,7 @@ header {
     display: block; }
     .hover-trigger .mobile-logo {
       margin: 0 0 0 10px;
-      display: block;
+      display: block !important;
       width: 200px;
       text-align: left;
       float: left;
