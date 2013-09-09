@@ -1193,9 +1193,9 @@ header {
 .search-wrap.about {
   margin-top: 45px; }
 
-.search-wrap.work {
+.search-wrap.work, .search-wrap.detail {
   margin-top: 170px; }
-  .search-wrap.work img:last-child {
+  .search-wrap.work img:last-child, .search-wrap.detail img:last-child {
     margin-bottom: 0; }
 
 @media (max-width: 768px) {
@@ -1907,7 +1907,7 @@ label.error {
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 15px;
+    bottom: 35px;
     font-style: 18px; }
   .masthead img {
     width: 100%;
