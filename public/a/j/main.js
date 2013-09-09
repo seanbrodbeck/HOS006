@@ -117,6 +117,13 @@ $(function() {
 				section.find('div.page-content').hide().load($siteURL + 'inc/' + page, function(){
 					
 					section.find('div.loading').remove();
+					
+					//Load images asynchronously 
+					$images = $('img.async, .page-content img');
+					$images.each(function(idx, e) {
+					    $(e).imageload({delay: 10 * idx});
+					});
+					
 					$(this).fadeIn(1000);
 				});
 				
