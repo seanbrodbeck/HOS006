@@ -370,6 +370,15 @@ $(window).resize(function (){
 
 
 $(document).ready(function(){
+	
+	//Images loaded support
+	$images = $('img.async, .page-content img');
+
+
+	$images.each(function(idx, e) {
+	    $(e).imageload({delay: 10 * idx});
+	});
+	
 	var $label = $(".col img:first-child").attr("data-caption");
 	$(".work-detail .meta").text($label);
 	
