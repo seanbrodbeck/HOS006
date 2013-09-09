@@ -1171,7 +1171,8 @@ header {
       .work-landing header, .work-detail header {
         margin-bottom: 20px; } }
   header .inner-wrap {
-    padding-top: 33px;
+    padding-top: 38px;
+    padding-bottom: 10px;
     background: #fff;
     margin-bottom: 19px; }
   @media (max-width: 768px) {
@@ -1216,7 +1217,7 @@ header {
   margin-top: 45px; }
 
 .search-wrap.work, .search-wrap.detail {
-  margin-top: 165px; }
+  margin-top: 185px; }
   .search-wrap.work .image-loading:last-child img, .search-wrap.detail .image-loading:last-child img {
     margin-bottom: 0; }
 
