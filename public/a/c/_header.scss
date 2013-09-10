@@ -260,7 +260,7 @@ nav { @include clearfix;
 	}
 	li { 
 		padding: $base 0;
-		margin-right: 80px;
+		margin-right: 65px;
 		margin-bottom: 0;
 		margin-left: 0;
 		&:last-of-type { margin-right: 0; }
@@ -278,6 +278,7 @@ nav { @include clearfix;
 			margin-right: 30px;
 		}				
 	}
+	li:last-child{margin-right: 0;}
 	&.cs li { margin-right: 102px; 
 		&:last-of-type { margin-right: 0; }
 	}
