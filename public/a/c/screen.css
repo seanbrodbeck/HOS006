@@ -232,7 +232,7 @@ a.line {
   float: left;
   margin: 0 0 10px 10px; }
 
-.module, .col.about-us, .about-us.grid-block, .capabilities, .about-list .head-wrap, .about-list ul, .about-list .speaking p {
+.module, .col.about-us, .about-us.grid-block, .capabilities, .about-list ul, .about-list .speaking p {
   padding: 21px 34px; }
 
 .module, .cards .col, .cards .grid-block, .carousel.rsDefault, .block-instagram {
@@ -908,6 +908,7 @@ figure a:hover img {
   margin-bottom: 13px; }
   .about-list .head-wrap {
     margin-bottom: 20px;
+    padding: 21px 34px 0;
     background: #cecece; }
     .about-list .head-wrap:after {
       content: ".";
@@ -917,6 +918,7 @@ figure a:hover img {
       visibility: hidden;
       font-size: 0; }
   .about-list h3 {
+    padding-bottom: 13px;
     margin-bottom: 14px;
     font: normal 20px/30px chaparral-pro, sans-serif;
     text-transform: none;
@@ -929,10 +931,12 @@ figure a:hover img {
       margin-right: 0; }
     .about-list h3.on {
       color: #fff;
-      text-shadow: 1px 2px 1px rgba(59, 59, 59, 0.2); }
+      text-shadow: 1px 2px 1px rgba(59, 59, 59, 0.2);
+      background: url(../i/carot-about-on.png) no-repeat center bottom; }
     @media (max-width: 1000px) {
       .about-list h3 {
-        font-size: 16px; } }
+        font-size: 16px;
+        margin-right: 15px; } }
   .about-list ul {
     position: relative;
     margin-bottom: 0; }
@@ -958,7 +962,7 @@ figure a:hover img {
   .about-list .clients {
     display: block; }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .about .split3_2-1-alt .col, .about .split3_2-1-alt .grid-block, .about .split3_2-1-alt .grid-block, .about .split3 .col, .about .split3 .grid-block, .split3 .grid-block {
     display: block !important;
     width: 100% !important;
