@@ -1223,7 +1223,7 @@ header {
 
 @media (max-width: 768px) {
   .search-wrap {
-    margin-top: 0px; }
+    margin-top: 0px !important; }
 
   .search-wrap.case-studies {
     margin-top: 20px; }
