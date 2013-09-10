@@ -889,10 +889,12 @@ figure a:hover img {
 
 .about-list {
 	margin-bottom: 13px;
-	@extend %box-padding;
+	
 	.head-wrap {
 		@include clearfix;
 		margin-bottom: 20px;
+		@extend %box-padding;
+		background: #cecece;
 	}
 
 	h3 { 
@@ -908,7 +910,8 @@ figure a:hover img {
 			margin-right: 0;
 		}
 		&.on {
-			color: #3b3b3b;
+			color: #fff;
+			text-shadow: 1px 2px 1px rgba(59, 59, 59, 0.2);
 		}
         @media (max-width: 1000px) {
             font-size: 16px;
@@ -917,6 +920,7 @@ figure a:hover img {
 	ul { 
 		position: relative;
 		margin-bottom: 0;
+		@extend %box-padding;
 
 	}
 	.speaking {
