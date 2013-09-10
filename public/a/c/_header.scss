@@ -73,7 +73,7 @@ header {
 }
 
 @media (max-width: 768px) {
-	.search-wrap{margin-top:0px;}
+	.search-wrap{margin-top:0px !important;}
 	.search-wrap.case-studies{margin-top: 20px;}
 	.search-wrap.blog{margin-top: 20px;}
 	.search-wrap.about{margin-top: 75px;}
