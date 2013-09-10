@@ -927,14 +927,13 @@ figure a:hover img {
 		ul {
 			padding-bottom: 42px;
 			&:after { 
-				content: "____";
 				position: absolute;
 				bottom: 20px;
 				left: 0;
 				color: $black-light;
 			}
 		}
-		p { margin-bottom: 0; }
+		p { margin-bottom: 0; @extend %box-padding;}
 	}
 	li { 
 		list-style: none;
