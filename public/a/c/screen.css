@@ -1401,7 +1401,7 @@ nav .ss-standard {
         width: 665px; } }
   .subnav li {
     padding: 14px 0;
-    margin-right: 80px;
+    margin-right: 65px;
     margin-bottom: 0;
     margin-left: 0; }
     .subnav li:last-of-type {
@@ -1417,6 +1417,8 @@ nav .ss-standard {
     @media (max-width: 900px) {
       .subnav li {
         margin-right: 30px; } }
+  .subnav li:last-child {
+    margin-right: 0; }
   .subnav.cs li {
     margin-right: 102px; }
     .subnav.cs li:last-of-type {
